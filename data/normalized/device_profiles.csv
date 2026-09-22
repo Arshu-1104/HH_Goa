@@ -1,0 +1,1444 @@
+device_id,DeviceType,DeviceInfo,os,browser
+samsung_sm-g892a,mobile,SAMSUNG SM-G892A Build/NRD90M,Android 7.0,samsung browser 6.2
+ios_device,mobile,iOS Device,iOS 11.1.2,mobile safari 11.0
+windows,desktop,Windows,,chrome 62.0
+macos,desktop,MacOS,Mac OS X 10_11_6,chrome 62.0
+sm-g930v,mobile,SM-G930V Build/NRD90M,Android 7.0,chrome 62.0 for android
+blade_a602,mobile,BLADE A602 Build/MRA58K,,chrome 62.0 for android
+xt1635-02,mobile,XT1635-02 Build/NPN26.118-22-2,,chrome 62.0 for android
+z970,mobile,Z970,Android,chrome 56.0 for android
+sm-n920v,mobile,SM-N920V Build/NRD90M,Android 7.0,chrome 62.0 for android
+redmi_note_4,mobile,Redmi Note 4 Build/MMB29M,,chrome 54.0 for android
+lenovo_pb1-750m,mobile,Lenovo PB1-750M Build/S100,,chrome 62.0 for android
+lt22i,mobile,LT22i Build/6.2.A.1.100,,chrome 62.0 for android
+rv520,desktop,rv:52.0,Windows 10,firefox
+sm-g950u,mobile,SM-G950U Build/NRD90M,,chrome 60.0 for android
+lg-h872,mobile,LG-H872 Build/NRD90U,Android 7.0,chrome 62.0 for android
+lg-k500,mobile,LG-K500 Build/MMB29M,,chrome 62.0 for android
+sm-p550,mobile,SM-P550 Build/MMB29M,,chrome 62.0 for android
+sm-j700m,mobile,SM-J700M Build/MMB29K,,chrome 61.0 for android
+trident70,desktop,Trident/7.0,Windows 7,ie 11.0 for desktop
+rv570,desktop,rv:57.0,Mac OS X 10.12,firefox 57.0
+samsung_sm-g930t,mobile,SAMSUNG SM-G930T Build/NRD90M,Android 7.0,samsung browser 6.2
+blade_v6_plus,mobile,Blade V6 Plus Build/MRA58K,,chrome 62.0 for android
+bll-l23,mobile,BLL-L23 Build/HUAWEIBLL-L23,,chrome 62.0 for android
+kyocera-c6742a,mobile,KYOCERA-C6742A Build/LMY47V,Android 5.1.1,chrome generic
+f3113,mobile,F3113 Build/33.2.A.4.70,,chrome 62.0 for android
+d5306,mobile,D5306 Build/19.4.A.0.182,,chrome 62.0 for android
+m4_ss4457,mobile,M4 SS4457 Build/MRA58K,,chrome 62.0 for android
+sm-g955u,mobile,SM-G955U Build/NRD90M,Android 7.0,chrome 62.0 for android
+sm-g610m,mobile,SM-G610M Build/MMB29K,,other
+samsung_sm-g935f,mobile,SAMSUNG SM-G935F Build/NRD90M,,samsung browser 6.2
+xt1635-01,mobile,XT1635-01,Android 7.1.1,chrome 62.0 for android
+rv560,desktop,rv:56.0,,firefox 56.0
+vs500,mobile,VS500,Android 7.0,android webview 4.0
+cam-l03,mobile,CAM-L03 Build/HUAWEICAM-L03,,chrome 62.0 for android
+rct6303w87m7,mobile,RCT6303W87M7 Build/MRA58K,Android 6.0,chrome 62.0 for android
+m4_ss4451,mobile,M4 SS4451 Build/LMY47D,,chrome
+kffowi,mobile,KFFOWI Build/LVY48F,Android 5.1.1,chrome generic
+moto_e_4,mobile,Moto E (4) Build/NMA26.42-19,,chrome generic
+samsung,mobile,SAMSUNG,,samsung browser 6.2
+e2306,mobile,E2306 Build/26.3.A.1.33,,chrome 62.0 for android
+ilium_l910,mobile,Ilium L910 Build/MRA58K,,chrome 62.0 for android
+gt-i9300,mobile,GT-I9300,,chrome 62.0 for android
+lg-h420,mobile,LG-H420 Build/LRX21Y,,other
+windows_nt_62,desktop,Windows NT 6.2,,ie
+xt1032,mobile,XT1032 Build/LPBS23.13-56-2,,chrome 55.0 for android
+gt-i9060m,mobile,GT-I9060M Build/KTU84P,,chrome 62.0 for android
+rv380,desktop,rv:38.0,,firefox
+moto_g_4,mobile,Moto G (4) Build/NPJS25.93-14-10,,chrome generic
+sm-g530t,mobile,SM-G530T,Android 5.1.1,chrome 62.0 for android
+lgmp260,mobile,LGMP260 Build/NRD90U,Android 7.0,chrome 61.0 for android
+sm-e500m,mobile,SM-E500M Build/KTU84P,,chrome 62.0 for android
+samsung_sm-g950u,mobile,SAMSUNG SM-G950U Build/NRD90M,Android 7.0,samsung browser 6.2
+rv110,desktop,rv:11.0,Windows 7,ie 11.0 for desktop
+sm-g920i,mobile,SM-G920I Build/NRD90M,,chrome 62.0 for android
+samsung_sm-j327t,mobile,SAMSUNG SM-J327T Build/NRD90M,Android 7.0,samsung browser 6.2
+sm-g900h,mobile,SM-G900H Build/MMB29K,,chrome 60.0 for android
+trt-l53,mobile,TRT-L53 Build/HUAWEITRT-L53,,chrome 62.0 for android
+android_60,mobile,Android 6.0.1,,android webview 4.0
+moto_g_play,mobile,Moto G Play Build/MPIS24.241-15.3-26,,chrome 62.0 for android
+nexus_6p,mobile,Nexus 6P Build/OPR5.170623.011,Android 8.0.0,
+sgp521,mobile,SGP521,,chrome 62.0 for android
+vs988,mobile,VS988 Build/NRD90U,Android 7.0,chrome 62.0 for android
+sm-g531h,mobile,SM-G531H Build/LMY48B,,chrome 57.0 for android
+moto_c,mobile,Moto C Build/NRD90M.063,,chrome 62.0 for android
+lg-k410,mobile,LG-K410 Build/LRX22G,,chrome 59.0 for android
+sm-g935f,mobile,SM-G935F Build/MMB29K,,chrome 62.0 for android
+moto_c_plus,mobile,Moto C Plus Build/NRD90M.05.022,,chrome 56.0 for android
+lg-x180g,mobile,LG-X180g Build/LMY47I,,chrome 46.0 for android
+sm-g925p,mobile,SM-G925P Build/NRD90M,,chrome 56.0 for android
+es-us,mobile,es-us,,android webview 4.0
+sm-g920v,mobile,SM-G920V Build/NRD90M,Android 7.0,chrome 62.0 for android
+sm-g935t,mobile,SM-G935T Build/NRD90M,Android 7.0,chrome 62.0 for android
+moto_e_4_plus,mobile,Moto E (4) Plus Build/NMA26.42-69,,chrome generic
+sm-g925w8,mobile,SM-G925W8,,chrome 62.0 for android
+rv480,desktop,rv:48.0,Windows 7,firefox 48.0
+samsung-sm-g930a,mobile,SAMSUNG-SM-G930A Build/NRD90M,Android 7.0,chrome 62.0 for android
+htc_one_m9,mobile,HTC One M9 Build/NRD90M,Android 7.0,chrome 62.0 for android
+7055a,mobile,7055A Build/KVT49L,,chrome 62.0 for android
+sm-t810,mobile,SM-T810 Build/NRD90M,Android 7.0,chrome 62.0 for android
+rv510,desktop,rv:51.0,,firefox
+sm-n910v,mobile,SM-N910V Build/MMB29M,Android 6.0.1,chrome 62.0 for android
+sm-g930t,mobile,SM-G930T Build/NRD90M,Android 7.0,chrome 62.0 for android
+lg-h870,mobile,LG-H870 Build/NRD90U,,chrome 62.0 for android
+samsung_sm-g950u1,mobile,SAMSUNG SM-G950U1 Build/NRD90M,Android 7.0,samsung browser 6.2
+samsung_sm-s727vl,mobile,SAMSUNG SM-S727VL Build/MMB29M,Android 6.0.1,samsung browser 4.0
+sm-n920g,mobile,SM-N920G Build/NRD90M,,chrome 62.0 for android
+moto_g_5_plus,mobile,Moto G (5) Plus Build/NPN25.137-72,,android webview 4.0
+moto_g_5,mobile,Moto G (5) Build/NPP25.137-72,,chrome generic
+lg-d373,mobile,LG-D373 Build/KOT49I.V10a,,chrome 61.0 for android
+ale-l23,mobile,ALE-L23 Build/HuaweiALE-L23,,chrome 46.0 for android
+z836bl,mobile,Z836BL,Android 6.0.1,chrome 53.0 for android
+ilium_x710,mobile,Ilium X710 Build/MRA58K,,chrome 62.0 for android
+lg-d680,mobile,LG-D680 Build/KOT49I,,chrome 62.0 for android
+m4_ss4450,mobile,M4 SS4450 Build/MRA58K,,other
+lg-k580,mobile,LG-K580 Build/MRA58K,,chrome 62.0 for android
+sm-a710m,mobile,SM-A710M,,chrome 62.0 for android
+moto_z2_play,mobile,Moto Z2 Play Build/NPSS26.118-19-6,,chrome 62.0 for android
+z981,mobile,Z981 Build/MMB29M,Android 6.0.1,chrome 62.0 for android
+sm-t710,mobile,SM-T710 Build/NRD90M,,chrome 62.0 for android
+sm-t700,mobile,SM-T700 Build/MMB29K,,chrome 62.0 for android
+one_touch_4033a,mobile,ONE TOUCH 4033A Build/JDQ39,,chrome 62.0 for android
+f5121,mobile,F5121 Build/34.3.A.0.228,,chrome 62.0 for android
+was-lx3,mobile,WAS-LX3 Build/HUAWEIWAS-LX3,,chrome 62.0 for android
+r8106,mobile,R8106,,chrome 62.0 for android
+motog3,mobile,MotoG3 Build/MPIS24.65-33.1-2-16,,chrome 62.0 for android
+sm-g925i,mobile,SM-G925I Build/MMB29K,,chrome 62.0 for android
+huawei_vns-l53,mobile,HUAWEI VNS-L53 Build/HUAWEIVNS-L53,,chrome 62.0 for android
+blade_v6,mobile,Blade V6 Build/LRX22G,,chrome 62.0 for android
+sm-t113nu,mobile,SM-T113NU Build/KTU84P,,chrome 62.0 for android
+samsung_sm-g530h,mobile,SAMSUNG SM-G530H Build/LRX22G,,other
+sm-j510mn,mobile,SM-J510MN Build/MMB29M,,chrome 62.0 for android
+sm-g950f,mobile,SM-G950F Build/NRD90M,,chrome 62.0 for android
+samsung_sm-j700m,mobile,SAMSUNG SM-J700M Build/MMB29K,,samsung browser 6.2
+sm-g570m,mobile,SM-G570M Build/MMB29K,,chrome 62.0 for android
+samsung-sm-g891a,mobile,SAMSUNG-SM-G891A Build/NRD90M,Android 7.0,chrome 62.0 for android
+sm-j500m,mobile,SM-J500M Build/LMY48B,,chrome 62.0 for android
+sm-j727u,mobile,SM-J727U Build/NRD90M,,chrome 58.0 for android
+lgls676,mobile,LGLS676 Build/MXB48T,Android 6.0.1,chrome 62.0 for android
+ta-1003,mobile,TA-1003,,chrome 62.0 for android
+sm-g900v,mobile,SM-G900V Build/MMB29M,Android 6.0.1,chrome 62.0 for android
+vk810,mobile,VK810,Android 5.0.2,chrome 62.0 for android
+kfaswi,mobile,KFASWI Build/LVY48F,Android 5.1.1,chrome generic
+sm-j320m,mobile,SM-J320M Build/LMY47V,,chrome 62.0 for android
+sm-j120h,mobile,SM-J120H Build/LMY47V,,chrome generic
+sm-n950u,mobile,SM-N950U Build/NMF26X,Android 7.1.1,chrome 62.0 for android
+lg-d693n,mobile,LG-D693n Build/LRX22G,,chrome 60.0 for android
+huawei_rio-l03,mobile,HUAWEI RIO-L03 Build/HUAWEIRIO-L03,,chrome 62.0 for android
+samsung_sm-g930a,mobile,SAMSUNG SM-G930A Build/NRD90M,Android 7.0,samsung browser 6.2
+5012g,mobile,5012G Build/MRA58K,,chrome 55.0 for android
+sm-p350,mobile,SM-P350 Build/MMB29M,,chrome 62.0 for android
+sm-a300h,mobile,SM-A300H Build/LRX22G,,chrome 62.0 for android
+moto,mobile,Moto,Android 7.0,chrome generic
+sm-g925v,mobile,SM-G925V Build/NRD90M,Android 7.0,chrome 62.0 for android
+samsung_sm-n910a,mobile,SAMSUNG SM-N910A Build/MMB29M,Android 6.0.1,samsung browser 6.2
+sm-g532m,mobile,SM-G532M Build/MMB29T,,chrome 60.0 for android
+5080a,mobile,5080A Build/MRA58K,,chrome 62.0 for android
+xt1254,mobile,XT1254 Build/MCG24.251-5-5,Android 6.0.1,chrome 62.0 for android
+kfgiwi,mobile,KFGIWI Build/LVY48F,Android 5.1.1,chrome generic
+lg-d331,mobile,LG-D331 Build/LRX22G,,chrome 60.0 for android
+sm-g950u1,mobile,SM-G950U1 Build/NRD90M,Android 7.0,chrome 62.0 for android
+pixel,mobile,Pixel,,chrome 62.0 for android
+sm-g900t,mobile,SM-G900T Build/MMB29M,Android 6.0.1,chrome 62.0 for android
+e5606,mobile,E5606 Build/30.2.A.1.21,,chrome 62.0 for android
+z410,mobile,Z410,,chrome 62.0 for android
+lg-h500,mobile,LG-H500 Build/LRX21Y,,chrome 59.0 for android
+huawei_tag-l13,mobile,HUAWEI TAG-L13 Build/HUAWEITAG-L13,,chrome 62.0 for android
+p4526a,mobile,P4526A Build/NRD90M,,chrome 58.0 for android
+sm-g900f,mobile,SM-G900F Build/MMB29M,,chrome 62.0 for android
+sm-a510m,mobile,SM-A510M Build/NRD90M,,chrome 62.0 for android
+xt1565,mobile,XT1565,Android 6.0.1,chrome 62.0 for android
+blade_v6_max,mobile,Blade V6 Max Build/MRA58K,,chrome 62.0 for android
+f3213,mobile,F3213 Build/36.1.A.1.86,,chrome 62.0 for android
+rex,mobile,REX,,chrome 61.0 for android
+xt1585,mobile,XT1585 Build/NCK25.118-10.5,Android 7.0,chrome 62.0 for android
+motog3-te,mobile,MotoG3-TE,,chrome 62.0 for android
+ilium_lt510,mobile,Ilium LT510 Build/MRA58K,,chrome 60.0 for android
+samsung-sm-g870a,mobile,SAMSUNG-SM-G870A Build/MMB29M,Android 6.0.1,chrome 62.0 for android
+sm-a500m,mobile,SM-A500M Build/KTU84P,,chrome 62.0 for android
+htc,mobile,HTC,Android,chrome 50.0 for android
+samsung_sm-g950f,mobile,SAMSUNG SM-G950F Build/NRD90M,,samsung browser 6.2
+lg-x240,mobile,LG-X240 Build/MRA58K,,chrome 62.0 for android
+kfauwi,mobile,KFAUWI Build/LVY48F,Android 5.1.1,chrome generic
+lg-k428,mobile,LG-K428 Build/MMB29M,Android 6.0.1,chrome 59.0 for android
+samsung_sm-t580,mobile,SAMSUNG SM-T580 Build/NRD90M,Android 7.0,samsung browser 6.2
+edison,mobile,Edison,,chrome 62.0 for android
+hisense_f20,mobile,Hisense F20 Build/MMB29M,,chrome 62.0 for android
+sm-j327v,mobile,SM-J327V Build/NRD90M,Android 7.0,chrome 62.0 for android
+lgls775,mobile,LGLS775 Build/NRD90U,Android 7.0,chrome 61.0 for android
+lg-ls777,mobile,LG-LS777 Build/NRD90U,Android 7.0,chrome 62.0 for android
+lg-h320,mobile,LG-H320 Build/LRX21Y,,chrome 51.0 for android
+qtasun1,mobile,QTASUN1 Build/NRD90M,Android 7.0,chrome 56.0 for android
+sm-j730g,mobile,SM-J730G Build/NRD90M,,chrome 62.0 for android
+rv580,desktop,rv:58.0,,firefox generic
+htc_10,mobile,HTC 10 Build/NRD90M,Android 7.0,chrome 62.0 for android
+xt1063,mobile,XT1063,,chrome 62.0 for android
+vs995,mobile,VS995 Build/NRD90M,Android 7.0,chrome 62.0 for android
+sm-g550t,mobile,SM-G550T Build/MMB29K,Android 6.0.1,chrome 59.0 for android
+samsung_sm-g930p,mobile,SAMSUNG SM-G930P Build/NRD90M,Android 7.0,samsung browser 6.2
+lg-k530,mobile,LG-K530 Build/MMB29M,,chrome 62.0 for android
+samsung_sm-j701m,mobile,SAMSUNG SM-J701M Build/NRD90M,,samsung browser 6.2
+samsung_sm-t587p,mobile,SAMSUNG SM-T587P Build/NRD90M,Android 7.0,samsung browser 6.2
+sm-t530nu,mobile,SM-T530NU Build/LRX22G,Android 5.0.2,chrome 62.0 for android
+sm-s920l,mobile,SM-S920L,Android 5.0.2,chrome 62.0 for android
+sm-g530h,mobile,SM-G530H Build/LRX22G,,chrome 62.0 for android
+lg-v410,mobile,LG-V410,Android 5.0.2,chrome 61.0 for android
+samsung_sm-g891a,mobile,SAMSUNG SM-G891A Build/NRD90M,Android 7.0,samsung browser 6.2
+gt-p5113,mobile,GT-P5113,Android,chrome 62.0 for android
+lg-h840,mobile,LG-H840 Build/NRD90U,,chrome 62.0 for android
+bac-l03,mobile,BAC-L03 Build/HUAWEIBAC-L03,,chrome 62.0 for android
+samsung_sm-t810,mobile,SAMSUNG SM-T810 Build/NRD90M,,samsung browser 6.2
+vs835,mobile,VS835,Android 7.0,chrome 62.0 for android
+lg-tp450,mobile,LG-TP450 Build/NRD90U,,chrome 60.0 for android
+sm-j727v,mobile,SM-J727V Build/NRD90M,Android 7.0,chrome 62.0 for android
+sm-g955f,mobile,SM-G955F Build/NRD90M,,chrome 62.0 for android
+kfdowi,mobile,KFDOWI Build/LVY48F,Android 5.1.1,chrome generic
+sm-j200m,mobile,SM-J200M Build/LMY47X,,chrome 62.0 for android
+sm-j320h,mobile,SM-J320H,,chrome 62.0 for android
+blade_v8_se,mobile,BLADE V8 SE Build/NRD90M,,chrome 62.0 for android
+sm-n920t,mobile,SM-N920T Build/NRD90M,Android 7.0,chrome 62.0 for android
+lg-h542,mobile,LG-H542 Build/MRA58K,,chrome 52.0 for android
+sm-t330nu,mobile,SM-T330NU Build/LMY47X,Android 5.1.1,chrome 61.0 for android
+samsung_sm-j500m,mobile,SAMSUNG SM-J500M Build/LMY48B,,other
+lg-m322,mobile,LG-M322,Android 7.0,chrome 62.0 for android
+chc-u03,mobile,CHC-U03 Build/HuaweiCHC-U03,,chrome 62.0 for android
+htc_desire_650,mobile,HTC Desire 650 Build/MMB29M,,chrome 60.0 for android
+samsung-sm-g935a,mobile,SAMSUNG-SM-G935A Build/NRD90M,Android 7.0,chrome 57.0 for android
+lg-k200,mobile,LG-K200 Build/MXB48T,,chrome 62.0 for android
+aquaris,mobile,Aquaris,,chrome 61.0 for android
+sm-j710mn,mobile,SM-J710MN Build/MMB29K,,chrome 62.0 for android
+alcatel_4060a,mobile,Alcatel_4060A,Android 5.1.1,chrome generic
+lgms631,mobile,LGMS631 Build/MRA58K,Android 6.0,chrome 62.0 for android
+mot-a6020l37,mobile,MOT-A6020l37 Build/LMY47V,,other
+5011a,mobile,5011A Build/NRD90M,,chrome 56.0 for android
+sm-t550,mobile,SM-T550 Build/NMF26X,Android 7.1.1,chrome 62.0 for android
+e6603,mobile,E6603 Build/32.4.A.1.54,,chrome 62.0 for android
+redmi_4a,mobile,Redmi 4A Build/MMB29M,,chrome 62.0 for android
+rv550,desktop,rv:55.0,Mac OS X 10.10,firefox 55.0
+sm-t520,mobile,SM-T520,Android 4.4.2,chrome 62.0 for android
+htc_desire_10_lifestyle,mobile,HTC Desire 10 lifestyle Build/MMB29M,,chrome 62.0 for android
+sm-a720f,mobile,SM-A720F Build/MMB29K,,chrome 62.0 for android
+moto_g_5s,mobile,Moto G (5S,,chrome generic
+sm-g930r4,mobile,SM-G930R4 Build/NRD90M,Android 7.0,chrome 62.0 for android
+samsung_sm-g610m,mobile,SAMSUNG SM-G610M Build/MMB29K,,samsung browser 6.2
+lenovo_k33b36,mobile,Lenovo K33b36 Build/NRD90N,,chrome 62.0 for android
+sm-g930u,mobile,SM-G930U Build/NRD90M,,chrome 62.0 for android
+samsung_sm-n950u,mobile,SAMSUNG SM-N950U Build/NMF26X,Android 7.1.1,samsung browser 6.2
+sm-a320fl,mobile,SM-A320FL Build/MMB29K,,chrome 62.0 for android
+lg-m250,mobile,LG-M250 Build/NRD90U,,chrome 62.0 for android
+kfsawi,mobile,KFSAWI,Android 5.1.1,chrome generic
+samsung_sm-g930f,mobile,SAMSUNG SM-G930F Build/NRD90M,,samsung browser 6.2
+samsung_sm-n920v,mobile,SAMSUNG SM-N920V Build/NRD90M,Android 7.0,samsung browser 6.2
+windows_nt_61,desktop,Windows NT 6.1,,ie
+rv450,desktop,rv:45.0,Windows 10,firefox
+samsung-sm-j327a,mobile,SAMSUNG-SM-J327A Build/NRD90M,Android 7.0,chrome 62.0 for android
+sm-g935v,mobile,SM-G935V Build/NRD90M,Android 7.0,chrome 62.0 for android
+mddrjs,desktop,MDDRJS,Windows 7,ie 11.0 for desktop
+sm-g935p,mobile,SM-G935P Build/NRD90M,Android 7.0,chrome 62.0 for android
+sm-g930p,mobile,SM-G930P Build/NRD90M,Android 7.0,chrome 62.0 for android
+sm-g928v,mobile,SM-G928V Build/NRD90M,Android 7.0,chrome 62.0 for android
+lg-m210,mobile,LG-M210 Build/NRD90U,Android 7.0,chrome 62.0 for android
+blade_v580,mobile,Blade V580 Build/LMY47D,,chrome 62.0 for android
+ilium_lt500,mobile,Ilium LT500 Build/LMY47O,,chrome 60.0 for android
+y635-l03,mobile,Y635-L03 Build/HuaweiY635-L03,,chrome 62.0 for android
+rv420,desktop,rv:42.0,Windows 7,firefox
+samsung_sm-g925t,mobile,SAMSUNG SM-G925T Build/NRD90M,Android 7.0,samsung browser 6.2
+samsung-sm-g900a,mobile,SAMSUNG-SM-G900A Build/LRX21T,Android 5.0,chrome 62.0 for android
+moto_z_2,mobile,Moto Z (2,Android 7.1.1,chrome generic
+sm-g360t1,mobile,SM-G360T1 Build/LMY47X,,chrome 53.0 for android
+sm-s903vl,mobile,SM-S903VL,Android 6.0.1,chrome 62.0 for android
+samsung_sm-g920a,mobile,SAMSUNG SM-G920A Build/NRD90M,Android 7.0,samsung browser 6.2
+huawei_vns-l23,mobile,HUAWEI VNS-L23 Build/HUAWEIVNS-L23,,chrome 62.0 for android
+lg-h811,mobile,LG-H811 Build/MRA58K,Android 6.0,chrome 62.0 for android
+m4_ss4456,mobile,M4 SS4456 Build/LMY47V,,chrome 62.0 for android
+samsung-sm-t337a,mobile,SAMSUNG-SM-T337A Build/LMY47X,Android 5.1.1,chrome 62.0 for android
+samsung_sm-g955u,mobile,SAMSUNG SM-G955U Build/NRD90M,Android 7.0,samsung browser 6.2
+sm-g900p,mobile,SM-G900P Build/MMB29M,Android 6.0.1,android webview 4.0
+sm-g800f,mobile,SM-G800F Build/KOT49H,,chrome 62.0 for android
+bntv400,mobile,BNTV400,Android,chrome generic for android
+huawei_vns-l21,mobile,HUAWEI VNS-L21 Build/HUAWEIVNS-L21,,chrome 62.0 for android
+oneplus_a5000,mobile,ONEPLUS A5000 Build/NMF26X,,chrome 62.0 for android
+htc_desire_626s,mobile,HTC Desire 626s Build/LMY47O,,chrome 61.0 for android
+android_44,mobile,Android 4.4.2,Android 4.4.2,other
+xt1710-02,mobile,XT1710-02 Build/NDSS26.118-23-15,Android 7.1.1,chrome 62.0 for android
+rv490,desktop,rv:49.0,,firefox
+eva-l09,mobile,EVA-L09 Build/HUAWEIEVA-L09,,chrome 62.0 for android
+lenovo,mobile,Lenovo,,chrome 62.0 for android
+lg-k540,mobile,LG-K540 Build/MMB29M,Android 6.0.1,chrome 62.0 for android
+frd-l04,mobile,FRD-L04 Build/HUAWEIFRD-L04,Android 7.0,chrome 62.0 for android
+linux_x86_64,desktop,Linux x86_64,,firefox 56.0
+samsung_sm-g935t,mobile,SAMSUNG SM-G935T Build/NRD90M,Android 7.0,samsung browser 6.2
+sm-g900m,mobile,SM-G900M Build/LRX21T,,chrome 62.0 for android
+lg-h820,mobile,LG-H820 Build/NRD90U,Android 7.0,chrome 62.0 for android
+z983,mobile,Z983 Build/NMF26F,Android 7.1.1,chrome 62.0 for android
+lgls991,mobile,LGLS991,Android 6.0,chrome 62.0 for android
+sm-s120vl,mobile,SM-S120VL,Android 6.0.1,chrome 62.0 for android
+le,mobile,Le,Android,chrome 62.0 for android
+ilium_l1120,mobile,Ilium L1120 Build/NRD90M,,chrome 62.0 for android
+xt1650,mobile,XT1650 Build/NCLS26.118-23-13-3,Android 7.1.1,chrome 62.0 for android
+sm-t377p,mobile,SM-T377P Build/NMF26X,Android 7.1.1,chrome 60.0 for android
+qtaqz3,mobile,QTAQZ3 Build/LMY47V,Android 5.1.1,chrome 62.0 for android
+sm-a310m,mobile,SM-A310M,,chrome 62.0 for android
+f5321,mobile,F5321,,chrome 62.0 for android
+kftbwi,mobile,KFTBWI Build/LVY48F,Android 5.1.1,chrome generic
+m4_ss4453,mobile,M4 SS4453 Build/MMB29M,,chrome 62.0 for android
+xt1064,mobile,XT1064 Build/MPB24.65-34-3,,chrome 62.0 for android
+vs987,mobile,VS987 Build/NRD90U,Android 7.0,android webview 4.0
+sm-g386t,mobile,SM-G386T,Android 4.4.2,chrome 62.0 for android
+samsung-sm-n920a,mobile,SAMSUNG-SM-N920A Build/NRD90M,,chrome 62.0 for android
+samsung_sm-j727t1,mobile,SAMSUNG SM-J727T1 Build/NRD90M,Android 7.0,samsung browser 5.4
+samsung_sm-g532m,mobile,SAMSUNG SM-G532M Build/MMB29T,,samsung browser 6.2
+sm-g925t,mobile,SM-G925T Build/NRD90M,Android 7.0,chrome 61.0 for android
+nethelper70,desktop,NetHelper70,,ie 11.0 for desktop
+samsung_sm-g890a,mobile,SAMSUNG SM-G890A Build/NRD90M,Android 7.0,samsung browser 5.4
+d5803,mobile,D5803 Build/23.5.A.1.291,,chrome 62.0 for android
+gt-i8190l,mobile,GT-I8190L Build/JZO54K,,chrome 59.0 for android
+nexus,mobile,Nexus,Android 5.1.1,chrome 62.0 for android
+sm-t580,mobile,SM-T580 Build/NRD90M,Android 7.0,chrome 62.0 for android
+zeia8,mobile,ZEIA8,,chrome 62.0 for android
+sm-n920p,mobile,SM-N920P Build/NRD90M,Android 7.0,chrome 62.0 for android
+samsung_sm-j320f,mobile,SAMSUNG SM-J320F Build/LMY47V,,chrome generic
+vs501,mobile,VS501 Build/NRD90U,Android 7.0,chrome 62.0 for android
+linux_i686,desktop,Linux i686,Linux,firefox
+sm-n910h,mobile,SM-N910H,,chrome 62.0 for android
+sm-g920f,mobile,SM-G920F Build/NRD90M,,chrome 62.0 for android
+sm-t560,mobile,SM-T560 Build/KTU84P,,chrome 62.0 for android
+motoe24g-lte,mobile,MotoE2(4G-LTE,,chrome generic
+touch,desktop,Touch,,ie 11.0 for desktop
+lg-x230,mobile,LG-X230 Build/MRA58K,,chrome 62.0 for android
+lg-k371,mobile,LG-K371,Android 7.0,chrome 62.0 for android
+sm-t560nu,mobile,SM-T560NU Build/MMB29M,Android 6.0.1,chrome 61.0 for android
+samsung_sm-a520f,mobile,SAMSUNG SM-A520F Build/NRD90M,,samsung browser 6.2
+sm-p600,mobile,SM-P600 Build/LMY47X,,chrome 62.0 for android
+htc_u11,mobile,HTC U11 Build/NMF26X,,chrome 62.0 for android
+kfapwi,mobile,KFAPWI Build/KTU84M,Android,chrome generic
+g3313,mobile,G3313,,chrome 62.0 for android
+ax920,mobile,AX920,,chrome 62.0 for android
+sm-j327vpp,mobile,SM-J327VPP Build/NRD90M,Android 7.0,chrome 62.0 for android
+lg-m320,mobile,LG-M320 Build/NRD90U,,chrome 62.0 for android
+sm-g610f,mobile,SM-G610F,,chrome 62.0 for android
+rv540,desktop,rv:54.0,Mac OS X 10.11,firefox
+qmv7a,mobile,QMV7A,Android 4.4.2,chrome 60.0 for android
+sm-t817v,mobile,SM-T817V Build/NRD90M,Android 7.0,chrome 62.0 for android
+htc_desire_530,mobile,HTC Desire 530 Build/MMB29M,,chrome 60.0 for android
+lg-ls998,mobile,LG-LS998,Android 7.1.2,chrome 62.0 for android
+rv410,desktop,rv:41.0,,firefox
+gt-p5210,mobile,GT-P5210 Build/JDQ39,,chrome 62.0 for android
+sm-j730f,mobile,SM-J730F,,chrome 62.0 for android
+kfjwi,mobile,KFJWI,Android,silk
+htc_desire_510,mobile,HTC Desire 510 Build/KOT49H,Android 4.4.2,chrome 62.0 for android
+android,mobile,Android,,chrome generic
+lg-h810,mobile,LG-H810,Android 6.0,chrome 62.0 for android
+sm-g920p,mobile,SM-G920P Build/NRD90M,Android 7.0,chrome 62.0 for android
+d6603,mobile,D6603 Build/23.5.A.1.291,,chrome 61.0 for android
+sm-g930f,mobile,SM-G930F Build/NRD90M,,chrome 62.0 for android
+lgms550,mobile,LGMS550 Build/NRD90U,Android 7.0,chrome 62.0 for android
+sm-a520f,mobile,SM-A520F Build/NRD90M,,chrome 62.0 for android
+sm-g920t,mobile,SM-G920T Build/NRD90M,Android 7.0,chrome 62.0 for android
+fractal,mobile,Fractal,,android webview 4.0
+huawei,mobile,HUAWEI,,chrome 62.0 for android
+sm-t350,mobile,SM-T350 Build/NMF26X,Android 7.1.1,chrome 62.0 for android
+samsung_sm-j730gm,mobile,SAMSUNG SM-J730GM Build/NRD90M,,samsung browser 6.2
+ta-1039,mobile,TA-1039 Build/N2G47H,,chrome 62.0 for android
+xt1003,mobile,XT1003,,chrome 62.0 for android
+bv6000,mobile,BV6000,,chrome 62.0 for android
+sm-t230,mobile,SM-T230 Build/KOT49H,,chrome 62.0 for android
+samsung_sm-g920p,mobile,SAMSUNG SM-G920P Build/NRD90M,Android 7.0,samsung browser 6.2
+htc_one_a9,mobile,HTC One A9 Build/NRD90M,,chrome 62.0 for android
+nx785qc8g,mobile,NX785QC8G,Android 4.4.2,chrome 62.0 for android
+rv470,desktop,rv:47.0,,firefox 47.0
+e5506,mobile,E5506 Build/29.1.A.0.101,,chrome 63.0 for android
+lgl33lv100,mobile,LGL33L/V100,Android,other
+sm-j510fn,mobile,SM-J510FN,,chrome 62.0 for android
+lgms330,mobile,LGMS330 Build/LMY47V,Android 5.1.1,chrome 62.0 for android
+microsoft,mobile,Microsoft,,edge
+samsung_sm-g955f,mobile,SAMSUNG SM-G955F Build/NRD90M,,samsung browser 6.2
+xt1053,mobile,XT1053 Build/LPAS23.12-21.7-1,,chrome 63.0 for android
+5025g,mobile,5025G Build/LMY47I,,chrome 62.0 for android
+lg-h918,mobile,LG-H918 Build/NRD90M,Android 7.0,chrome 62.0 for android
+sm-g900w8,mobile,SM-G900W8,,chrome 62.0 for android
+sm-j320v,mobile,SM-J320V Build/NMF26X,Android 7.1.1,chrome 62.0 for android
+sm-j105b,mobile,SM-J105B Build/LMY47V,,chrome 62.0 for android
+samsung_sm-g550t1,mobile,SAMSUNG SM-G550T1 Build/MMB29K,Android 6.0.1,other
+5010s,mobile,5010S Build/MRA58K,,chrome 62.0 for android
+lg-h910,mobile,LG-H910 Build/NRD90M,Android 7.0,chrome 62.0 for android
+motoe2,mobile,MotoE2 Build/LPCS23.13-56-5,,chrome 61.0 for android
+lgms210,mobile,LGMS210 Build/NRD90U,Android 7.0,chrome 62.0 for android
+lg-m700,mobile,LG-M700 Build/NMF26X,,chrome 58.0 for android
+5054n,mobile,5054N,,chrome 61.0 for android
+samsung_sm-g900a,mobile,SAMSUNG SM-G900A Build/MMB29M,Android 6.0.1,samsung browser 6.2
+samsung-sm-t677a,mobile,SAMSUNG-SM-T677A,Android 5.1.1,chrome generic
+sm-j500fn,mobile,SM-J500FN,,chrome 62.0 for android
+lgmp450,mobile,LGMP450 Build/NRD90U,Android 7.0,chrome 62.0 for android
+pixel_2,mobile,Pixel 2 Build/OPM1.171019.011,Android 8.1.0,chrome 63.0 for android
+sm-j701m,mobile,SM-J701M Build/NRD90M,,chrome 62.0 for android
+z798bl,mobile,Z798BL Build/MMB29M,Android 6.0.1,chrome 53.0 for android
+huawei_cun-l03,mobile,HUAWEI CUN-L03 Build/HUAWEICUN-L03,,chrome 50.0 for android
+lenovo-a6020l36,mobile,Lenovo-A6020l36 Build/LMY47V,,other
+vs820,mobile,VS820,Android 5.1.1,chrome 61.0 for android
+kfthwi,mobile,KFTHWI Build/KTU84M,Android,chrome generic
+sm-t827v,mobile,SM-T827V Build/NRD90M,Android 7.0,chrome 63.0 for android
+lg-h650,mobile,LG-H650 Build/MRA58K,,chrome 62.0 for android
+samsung-sgh-i337,mobile,SAMSUNG-SGH-I337 Build/KOT49H,,chrome 62.0 for android
+lg-k220,mobile,LG-K220 Build/MXB48T,,chrome 62.0 for android
+lg-h810h81021z,mobile,LG-H810/H81021z,Android 6.0,android webview 4.0
+ale-l21,mobile,ALE-L21 Build/HuaweiALE-L21,,chrome 62.0 for android
+redmi_4x,mobile,Redmi 4X Build/N2G47H,,chrome 62.0 for android
+samsung_sm-g935a,mobile,SAMSUNG SM-G935A Build/NRD90M,Android 7.0,samsung browser 6.2
+sm-t713,mobile,SM-T713 Build/NRD90M,,chrome 63.0 for android
+5051a,mobile,5051A Build/MMB29M,,chrome 50.0 for android
+lg-p714,mobile,LG-P714,,chrome 61.0 for android
+samsung_sm-g531h,mobile,SAMSUNG SM-G531H Build/LMY48B,,Samsung/SM-G531H
+sm-g928g,mobile,SM-G928G Build/NRD90M,,chrome 63.0 for android
+x10,mobile,X10,Android 5.1.1,chrome 43.0 for android
+gt-i9500,mobile,GT-I9500,,chrome 62.0 for android
+huawei_y625-u13,mobile,HUAWEI Y625-U13 Build/HUAWEIY625-U13,,chrome 62.0 for android
+hisense_l675,mobile,Hisense L675 Build/MRA58K,,chrome 60.0 for android
+p5526a,mobile,P5526A Build/NRD90M,,chrome 62.0 for android
+sm-t818v,mobile,SM-T818V,Android 7.0,chrome 62.0 for android
+es-mx,mobile,es-mx,,chrome generic
+lg-d851,mobile,LG-D851,Android 6.0,android webview 4.0
+lg-h990,mobile,LG-H990 Build/NRD90M,Android 7.0,chrome 62.0 for android
+lg-v495v49520l,mobile,LG-V495/V49520l,Android 6.0,android webview 4.0
+pra-lx3,mobile,PRA-LX3 Build/HUAWEIPRA-LX3,,chrome 62.0 for android
+xt1080,mobile,XT1080 Build/SU6-7.7,Android,chrome generic
+huawei_y520-u03,mobile,HUAWEI Y520-U03 Build/HUAWEIY520-U03,,chrome 60.0 for android
+lenovo_a2016b30,mobile,Lenovo A2016b30 Build/MRA58K,,chrome 61.0 for android
+mya-l23,mobile,MYA-L23,,chrome 62.0 for android
+k88,mobile,K88 Build/MMB29M,Android 6.0.1,chrome 60.0 for android
+lgls770,mobile,LGLS770,Android 6.0,android webview 4.0
+lg-m153,mobile,LG-M153 Build/MXB48T,,chrome 53.0 for android
+qtair7,mobile,QTAIR7 Build/LMY47D,Android,chrome 62.0 for android
+2pq93,mobile,2PQ93,Android 7.0,chrome 59.0 for android
+sm-j111m,mobile,SM-J111M Build/LMY47V,,chrome 62.0 for android
+sm-s320vl,mobile,SM-S320VL,,chrome 62.0 for android
+lg-h901,mobile,LG-H901,Android 6.0,chrome 62.0 for android
+ilium,mobile,ILIUM,,chrome 59.0 for android
+sm-t377v,mobile,SM-T377V Build/NMF26X,Android 7.1.1,chrome 62.0 for android
+one_a2005,mobile,ONE A2005 Build/MMB29M,Android 6.0.1,chrome 62.0 for android
+sm-n910t,mobile,SM-N910T Build/MMB29M,Android 6.0.1,chrome 62.0 for android
+android_51,mobile,Android 5.1,,other
+xt1058,mobile,XT1058 Build/LPAS23.12-21.7-1,,chrome 62.0 for android
+pixel_xl,mobile,Pixel XL Build/OPM1.171019.011,Android 8.1.0,chrome 63.0 for android
+lg-tp260,mobile,LG-TP260 Build/NRD90U,Android 7.0,chrome 62.0 for android
+sm-n900v,mobile,SM-N900V Build/LRX21V,Android 5.0,chrome 62.0 for android
+moto_x_play,mobile,Moto X Play Build/NPD26.48-24-1,,chrome 62.0 for android
+sky_50lm,mobile,SKY_5.0LM,,chrome 62.0 for android
+sm-a320y,mobile,SM-A320Y Build/NRD90M,,chrome 62.0 for android
+sm-t230nu,mobile,SM-T230NU Build/KOT49H,Android 4.4.2,chrome 62.0 for android
+kftt,mobile,KFTT Build/IML74K,Android,silk
+2ps64,mobile,2PS64 Build/NRD90M,Android 7.0,chrome 62.0 for android
+stv100-2,mobile,STV100-2 Build/MMB29M,Android 6.0.1,chrome 62.0 for android
+g3123,mobile,G3123 Build/40.0.A.6.135,,chrome 62.0 for android
+samsung_sm-a300h,mobile,SAMSUNG SM-A300H Build/LRX22G,,chrome generic
+z971,mobile,Z971,Android 7.1.1,chrome 62.0 for android
+sm-g935w8,mobile,SM-G935W8,,chrome 62.0 for android
+sm-p580,mobile,SM-P580 Build/NRD90M,Android 7.0,chrome 63.0 for android
+samsung-sm-j320a,mobile,SAMSUNG-SM-J320A Build/MMB29K,Android 6.0.1,chrome 62.0 for android
+samsung-sm-j727a,mobile,SAMSUNG-SM-J727A Build/NRD90M,Android 7.0,chrome 63.0 for android
+verykools5030,mobile,VerykoolS5030,,chrome 61.0 for android
+sm-j320p,mobile,SM-J320P Build/LMY47X,,chrome 63.0 for android
+lgls751,mobile,LGLS751,Android 5.1.1,chrome 60.0 for android
+f8331,mobile,F8331 Build/41.2.A.7.76,,chrome 62.0 for android
+blade_l5,mobile,Blade L5 Build/LMY47I,,chrome 61.0 for android
+tommy2,mobile,TOMMY2,,chrome 62.0 for android
+rv500,desktop,rv:50.0,Mac OS X 10.10,firefox
+sla-l03,mobile,SLA-L03 Build/HUAWEISLA-L03,,chrome 63.0 for android
+sm-t280,mobile,SM-T280 Build/LMY47V,Android 5.1.1,chrome 62.0 for android
+z837vl,mobile,Z837VL,Android 6.0.1,chrome
+sm-a510f,mobile,SM-A510F Build/NRD90M,,chrome 63.0 for android
+xt1580,mobile,XT1580,,chrome 63.0 for android
+sm-t820,mobile,SM-T820 Build/NRD90M,Android 7.0,chrome generic for android
+sm-g550t1,mobile,SM-G550T1 Build/MMB29K,Android 6.0.1,chrome 61.0 for android
+lg-h871,mobile,LG-H871,Android 7.0,firefox
+lg-ls993,mobile,LG-LS993 Build/NRD90U,Android 7.0,chrome 62.0 for android
+sm-t377w,mobile,SM-T377W,Android 6.0.1,chrome 62.0 for android
+xt1563,mobile,XT1563 Build/MPDS24.107-52-5,,chrome 60.0 for android
+blade,mobile,Blade,,chrome 62.0 for android
+verykools5019,mobile,verykoolS5019,,chrome 62.0 for android
+sm-g360v,mobile,SM-G360V Build/LMY48B,Android 5.1.1,chrome 60.0 for android
+lg-x210,mobile,LG-X210 Build/LMY47I,,chrome 62.0 for android
+hi6210sft,mobile,hi6210sft Build/MRA58K,,chrome 62.0 for android
+samsung_sm-t530nu,mobile,SAMSUNG SM-T530NU Build/LRX22G,Android 5.0.2,chrome generic
+c6743,mobile,C6743 Build/LMY47V,Android 5.1.1,chrome generic
+bln-l24,mobile,BLN-L24 Build/HONORBLN-L24,Android 7.0,chrome 62.0 for android
+redmi_note_3,mobile,Redmi Note 3 Build/MMB29M,,chrome 62.0 for android
+e6810,mobile,E6810 Build/5.320VZ.03.r,Android 7.1.2,chrome 62.0 for android
+e6553,mobile,E6553,,chrome 63.0 for android
+pixel_2_xl,mobile,Pixel 2 XL Build/OPM1.171019.011,Android 8.1.0,chrome 62.0 for android
+z835,mobile,Z835 Build/NMF26V,Android 7.1.1,chrome 56.0 for android
+lg-d725,mobile,LG-D725,Android 5.0.2,chrome 62.0 for android
+xt1008,mobile,XT1008 Build/LPBS23.13-56-2,,chrome 62.0 for android
+xt1040,mobile,XT1040,,chrome 62.0 for android
+en-us,mobile,en-us,Android 4.4.2,chrome generic
+sm-t807v,mobile,SM-T807V,Android 6.0.1,chrome 62.0 for android
+vs996,mobile,VS996,Android 7.1.2,chrome 62.0 for android
+e6853,mobile,E6853,,chrome 62.0 for android
+lg-k550,mobile,LG-K550 Build/NRD90U,Android 7.0,chrome 62.0 for android
+xt1030,mobile,XT1030 Build/SU6-7.7,,chrome 62.0 for android
+lg-m154,mobile,LG-M154,,chrome 63.0 for android
+sm-j700t,mobile,SM-J700T Build/NMF26X,Android 7.1.1,chrome 62.0 for android
+8050g,mobile,8050G Build/LMY47I,,chrome 46.0 for android
+sm-a500fu,mobile,SM-A500FU Build/MMB29M,,chrome 62.0 for android
+sm-t337v,mobile,SM-T337V,Android 5.1.1,chrome 62.0 for android
+samsung-sm-t377a,mobile,SAMSUNG-SM-T377A Build/MMB29K,Android 6.0.1,chrome 63.0 for android
+helio,mobile,HELIO,,chrome 59.0 for android
+blade_v7,mobile,BLADE V7 Build/MRA58K,,chrome 63.0 for android
+sm-n950f,mobile,SM-N950F Build/NMF26X,,chrome 63.0 for android
+xt1031,mobile,XT1031,Android,chrome 62.0 for android
+samsung_sm-t710,mobile,SAMSUNG SM-T710 Build/NRD90M,,samsung browser 6.2
+lenovo_tb-7703x,mobile,Lenovo TB-7703X Build/S100,,chrome 63.0 for android
+lt30p,mobile,LT30p,,chrome 50.0 for android
+mha-l09,mobile,MHA-L09 Build/HUAWEIMHA-L09,,chrome 62.0 for android
+huawei_vns-l31,mobile,HUAWEI VNS-L31 Build/HUAWEIVNS-L31,,chrome 62.0 for android
+hisense_l675_pro,mobile,Hisense L675 PRO Build/NRD90M,,chrome 63.0 for android
+samsung-sm-g925a,mobile,SAMSUNG-SM-G925A Build/NRD90M,Android 7.0,chrome 63.0 for android
+mi_a1,mobile,Mi A1 Build/N2G47H,,opera
+sm-n900t,mobile,SM-N900T,Android 4.4.2,chrome 62.0 for android
+vs425pp,mobile,VS425PP Build/LMY47V,Android 5.1.1,chrome generic
+sm-j727t,mobile,SM-J727T Build/NRD90M,Android 7.0,chrome 63.0 for android
+lg-x220,mobile,LG-X220 Build/LMY47I,,chrome 50.0 for android
+att-ie11,desktop,ATT-IE11,Windows 7,ie 11.0 for desktop
+samsung_sm-g900f,mobile,SAMSUNG SM-G900F Build/MMB29M,,samsung browser 6.2
+blade_v8,mobile,BLADE V8 Build/NRD90M,,chrome 58.0 for android
+sm-j700t1,mobile,SM-J700T1 Build/NMF26X,Android 7.1.1,chrome 63.0 for android
+sm-g930r7,mobile,SM-G930R7,Android 7.0,chrome 63.0 for android
+lgus215,mobile,LGUS215 Build/NRD90U,Android 7.0,chrome 62.0 for android
+sm-t237p,mobile,SM-T237P,Android 5.1.1,chrome 62.0 for android
+ta-1038,mobile,TA-1038,,chrome 63.0 for android
+sm-g930w8,mobile,SM-G930W8 Build/NRD90M,Android 7.0,chrome 63.0 for android
+sm-g950w,mobile,SM-G950W,,chrome 60.0 for android
+sm-j100vpp,mobile,SM-J100VPP Build/LMY48B,Android 5.1.1,chrome 63.0 for android
+lgls990,mobile,LGLS990,Android,chrome 62.0 for android
+sm-a500h,mobile,SM-A500H,Android 6.0.1,chrome 62.0 for android
+f3313,mobile,F3313 Build/37.0.A.2.108,,chrome 63.0 for android
+sm-g900i,mobile,SM-G900I,,chrome 61.0 for android
+sm-t813,mobile,SM-T813 Build/NRD90M,Android 7.0,chrome 62.0 for android
+rv310,desktop,rv:31.0,,firefox
+sm-j730gm,mobile,SM-J730GM Build/NRD90M,,chrome 63.0 for android
+h1711,mobile,H1711 Build/HUAWEIH1711,Android 7.0,chrome 62.0 for android
+lg-v930,mobile,LG-V930,Android 6.0,chrome 63.0 for android
+lg-k240,mobile,LG-K240 Build/MXB48T,,chrome 62.0 for android
+z982,mobile,Z982 Build/NMF26V,,chrome 63.0 for android
+samsung_sm-j700t,mobile,SAMSUNG SM-J700T Build/NMF26X,Android 7.1.1,samsung browser 6.2
+rv440,desktop,rv:44.0,Windows 7,firefox
+xt1055,mobile,XT1055,Android,chrome 60.0 for android
+xt1575,mobile,XT1575,Android 7.0,chrome 63.0 for android
+sm-j327p,mobile,SM-J327P Build/MMB29M,Android 6.0.1,chrome 62.0 for android
+huawei_g7-l03,mobile,HUAWEI G7-L03 Build/HuaweiG7-L03,,chrome 60.0 for android
+sm-p900,mobile,SM-P900,Android 5.0.2,chrome 63.0 for android
+samsung_sm-n920t,mobile,SAMSUNG SM-N920T Build/NRD90M,Android 7.0,samsung browser 6.2
+blade_a510,mobile,Blade A510 Build/MRA58K,,chrome 61.0 for android
+lgl62vl,mobile,LGL62VL,Android 5.1.1,chrome 43.0 for android
+bbb100-3,mobile,BBB100-3,Android 7.1.1,chrome 63.0 for android
+sm-n910c,mobile,SM-N910C Build/MMB29K,,chrome 61.0 for android
+lg-ls997,mobile,LG-LS997 Build/NRD90M,Android 7.0,chrome 63.0 for android
+sm-n950w,mobile,SM-N950W,,chrome 62.0 for android
+4027a,mobile,4027A Build/KOT49H,,chrome 54.0 for android
+rv530,desktop,rv:53.0,Windows 10,firefox
+zte,mobile,ZTE,,chrome 62.0 for android
+lg-m150,mobile,LG-M150,,chrome 62.0 for android
+htc_one,mobile,HTC One Build/LRX22G,Android 5.0.2,chrome 63.0 for android
+samsung_sm-g925p,mobile,SAMSUNG SM-G925P Build/NRD90M,Android 7.0,samsung browser 6.2
+samsung_sm-g570m,mobile,SAMSUNG SM-G570M Build/MMB29K,,samsung browser 6.2
+lg-h830,mobile,LG-H830 Build/NRD90U,Android 7.0,chrome 62.0 for android
+samsung_sm-n920p,mobile,SAMSUNG SM-N920P Build/NRD90M,Android 7.0,samsung browser 5.4
+samsung-sm-g890a,mobile,SAMSUNG-SM-G890A Build/MMB29K,Android 6.0.1,chrome 63.0 for android
+samsung_sm-g920t,mobile,SAMSUNG SM-G920T Build/NRD90M,Android 7.0,samsung browser 6.2
+samsung_sm-n920a,mobile,SAMSUNG SM-N920A Build/NRD90M,Android 7.0,samsung browser 6.2
+rv460,desktop,rv:46.0,Mac OS X 10.13,firefox
+sm-t800,mobile,SM-T800 Build/MMB29K,,chrome 62.0 for android
+hp2015,desktop,hp2015,Windows 7,ie 11.0 for desktop
+samsung_sm-g903f,mobile,SAMSUNG SM-G903F Build/MMB29K,,samsung browser 6.2
+sm-j100mu,mobile,SM-J100MU,,chrome 61.0 for android
+e6833,mobile,E6833,,chrome 62.0 for android
+sm-g920w8,mobile,SM-G920W8,,chrome 63.0 for android
+5010g,mobile,5010G Build/MRA58K,,chrome 52.0 for android
+a3_mini,mobile,A3_mini,,android webview 4.0
+xt1528,mobile,XT1528,Android,chrome 62.0 for android
+rv390,desktop,rv:39.0,Windows 7,firefox
+sm-n900w8,mobile,SM-N900W8 Build/LRX21V,,chrome 62.0 for android
+sm-g920t1,mobile,SM-G920T1,,chrome 56.0 for android
+hp,mobile,HP,,chrome 60.0 for android
+sm-s820l,mobile,SM-S820L,,chrome 62.0 for android
+samsung_sm-g850fg850fxxs2cqd9,mobile,SAMSUNG SM-G850F/G850FXXS2CQD9 Build/LRX22G,,chrome generic
+lg-h850,mobile,LG-H850,,chrome 59.0 for android
+redmi,mobile,Redmi,,chrome 63.0 for android
+d6708,mobile,D6708,Android 5.1.1,chrome 61.0 for android
+lg-h900h90022b,mobile,LG-H900/H90022b,Android 6.0,android webview 4.0
+samsung-sm-g920a,mobile,SAMSUNG-SM-G920A Build/NRD90M,Android 7.0,chrome 63.0 for android
+huawei_can-l01,mobile,HUAWEI CAN-L01 Build/HUAWEICAN-L01,,chrome 63.0 for android
+samsung_sm-g935p,mobile,SAMSUNG SM-G935P Build/NRD90M,Android 7.0,samsung browser 6.2
+wow64,desktop,WOW64,Windows 7,ie 11.0 for desktop
+samsung_sm-j327t1,mobile,SAMSUNG SM-J327T1 Build/NRD90M,Android 7.0,samsung browser 6.2
+cro-l03,mobile,CRO-L03 Build/HUAWEICRO-L03,,chrome 62.0 for android
+hisense_f23,mobile,Hisense F23 Build/NRD90M,,chrome 63.0 for android
+lg-k373,mobile,LG-K373,Android 6.0,chrome 62.0 for android
+sm-g530p,mobile,SM-G530P,Android 5.1.1,chrome 63.0 for android
+sm-j320fn,mobile,SM-J320FN Build/LMY47V,,chrome 61.0 for android
+moto_x4,mobile,moto x4 Build/NPW26.83-18-2-0-4,,chrome 63.0 for android
+ilium_x210,mobile,Ilium X210 Build/LMY47I,,chrome 63.0 for android
+htc6545lvw,mobile,HTC6545LVW,Android 7.0,chrome 63.0 for android
+sm-s902l,mobile,SM-S902L,Android 4.4.2,chrome 63.0 for android
+c2104,mobile,C2104,,chrome 60.0 for android
+samsung-sm-t537a,mobile,SAMSUNG-SM-T537A,,chrome 62.0 for android
+vs990,mobile,VS990 Build/MRA58K,Android 6.0,chrome 61.0 for android
+5056a,mobile,5056A Build/MMB29M,,chrome 63.0 for android
+lenovo_a6020l37,mobile,Lenovo A6020l37 Build/LMY47V,,chrome 62.0 for android
+samsung-sm-g928a,mobile,SAMSUNG-SM-G928A Build/NRD90M,Android 7.0,chrome 62.0 for android
+ph-1,mobile,PH-1,Android 7.1.1,chrome 63.0 for android
+g3423,mobile,G3423,,chrome 63.0 for android
+e5803,mobile,E5803 Build/32.4.A.1.54,,chrome 62.0 for android
+hisense_u963,mobile,Hisense U963 Build/MRA58K,,chrome 62.0 for android
+htc_one_m8,mobile,HTC One_M8 Build/MRA58K,Android 6.0,chrome 63.0 for android
+samsung_sm-g530t,mobile,SAMSUNG SM-G530T Build/LMY47X,Android 5.1.1,other
+sm-p355m,mobile,SM-P355M Build/MMB29M,,chrome 61.0 for android
+one_touch_4016a,mobile,ONE TOUCH 4016A Build/JDQ39,,chrome 61.0 for android
+ilium_x510,mobile,Ilium X510 Build/MRA58K,,chrome 63.0 for android
+blade_a520,mobile,BLADE A520 Build/NRD90M,,chrome 60.0 for android
+vs986,mobile,VS986 Build/MRA58K,Android 6.0,chrome 63.0 for android
+xt1609,mobile,XT1609 Build/MPIS24.241-2.35-1-17,Android 6.0.1,chrome 62.0 for android
+lg-d855,mobile,LG-D855 Build/LRX21R,,chrome 62.0 for android
+lg-h631,mobile,LG-H631,Android 6.0,chrome 59.0 for android
+fp2,mobile,FP2,,chrome 62.0 for android
+gt-n5110,mobile,GT-N5110,Android 4.4.2,chrome 61.0 for android
+m3,mobile,m3,,chrome 62.0 for android
+sm-g955u1,mobile,SM-G955U1 Build/NRD90M,Android 7.0,chrome 63.0 for android
+sm-j530gm,mobile,SM-J530GM Build/NRD90M,,chrome 63.0 for android
+kfsuwi,mobile,KFSUWI Build/LVY48F,Android 5.1.1,chrome generic
+r1,mobile,R1,Android 6.0,chrome 62.0 for android
+blade_l2_plus,mobile,Blade L2 Plus Build/KOT49H,,ZTE/Blade
+samsung_sm-g925f,mobile,SAMSUNG SM-G925F Build/NRD90M,,samsung browser 6.2
+lg-v521,mobile,LG-V521,Android 6.0.1,chrome 63.0 for android
+sch-i435,mobile,SCH-I435,Android 4.4.2,chrome 63.0 for android
+sm-g928t,mobile,SM-G928T Build/NRD90M,Android 7.0,chrome 62.0 for android
+p027,mobile,P027,Android 7.0,chrome 63.0 for android
+5054s,mobile,5054S Build/LMY47V,,chrome 43.0 for android
+sm-j327t1,mobile,SM-J327T1 Build/NRD90M,,chrome 60.0 for android
+p00c,mobile,P00C,Android 7.0,chrome 61.0 for android
+samsung_sm-g920f,mobile,SAMSUNG SM-G920F Build/NRD90M,,samsung browser 6.2
+lenovo_tb-x103f,mobile,Lenovo TB-X103F Build/LenovoTB-X103F,Android 6.0.1,chrome 59.0 for android
+revvlplus,mobile,REVVLPLUS,Android 7.1.1,chrome 58.0 for android
+lg-m430,mobile,LG-M430 Build/NRD90U,Android 7.0,chrome 63.0 for android
+xt1060,mobile,XT1060,Android,chrome 63.0 for android
+huawei_nxt-l09,mobile,HUAWEI NXT-L09 Build/HUAWEINXT-L09,,chrome 62.0 for android
+lenovoa3300-gv,mobile,LenovoA3300-GV Build/JDQ39,,chrome 62.0 for android
+rv350,desktop,rv:35.0,Mac OS X 10.9,firefox
+kfmewi,mobile,KFMEWI,Android 5.1.1,chrome generic
+le_x520,mobile,Le X520 Build/IEXCNFN5902303111S,,chrome 62.0 for android
+lg-m327,mobile,LG-M327 Build/NRD90U,Android 7.0,chrome 56.0 for android
+pspc550,mobile,PSPC550 Build/LMY47D,,chrome 63.0 for android
+sm-g930vl,mobile,SM-G930VL Build/NRD90M,Android 7.0,chrome 63.0 for android
+stv100-3,mobile,STV100-3,Android 6.0.1,chrome 63.0 for android
+samsung_sm-n950u1,mobile,SAMSUNG SM-N950U1 Build/NMF26X,,samsung browser 6.2
+samsung_sm-a720f,mobile,SAMSUNG SM-A720F Build/NRD90M,,samsung browser 6.2
+sm-g355m,mobile,SM-G355M Build/KOT49H,,chrome 62.0 for android
+me173x,mobile,ME173X,Android,chrome 63.0 for android
+gt-s7580l,mobile,GT-S7580L Build/JDQ39,,chrome 55.0 for android
+alcatel,mobile,ALCATEL,,chrome 61.0 for android
+nxa116qc164,mobile,NXA116QC164,Android 5.0,chrome 63.0 for android
+zte_blade_l5,mobile,ZTE Blade L5 Build/LMY47I,,chrome 60.0 for android
+sm-g925f,mobile,SM-G925F Build/NRD90M,,chrome 59.0 for android
+ax820,mobile,AX820 Build/MRA58K,,chrome 63.0 for android
+sm-g360m,mobile,SM-G360M,,chrome 63.0 for android
+v40r,mobile,V.40R,,chrome 62.0 for android
+blu,mobile,BLU,,chrome 59.0 for android
+malc,desktop,MALC,Windows 7,ie 11.0 for desktop
+asus_z00ed,mobile,ASUS_Z00ED,,android webview 4.0
+sh-04f,mobile,SH-04F,,chrome
+trekker-x3,mobile,TREKKER-X3 Build/MMB29M,,chrome 63.0 for android
+blade_l7,mobile,BLADE L7 Build/MRA58K,,chrome 63.0 for android
+nexus_5,mobile,Nexus 5 Build/M4B30Z,,chrome 63.0 for android
+venue,mobile,Venue,Android 5.0.2,chrome 63.0 for android
+samsung_sm-j327a,mobile,SAMSUNG SM-J327A Build/NRD90M,Android 7.0,samsung browser 6.2
+sm-t310,mobile,SM-T310 Build/KOT49H,,chrome 63.0 for android
+android_70,mobile,Android 7.0,,
+sm-a310f,mobile,SM-A310F Build/MMB29K,,chrome 61.0 for android
+vs880pp,mobile,VS880PP,Android 5.1.1,chrome 56.0 for android
+snow4,desktop,S.N.O.W.4,Windows 7,ie 11.0 for desktop
+sm-j727t1,mobile,SM-J727T1 Build/NRD90M,,chrome 63.0 for android
+samsung-sm-n900a,mobile,SAMSUNG-SM-N900A,,chrome 62.0 for android
+samsung_sm-g900t,mobile,SAMSUNG SM-G900T Build/MMB29M,Android 6.0.1,samsung browser 6.2
+sgh-i337m,mobile,SGH-I337M Build/LRX22C,,chrome 63.0 for android
+mami,desktop,MAMI,,ie 11.0 for desktop
+m4,mobile,M4,,chrome 62.0 for android
+sm-n9005,mobile,SM-N9005 Build/LRX21V,,chrome 61.0 for android
+trekker-m1,mobile,TREKKER-M1,,chrome 62.0 for android
+sch-i535,mobile,SCH-I535,Android 4.4.2,chrome 63.0 for android
+lg-v496,mobile,LG-V496,Android 5.0.2,chrome 62.0 for android
+nokia,mobile,NOKIA,,edge
+sgh-i317m,mobile,SGH-I317M,,chrome 63.0 for android
+turbo_c5,mobile,Turbo C5 Build/LMY47I,,chrome 59.0 for android
+lg-h540,mobile,LG-H540,,other
+z963vl,mobile,Z963VL,Android 5.1.1,chrome 63.0 for android
+samsung_sm-j327p,mobile,SAMSUNG SM-J327P Build/MMB29M,,samsung browser 6.2
+vfd,mobile,VFD,Android 6.0,chrome 61.0 for android
+sm-s906l,mobile,SM-S906L,Android 5.0.2,chrome 59.0 for android
+huawei_y560-l03,mobile,HUAWEI Y560-L03 Build/HUAWEIY560-L03,,chrome 61.0 for android
+pra-lx1,mobile,PRA-LX1 Build/HUAWEIPRA-LX1,,chrome 63.0 for android
+lg-h443h44312g,mobile,LG-H443/H44312g,Android 5.1.1,android browser 4.0
+lenovo_tb2-x30f,mobile,Lenovo TB2-X30F Build/LenovoTB2-X30F,,chrome 63.0 for android
+2pyb2,mobile,2PYB2,,chrome 63.0 for android
+htc_one_a9s,mobile,HTC One A9s Build/MRA58K,,chrome 63.0 for android
+lg-k450,mobile,LG-K450 Build/MXB48T,Android 6.0.1,chrome 63.0 for android
+sm-n950u1,mobile,SM-N950U1 Build/NMF26X,,chrome 63.0 for android
+zte-z835,mobile,ZTE-Z835,Android 7.1.1,other
+xt1033,mobile,XT1033,Android,chrome 63.0 for android
+sm-g900r4,mobile,SM-G900R4,Android 6.0.1,chrome 62.0 for android
+lg-k430,mobile,LG-K430 Build/MRA58K,,chrome 63.0 for android
+g8141,mobile,G8141 Build/47.1.A.5.51,,chrome 63.0 for android
+z956,mobile,Z956 Build/MMB29M,Android 6.0.1,chrome 62.0 for android
+vs880,mobile,VS880,Android 5.1.1,chrome 59.0 for android
+5049w,mobile,5049W Build/NRD90M,Android 7.0,chrome 62.0 for android
+bla-l29,mobile,BLA-L29 Build/HUAWEIBLA-L29,,chrome 63.0 for android
+5057m,mobile,5057M,,chrome 63.0 for android
+blade_a460,mobile,Blade A460 Build/LMY47O,,chrome 62.0 for android
+blu_life_xl,mobile,BLU LIFE XL Build/L050U,,chrome 62.0 for android
+coolpad,mobile,Coolpad,Android 7.1.1,chrome 62.0 for android
+vivo,mobile,Vivo,Android 6.0,chrome 63.0 for android
+sm-g930t1,mobile,SM-G930T1,Android 7.0,chrome 63.0 for android
+2pzc5,mobile,2PZC5,Android 7.1.1,chrome 63.0 for android
+sm-t113,mobile,SM-T113 Build/KTU84P,,chrome 63.0 for android
+att,desktop,ATT,Windows 7,ie 11.0 for desktop
+studio,mobile,Studio,Android 6.0,chrome 63.0 for android
+z959,mobile,Z959 Build/LMY47V,Android 5.1.1,chrome 57.0 for android
+zte_blade_a321,mobile,ZTE BLADE A321 Build/NMF26F,,chrome 63.0 for android
+htc6535lvw,mobile,HTC6535LVW,Android 7.0,chrome 63.0 for android
+lg-x165g,mobile,LG-X165g Build/LRX21M,,chrome 62.0 for android
+sm-j327t,mobile,SM-J327T Build/NRD90M,Android 7.0,chrome 61.0 for android
+slay,mobile,SLAY,,android webview 4.0
+orbis,mobile,orbis,,chrome 63.0 for android
+samsung_sm-g925i,mobile,SAMSUNG SM-G925I Build/NRD90M,,samsung browser 6.2
+s57,mobile,S57 Build/KTU84P,,chrome 60.0 for android
+samsung_sm-a510m,mobile,SAMSUNG SM-A510M Build/NRD90M,,samsung browser 6.2
+samsung_sm-j111m,mobile,SAMSUNG SM-J111M Build/LMY47V,,chrome generic
+sch-i545,mobile,SCH-I545 Build/LRX22C,Android,chrome 63.0 for android
+lg-h345,mobile,LG-H345,,chrome 61.0 for android
+sm-s907vl,mobile,SM-S907VL,,chrome 59.0 for android
+sm-j727vpp,mobile,SM-J727VPP Build/NRD90M,,chrome 63.0 for android
+lgl58vl,mobile,LGL58VL,Android 6.0.1,chrome 62.0 for android
+samsung_sm-p580,mobile,SAMSUNG SM-P580 Build/NRD90M,,samsung browser 6.2
+9003a,mobile,9003A Build/MRA58K,,chrome 61.0 for android
+lg-m400,mobile,LG-M400 Build/NRD90U,,chrome 62.0 for android
+htc6525lvw,mobile,HTC6525LVW,Android 6.0,android webview 4.0
+frd-l14,mobile,FRD-L14 Build/HUAWEIFRD-L14,Android 7.0,chrome 63.0 for android
+xt1096,mobile,XT1096,Android,chrome 63.0 for android
+qwestie8,desktop,QwestIE8,Windows 7,ie 11.0 for desktop
+samsung-sm-t817a,mobile,SAMSUNG-SM-T817A,Android 7.0,chrome 63.0 for android
+asus,mobile,ASUS,Android 5.1.1,android browser 4.0
+lg-m255,mobile,LG-M255,Android 7.0,chrome 61.0 for android
+sm-g928f,mobile,SM-G928F,,chrome 63.0 for android
+verykools5525,mobile,verykoolS5525,,android webview 4.0
+kfsowi,mobile,KFSOWI,Android,chrome generic
+sm-n920r4,mobile,SM-N920R4,Android 7.0,chrome 61.0 for android
+sm-s550tl,mobile,SM-S550TL,,chrome 62.0 for android
+a621r,mobile,A621R,Android 5.1.1,chrome 62.0 for android
+samsung_sm-n950f,mobile,SAMSUNG SM-N950F Build/NMF26X,,samsung browser 6.2
+lg-h810h81022f,mobile,LG-H810/H81022f,Android 6.0,android webview 4.0
+sgh-m919n,mobile,SGH-M919N,Android,chrome 63.0 for android
+h1611,mobile,H1611,Android 6.0.1,chrome 63.0 for android
+lgl52vl,mobile,LGL52VL Build/LMY47V,Android 5.1.1,other
+sm-n920a,mobile,SM-N920A Build/MMB29K,,chrome 61.0 for android
+g3223,mobile,G3223 Build/42.0.A.4.101,,chrome 63.0 for android
+lg-lk460,mobile,LG-LK460,Android 7.1.1,chrome 62.0 for android
+xt1094,mobile,XT1094,Android,chrome 63.0 for android
+p5026a,mobile,P5026A,,chrome 63.0 for android
+samsung-sm-g530az,mobile,SAMSUNG-SM-G530AZ Build/LMY48B,Android 5.1.1,chrome 61.0 for android
+lgls665,mobile,LGLS665 Build/LMY47V,Android 5.1.1,chrome 61.0 for android
+samsung_sm-n900t,mobile,SAMSUNG SM-N900T Build/LRX21V,Android 5.0,other
+z833,mobile,Z833,Android 6.0.1,chrome 63.0 for android
+lg-d850,mobile,LG-D850,Android 6.0,chrome 63.0 for android
+d6503,mobile,D6503,,chrome 62.0 for android
+samsung_sm-j530gm,mobile,SAMSUNG SM-J530GM Build/NRD90M,,samsung browser 6.2
+zte_a2017u,mobile,ZTE A2017U Build/NRD90M,Android 7.0,chrome 63.0 for android
+gt-n7100,mobile,GT-N7100,,chrome 63.0 for android
+samsung_sm-j710mn,mobile,SAMSUNG SM-J710MN Build/MMB29K,,samsung browser 6.2
+sm-p605v,mobile,SM-P605V,,chrome 62.0 for android
+rv370,desktop,rv:37.0,,firefox
+samsung_sm-g928g,mobile,SAMSUNG SM-G928G Build/NRD90M,,samsung browser 6.2
+lenovo_tab_2_a7-30gc,mobile,Lenovo TAB 2 A7-30GC Build/KOT49H,,chrome 55.0 for android
+blu_studio_c_55,mobile,BLU STUDIO C 5+5 Build/LRX21M,,chrome 63.0 for android
+sm-s975l,mobile,SM-S975L,Android,chrome 63.0 for android
+xt1097,mobile,XT1097,,chrome 63.0 for android
+0pm92,mobile,0PM92,Android 6.0.1,chrome 56.0 for android
+d2306,mobile,D2306,,chrome 63.0 for android
+mya-l13,mobile,MYA-L13 Build/HUAWEIMYA-L13,,chrome 52.0 for android
+lg-h700,mobile,LG-H700 Build/NRD90U,Android 7.0,chrome 63.0 for android
+a50c,mobile,A50C+,,chrome 63.0 for android
+samsung_sm-g900m,mobile,SAMSUNG SM-G900M Build/LRX21T,,chrome generic
+5095i,mobile,5095I Build/MRA58K,,chrome 63.0 for android
+lg-v495,mobile,LG-V495,,chrome 61.0 for android
+a1601,mobile,A1601 Build/LMY47I,,chrome 63.0 for android
+lgus991,mobile,LGUS991,Android 6.0,chrome 63.0 for android
+samsung-sm-t807a,mobile,SAMSUNG-SM-T807A,Android 5.0.2,chrome 61.0 for android
+s6000,mobile,S6000,,chrome 63.0 for android
+sm-j320vpp,mobile,SM-J320VPP,Android 6.0.1,chrome 62.0 for android
+rv529,desktop,rv:52.9,Windows 7,palemoon
+samsung_sm-t800,mobile,SAMSUNG SM-T800 Build/MMB29K,Android 6.0.1,samsung browser 6.2
+intel,desktop,Intel,Mac OS X 10_6_8,safari
+blade_a475,mobile,Blade A475 Build/LMY47D,,chrome 61.0 for android
+samsung_sm-g900i,mobile,SAMSUNG SM-G900I Build/MMB29M,,samsung browser 6.2
+win64,desktop,Win64,Windows 10,edge 14.0
+0pja2,mobile,0PJA2,Android 7.0,chrome 61.0 for android
+blu_energy_x_plus,mobile,BLU ENERGY X PLUS Build/LRX21M,,chrome 55.0 for android
+5015a,mobile,5015A Build/LMY47I,,chrome 63.0 for android
+samsung_sm-j530f,mobile,SAMSUNG SM-J530F Build/NRD90M,,samsung browser 6.2
+sm-g900l,mobile,SM-G900L,,chrome 63.0 for android
+asus_p00j,mobile,ASUS_P00J,Android 7.0,chrome 63.0 for android
+ta-1025,mobile,TA-1025,,chrome 63.0 for android
+sm-s327vl,mobile,SM-S327VL,Android 6.0.1,chrome 63.0 for android
+a0001,mobile,A0001 Build/MHC19Q,Android 6.0.1,chrome 62.0 for android
+gt-i9195l,mobile,GT-I9195L,,chrome 63.0 for android
+6039a,mobile,6039A Build/LRX22G,,chrome 63.0 for android
+sm-a800i,mobile,SM-A800I,,chrome 63.0 for android
+lg-d959,mobile,LG-D959,Android 4.4.2,chrome 62.0 for android
+samsung_sm-g930r4,mobile,SAMSUNG SM-G930R4 Build/NRD90M,Android 7.0,samsung browser 6.2
+lgl83bl,mobile,LGL83BL,Android 7.0,chrome 63.0 for android
+sm-g928p,mobile,SM-G928P,Android 5.1.1,chrome 62.0 for android
+c6906,mobile,C6906 Build/14.6.A.1.236,,chrome 63.0 for android
+k92,mobile,K92,Android 7.1.1,chrome 62.0 for android
+k90u,mobile,K90U,Android 6.0.1,chrome 63.0 for android
+boie9,desktop,BOIE9,Windows 7,ie 11.0 for desktop
+lg-ls995,mobile,LG-LS995,Android 4.4.2,chrome 63.0 for android
+lgus990,mobile,LGUS990,Android 4.4.2,chrome 63.0 for android
+sm-g935u,mobile,SM-G935U,Android 7.0,chrome 63.0 for android
+xt1021,mobile,XT1021 Build/KXC21.5-40,,chrome 57.0 for android
+kiw-l24,mobile,KIW-L24,Android 6.0.1,chrome 63.0 for android
+sm-t377t,mobile,SM-T377T,Android 7.1.1,chrome 61.0 for android
+rv430,desktop,rv:43.0,,firefox
+lg-d320,mobile,LG-D320 Build/KOT49I.V10a,,chrome 63.0 for android
+alcatel_5044r,mobile,Alcatel_5044R Build/NRD90M,Android 7.0,chrome 63.0 for android
+samsung-sm-n910a,mobile,SAMSUNG-SM-N910A,Android,chrome 63.0 for android
+htc6500lvw,mobile,HTC6500LVW,Android 5.0.2,chrome generic
+rs988,mobile,RS988,Android 7.0,chrome 63.0 for android
+lg-h931,mobile,LG-H931,Android 7.1.2,firefox
+rct6s03w12,mobile,RCT6S03W12,Android 7.0,chrome 62.0 for android
+sm-t807t,mobile,SM-T807T,Android 4.4.2,chrome 63.0 for android
+cam-l23,mobile,CAM-L23,,chrome 63.0 for android
+sm-t817t,mobile,SM-T817T,Android 7.0,chrome 63.0 for android
+sm-j727p,mobile,SM-J727P,,chrome 63.0 for android
+sm-g550t2,mobile,SM-G550T2,Android 6.0.1,chrome 56.0 for android
+vs985,mobile,VS985,Android 6.0,chrome 63.0 for android
+lg-h815,mobile,LG-H815 Build/MRA58K,,chrome 63.0 for android
+samsung_sm-j320m,mobile,SAMSUNG SM-J320M Build/LMY47V,,chrome generic
+bba100-1,mobile,BBA100-1,Android 6.0.1,chrome 63.0 for android
+831c,mobile,831C,Android 6.0,chrome 63.0 for android
+alcatel_one_touch_7047a,mobile,ALCATEL ONE TOUCH 7047A Build/JDQ39,,chrome 58.0 for android
+sm-e700m,mobile,SM-E700M,,chrome 62.0 for android
+z831,mobile,Z831,Android 6.0.1,chrome 59.0 for android
+gt-p3100,mobile,GT-P3100,,chrome generic for android
+asus_z00ud,mobile,ASUS_Z00UD,,android webview 4.0
+sm-n900p,mobile,SM-N900P Build/LRX21V,Android 5.0,chrome 43.0 for android
+lg-v700,mobile,LG-V700,,chrome 52.0 for android
+samsung_sm-j700t1,mobile,SAMSUNG SM-J700T1 Build/NMF26X,Android 7.1.1,samsung browser 6.2
+p008,mobile,P008 Build/NRD90M,Android 7.0,chrome 63.0 for android
+oneplus,mobile,ONEPLUS,Android 7.1.1,chrome 59.0 for android
+sm-g800m,mobile,SM-G800M Build/KOT49H,,chrome 63.0 for android
+bbb100-2,mobile,BBB100-2,Android 7.1.1,chrome 63.0 for android
+sm-s727vl,mobile,SM-S727VL Build/MMB29M,Android 6.0.1,chrome 63.0 for android
+one,mobile,ONE,,chrome 63.0 for android
+d5106,mobile,D5106,,chrome 62.0 for android
+lgl84vl,mobile,LGL84VL Build/NRD90U,Android 7.0,chrome 63.0 for android
+ta-1028,mobile,TA-1028 Build/NMF26O,,chrome 63.0 for android
+yoga,mobile,YOGA,Android,chrome 49.0 for android
+d5316,mobile,D5316,,chrome 62.0 for android
+sph-l720,mobile,SPH-L720,Android,chrome 62.0 for android
+sm-n915v,mobile,SM-N915V,,chrome 57.0 for android
+0paj5,mobile,0PAJ5,Android 6.0.1,chrome 63.0 for android
+rct6513w87,mobile,RCT6513W87 Build/MRA58K,Android 6.0,chrome 63.0 for android
+sm-g720ax,mobile,SM-G720AX,,chrome 63.0 for android
+6045i,mobile,6045I Build/LRX22G,,chrome 58.0 for android
+e2006,mobile,E2006,,chrome 62.0 for android
+bbb100-1,mobile,BBB100-1,Android 7.1.1,chrome 63.0 for android
+gt-i9060l,mobile,GT-I9060L Build/JDQ39,,chrome 62.0 for android
+sm-t530,mobile,SM-T530,,chrome 63.0 for android
+infinit,mobile,Infinit,,chrome 63.0 for android
+sm-j110m,mobile,SM-J110M Build/LMY48B,,chrome 62.0 for android
+lg-d213,mobile,LG-D213,,chrome 61.0 for android
+lava_a3,mobile,LAVA_A3,,chrome 63.0 for android
+gt-s7390,mobile,GT-S7390,,chrome 59.0 for android
+alcatel_5054o,mobile,Alcatel_5054O,Android 5.1.1,chrome 63.0 for android
+lenovo_yt3-x50f,mobile,Lenovo YT3-X50F Build/MMB29M,,chrome 63.0 for android
+ilium_l620,mobile,Ilium L620 Build/NRD90M,,chrome 63.0 for android
+sm-n910p,mobile,SM-N910P,Android 6.0.1,chrome 63.0 for android
+lenovo_pb2-650y,mobile,Lenovo PB2-650Y Build/MRA58K,,chrome 62.0 for android
+sm-g9250,mobile,SM-G9250,,chrome 63.0 for android
+sm-n920c,mobile,SM-N920C Build/NRD90M,,chrome 63.0 for android
+sm-j710gn,mobile,SM-J710GN,Android 7.0,chrome 63.0 for android
+sm-a500w,mobile,SM-A500W,,chrome 63.0 for android
+nexus_6,mobile,Nexus 6 Build/N6F27M,Android 7.1.1,chrome 63.0 for android
+m4_ss4452,mobile,M4 SS4452 Build/LMY47V,,chrome 46.0 for android
+sm-t110,mobile,SM-T110 Build/JDQ39,Android,chrome generic
+neffos_c5,mobile,Neffos C5 Build/LMY47D,,chrome 63.0 for android
+ta-1044,mobile,TA-1044 Build/NMF26F,,chrome 63.0 for android
+astro,mobile,ASTRO,,chrome 63.0 for android
+samsung-sm-j320az,mobile,SAMSUNG-SM-J320AZ,Android 7.1.1,chrome 63.0 for android
+bg2-w09,mobile,BG2-W09,,chrome 63.0 for android
+sm-j700h,mobile,SM-J700H Build/MMB29K,,chrome 63.0 for android
+gt-p5110,mobile,GT-P5110,,chrome generic for android
+asus_z01kd,mobile,ASUS_Z01KD,Android 7.1.1,chrome 63.0 for android
+lg-k330,mobile,LG-K330,Android 5.1.1,chrome 52.0 for android
+sm-j530f,mobile,SM-J530F Build/NRD90M,,chrome 63.0 for android
+lg-h525n,mobile,LG-H525n Build/MRA58K,,chrome 61.0 for android
+p5006a,mobile,P5006A,,chrome 62.0 for android
+samsung_sm-j510mn,mobile,SAMSUNG SM-J510MN Build/MMB29M,,samsung browser 6.2
+iris_870,mobile,iris 870 Build/MRA58K,,android webview 4.0
+lg-h932,mobile,LG-H932,Android 7.1.2,chrome 60.0 for android
+sm-t705,mobile,SM-T705,,chrome 63.0 for android
+samsung_sm-j120h,mobile,SAMSUNG SM-J120H Build/LMY47V,,chrome generic
+7048a,mobile,7048A Build/LRX22G,,chrome 46.0 for android
+4013m,mobile,4013M Build/KOT49H,,chrome
+stv100-1,mobile,STV100-1,,chrome 63.0 for android
+lg-e450f,mobile,LG-E450f,,chrome 62.0 for android
+lg-h960,mobile,LG-H960,,chrome 63.0 for android
+gxq6580_weg_l,mobile,gxq6580_weg_l Build/LMY47I,,chrome 63.0 for android
+beat,mobile,Beat,Android,android browser 4.0
+vk700,mobile,VK700 Build/LRX22G,Android 5.0.2,chrome 53.0 for android
+eva-l19,mobile,EVA-L19 Build/HUAWEIEVA-L19,,chrome 63.0 for android
+lgl57bl,mobile,LGL57BL,Android 6.0.1,chrome 63.0 for android
+xt1023,mobile,XT1023,,chrome 51.0 for android
+sm-g900t1,mobile,SM-G900T1,,chrome 63.0 for android
+neffos_x1_max,mobile,Neffos X1 Max Build/NRD90M,,chrome 63.0 for android
+m4_ss4458,mobile,M4 SS4458 Build/MMB29M,,chrome 63.0 for android
+a96,mobile,A96 Build/LMY47I,,chrome 61.0 for android
+lenovo_tb3-710i,mobile,Lenovo TB3-710I Build/LMY47I,,chrome 63.0 for android
+sm-a520w,mobile,SM-A520W Build/NRD90M,,chrome 63.0 for android
+e2104,mobile,E2104,,chrome 63.0 for android
+samsung_sm-g800f,mobile,SAMSUNG SM-G800F Build/MMB29K,,samsung browser 6.2
+was-lx1a,mobile,WAS-LX1A Build/HUAWEIWAS-LX1A,,chrome 63.0 for android
+alcatel_5098o,mobile,Alcatel_5098O Build/MMB29M,,chrome 63.0 for android
+blade_a465,mobile,Blade A465 Build/LMY47D,,chrome 61.0 for android
+ilium_x520,mobile,Ilium X520 Build/NRD90M,,chrome 60.0 for android
+sla-l02,mobile,SLA-L02,,chrome 63.0 for android
+rv290,desktop,rv:29.0,,firefox
+lg-h735,mobile,LG-H735 Build/LMY47V,,chrome 63.0 for android
+max,mobile,Max,,android webview 4.0
+g620s-l03,mobile,G620S-L03,,chrome 63.0 for android
+sm-g318ml,mobile,SM-G318ML,,chrome 60.0 for android
+samsung_sm-a320y,mobile,SAMSUNG SM-A320Y Build/NRD90M,,samsung browser 6.2
+sm-t320,mobile,SM-T320 Build/KOT49H,,chrome 55.0 for android
+f1f,mobile,F1f Build/LMY47V,,chrome 63.0 for android
+huawei_lua-u23,mobile,HUAWEI LUA-U23 Build/HUAWEILUA-U23,,chrome 63.0 for android
+lg-h343,mobile,LG-H343,Android 5.1.1,chrome 58.0 for android
+lgms323,mobile,LGMS323,,chrome generic
+verykools5004,mobile,verykools5004,,chrome
+u,mobile,U,,chrome 63.0 for android
+htc_d10i,mobile,HTC_D10i,,
+ta-1027,mobile,TA-1027 Build/N2G47H,,chrome 63.0 for android
+vtr-l29,mobile,VTR-L29,,chrome 63.0 for android
+iris_820,mobile,iris 820 Build/MRA58K,,android webview 4.0
+wileyfox,mobile,Wileyfox,,chrome 63.0 for android
+lg-h340ar,mobile,LG-H340AR,,chrome 63.0 for android
+ilium_l610,mobile,Ilium L610 Build/MRA58K,,chrome 63.0 for android
+ideatab,mobile,IdeaTab,,chrome 63.0 for android
+a9,mobile,A9,,android webview 4.0
+iphone,mobile,iPhone,,chrome 63.0 for android
+blade_l3,mobile,Blade L3 Build/KOT49H,,chrome 61.0 for android
+zte_blade_a512,mobile,ZTE BLADE A512 Build/MMB29M,,chrome 63.0 for android
+4047a,mobile,4047A Build/NRD90M,,chrome 56.0 for android
+n9136,mobile,N9136,Android 6.0.1,chrome 63.0 for android
+dt0704k08,mobile,DT0704K08,,chrome 63.0 for android
+hisense,mobile,Hisense,,chrome 63.0 for android
+sm-g920r4,mobile,SM-G920R4,Android 7.0,chrome 63.0 for android
+a466bg,mobile,A466BG,Android 6.0,android webview 4.0
+nem-l51,mobile,NEM-L51 Build/HONORNEM-L51,,chrome 63.0 for android
+4047g,mobile,4047G Build/NRD90M,,chrome 62.0 for android
+mi,mobile,MI,,chrome 63.0 for android
+alcatel_one_touch_5036a,mobile,ALCATEL ONE TOUCH 5036A Build/JDQ39,,chrome 58.0 for android
+lg-k420,mobile,LG-K420,,chrome 59.0 for android
+sm-a300fu,mobile,SM-A300FU Build/MMB29M,,chrome 63.0 for android
+1016s,mobile,1016S,,chrome generic
+lenovo_tb3-710f,mobile,Lenovo TB3-710F Build/LRX21M,,chrome 46.0 for android
+sgp621,mobile,SGP621 Build/23.5.A.1.291,,chrome 63.0 for android
+lg-v520,mobile,LG-V520,Android 6.0.1,chrome 63.0 for android
+asus_x008dc,mobile,ASUS_X008DC Build/NRD90M,,chrome 63.0 for android
+asus_z01bda,mobile,ASUS_Z01BDA,,chrome 63.0 for android
+alcatel_one_touch_7042a,mobile,ALCATEL ONE TOUCH 7042A Build/JDQ39,,chrome
+archos,mobile,Archos,,chrome 63.0 for android
+rct6773w22b,mobile,RCT6773W22B,,chrome 63.0 for android
+f80_piabella,mobile,F80 PIABELLA Build/MRA58K,,chrome 63.0 for android
+samsung_sm-a510f,mobile,SAMSUNG SM-A510F Build/NRD90M,,samsung browser 6.2
+sm-j320w8,mobile,SM-J320W8,,chrome 63.0 for android
+grand2c,mobile,Grand2c,,android webview 4.0
+lg-d625,mobile,LG-D625,,chrome 62.0 for android
+ftj152d,mobile,FTJ152D,,chrome 63.0 for android
+z799vl,mobile,Z799VL,Android 6.0.1,chrome
+bba100-2,mobile,BBA100-2,,chrome 63.0 for android
+sm-j710f,mobile,SM-J710F Build/NRD90M,,chrome 63.0 for android
+ht0701a16,mobile,HT0701A16,,chrome 50.0 for android
+ego,mobile,EGO,,chrome 63.0 for android
+samsung_sm-g920i,mobile,SAMSUNG SM-G920I Build/NRD90M,,samsung browser 6.2
+sm-g903f,mobile,SM-G903F Build/MMB29K,,chrome 63.0 for android
+asus_x00dd,mobile,ASUS_X00DD,,chrome 63.0 for android
+aquaris_u_plus,mobile,Aquaris U Plus Build/NMF26F,,chrome 63.0 for android
+robin,mobile,Robin,,chrome 63.0 for android
+verykools5035,mobile,verykools5035,,chrome 63.0 for android
+icon,mobile,ICON,,chrome 60.0 for android
+xt1680,mobile,XT1680,,chrome 63.0 for android
+one_a2003,mobile,ONE A2003 Build/MMB29M,,chrome 63.0 for android
+verykools4009,mobile,verykools4009,,chrome 62.0 for android
+z839,mobile,Z839,Android 7.1.1,chrome 63.0 for android
+5085b,mobile,5085B Build/MRA58K,,chrome 63.0 for android
+s60,mobile,S60 Build/MMB29M,,chrome 63.0 for android
+asus_z00ad,mobile,ASUS_Z00AD Build/LRX21V,,chrome 63.0 for android
+huawei_gra-l09,mobile,HUAWEI GRA-L09 Build/HUAWEIGRA-L09,,chrome 63.0 for android
+xt1092,mobile,XT1092,,chrome 63.0 for android
+huawei_lyo-l21,mobile,HUAWEI LYO-L21 Build/HUAWEILYO-L21,,chrome 63.0 for android
+playtab,mobile,PLAYTAB,,chrome 55.0 for android
+tab2a7-10f,mobile,Tab2A7-10F,,chrome 63.0 for android
+vky-l09,mobile,VKY-L09 Build/HUAWEIVKY-L09,,chrome 63.0 for android
+u_feel_lite,mobile,U FEEL LITE Build/MRA58K,,chrome 63.0 for android
+e5823,mobile,E5823 Build/32.4.A.1.54,,chrome 63.0 for android
+n817,mobile,N817,Android,chrome 63.0 for android
+joy,mobile,Joy,,android webview 4.0
+was-l03t,mobile,WAS-L03T Build/HUAWEIWAS-L03T,,chrome 63.0 for android
+tornado,mobile,Tornado,,chrome 62.0 for android
+sm-t825,mobile,SM-T825 Build/NRD90M,,chrome 63.0 for android
+sm-g390w,mobile,SM-G390W,,chrome 63.0 for android
+samsung_sm-j500fn,mobile,SAMSUNG SM-J500FN Build/MMB29M,,samsung browser 6.2
+gt-i9195i,mobile,GT-I9195I,,chrome 63.0 for android
+asus_x015d,mobile,ASUS_X015D Build/NRD90M,,chrome 63.0 for android
+ideataba1000-f,mobile,IdeaTabA1000-F,,chrome 61.0 for android
+lm-x210g,mobile,LM-X210(G,Android 7.1.2,chrome generic
+alter,mobile,ALTER,,chrome 63.0 for android
+sm-g390f,mobile,SM-G390F,,chrome 63.0 for android
+a37f,mobile,A37f,,chrome 63.0 for android
+tab7,mobile,TAB7,,chrome generic
+lgls675,mobile,LGLS675 Build/LMY47V,Android 5.1.1,chrome 59.0 for android
+ilium_l950,mobile,Ilium L950 Build/KTU84P,,chrome 63.0 for android
+rv590,desktop,rv:59.0,,firefox generic
+e6633,mobile,E6633,,chrome 63.0 for android
+lg-h831,mobile,LG-H831 Build/NRD90U,,chrome 63.0 for android
+sm-t555,mobile,SM-T555,,chrome 63.0 for android
+trt-lx3,mobile,TRT-LX3,,chrome 63.0 for android
+highway,mobile,HIGHWAY,,chrome 63.0 for android
+verykools5034,mobile,verykools5034,,chrome 63.0 for android
+rct6203w46,mobile,RCT6203W46 Build/KOT49H,Android 4.4.2,chrome 52.0 for android
+samsung_sm-j320fn,mobile,SAMSUNG SM-J320FN Build/LMY47V,,other
+gt-n8000,mobile,GT-N8000,,chrome 63.0 for android
+samsung_sm-n900w8,mobile,SAMSUNG SM-N900W8 Build/LRX21V,,chrome generic
+mobiistar_lai_yuna_x,mobile,Mobiistar_LAI_Yuna_X,,android webview 4.0
+iris80,mobile,iris80,,chrome 62.0 for android
+gt-i9505,mobile,GT-I9505 Build/LRX22C,,chrome 53.0 for android
+vtr-l09,mobile,VTR-L09 Build/HUAWEIVTR-L09,,chrome generic for android
+bnd-l21,mobile,BND-L21 Build/HONORBND-L21,,chrome 63.0 for android
+nexus_5x,mobile,Nexus 5X Build/OPM3.171019.013,Android 8.1.0,chrome 63.0 for android
+samsung_sm-a320fl,mobile,SAMSUNG SM-A320FL Build/NRD90M,,samsung browser 6.2
+lg-d802,mobile,LG-D802,,chrome 63.0 for android
+lg-d722,mobile,LG-D722,,chrome 61.0 for android
+sla-l22,mobile,SLA-L22,,chrome 63.0 for android
+lglk430,mobile,LGLK430,Android,chrome generic
+t1,mobile,T1,,chrome 63.0 for android
+tr10cs1,mobile,TR10CS1 Build/JDQ39,,chrome 63.0 for android
+redmi_3s,mobile,Redmi 3S Build/MMB29M,,chrome generic for android
+e2303,mobile,E2303,,chrome 63.0 for android
+sm-g531f,mobile,SM-G531F,,chrome 50.0 for android
+e8qp,mobile,E8QP,,chrome generic
+lgl41c,mobile,LGL41C,Android 4.4.2,chrome 63.0 for android
+grand,mobile,Grand,,chrome 56.0 for android
+sm-g903m,mobile,SM-G903M,,chrome 60.0 for android
+9022x,mobile,9022X,,chrome 63.0 for android
+alp-l09,mobile,ALP-L09 Build/HUAWEIALP-L09,,chrome generic for android
+sm-g850m,mobile,SM-G850M Build/LRX22G,,chrome 63.0 for android
+lg-f400k,mobile,LG-F400K,,chrome generic
+rct6223w87,mobile,RCT6223W87,,chrome generic for android
+9002a,mobile,9002A,,chrome 63.0 for android
+covet,mobile,COVET Build/NRD90M,,android webview 4.0
+sm-j120fn,mobile,SM-J120FN Build/LMY47X,,chrome 63.0 for android
+rne-l03,mobile,RNE-L03 Build/HUAWEIRNE-L03,,chrome 63.0 for android
+me301t,mobile,ME301T,,chrome 63.0 for android
+sgh-m919,mobile,SGH-M919 Build/KTU84P,Android,chrome 63.0 for android
+sm-g530w,mobile,SM-G530W,,chrome 63.0 for android
+ax921,mobile,AX921 Build/MRA58K,,chrome 63.0 for android
+sm-n910f,mobile,SM-N910F Build/MMB29M,,chrome 64.0 for android
+zte_blade_a511,mobile,ZTE Blade A511 Build/MRA58K,,chrome 63.0 for android
+ilium_l1000,mobile,Ilium L1000 Build/LRX22G,,chrome 64.0 for android
+kyy22,mobile,KYY22,,chrome 63.0 for android
+asus_z017d,mobile,ASUS_Z017D,,chrome 64.0 for android
+lg-h870ds,mobile,LG-H870DS Build/NRD90U,,chrome 64.0 for android
+lgls755,mobile,LGLS755,,chrome 63.0 for android
+stellar,mobile,Stellar,,chrome 61.0 for android
+gt-i9515,mobile,GT-I9515,,chrome 63.0 for android
+frd-l09,mobile,FRD-L09 Build/HUAWEIFRD-L09,,chrome 64.0 for android
+ax1070,mobile,AX1070,,chrome 63.0 for android
+samsung_sm-t550,mobile,SAMSUNG SM-T550 Build/NMF26X,,samsung browser 6.2
+sens,mobile,SENS,,android webview 4.0
+vt0701a08,mobile,VT0701A08,,chrome 64.0 for android
+duk-al20,mobile,DUK-AL20,,chrome 62.0 for android
+lenovo_pb2-670y,mobile,Lenovo PB2-670Y Build/MRA58K,,chrome 64.0 for android
+sm-j510f,mobile,SM-J510F,,chrome 64.0 for android
+sm-j330fn,mobile,SM-J330FN Build/NRD90M,,chrome 64.0 for android
+htc_desire_526g,mobile,HTC Desire 526G Build/KOT49H,,chrome 63.0 for android
+sm-j330f,mobile,SM-J330F,,chrome 64.0 for android
+4003a,mobile,4003A,,chrome 53.0 for android
+rv600,desktop,rv:60.0,,firefox generic
+htc_one_m8s2121,mobile,HTC_One_M8s/2.12.111.1,,
+z832,mobile,Z832 Build/MMB29M,Android 6.0.1,chrome 46.0 for android
+cph1701,mobile,CPH1701,,chrome 64.0 for android
+a952,mobile,A952,,android webview 4.0
+e5306,mobile,E5306 Build/27.3.A.0.165,,chrome 64.0 for android
+z9_plus,mobile,Z9 PLUS Build/NRD90M,,chrome 63.0 for android
+dash,mobile,Dash,,chrome 61.0 for android
+nx521j,mobile,NX521J,,chrome 64.0 for android
+916,mobile,916,,chrome 59.0 for android
+4034g,mobile,4034G,,chrome 64.0 for android
+gravity,mobile,Gravity Build/NRD90M,,chrome 58.0 for android
+plus,mobile,PLUS,,chrome 63.0 for android
+sm-n910t3,mobile,SM-N910T3,,chrome 63.0 for android
+9203a,mobile,9203A Build/MRA58K,,chrome 49.0 for android
+mha-l29,mobile,MHA-L29 Build/HUAWEIMHA-L29,,chrome 64.0 for android
+pe-tl10,mobile,PE-TL10,,chrome 64.0 for android
+z2,mobile,Z2,,android webview 4.0
+sgh-m919v,mobile,SGH-M919V,,chrome 64.0 for android
+tmovi,mobile,Tmovi Build/Vision,,chrome 64.0 for android
+xt1068,mobile,XT1068,,chrome 64.0 for android
+advance,mobile,Advance,,chrome 56.0 for android
+sm-g360f,mobile,SM-G360F,,chrome 63.0 for android
+plk-l01,mobile,PLK-L01 Build/HONORPLK-L01,,chrome 61.0 for android
+za409,mobile,ZA409,,android browser 4.0
+energy_x_2,mobile,Energy X 2 Build/E050L,,chrome 64.0 for android
+gt-i8200n,mobile,GT-I8200N,,chrome 64.0 for android
+hisense_f102,mobile,Hisense F102 Build/NRD90M,,chrome 64.0 for android
+5017a,mobile,5017A,,chrome 64.0 for android
+b1-810,mobile,B1-810,,chrome 61.0 for android
+stv100-4,mobile,STV100-4 Build/LMY47V,,chrome 64.0 for android
+ta-1004,mobile,TA-1004,,
+sm-g313ml,mobile,SM-G313ML,,other
+sm-g530m,mobile,SM-G530M,,chrome 64.0 for android
+lg-e980h,mobile,LG-E980h,,chrome 64.0 for android
+bah-l09,mobile,BAH-L09 Build/HUAWEIBAH-L09,,chrome 64.0 for android
+dli-l22,mobile,DLI-L22 Build/HONORDLI-L22,,chrome 64.0 for android
+sm-g388f,mobile,SM-G388F,,chrome 64.0 for android
+htcd160lvwpp,mobile,HTCD160LVWPP,,chrome 64.0 for android
+htc_one_mini,desktop,HTC One mini Build/KOT49H,,chrome generic
+sm-n9500,mobile,SM-N9500,,chrome 64.0 for android
+samsung-sgh-i537,mobile,SAMSUNG-SGH-I537,,chrome 64.0 for android
+5042a,mobile,5042A,,chrome 64.0 for android
+sm-g903w,mobile,SM-G903W,,chrome 64.0 for android
+bln-l21,mobile,BLN-L21 Build/HONORBLN-L21,,chrome 64.0 for android
+sm-g730v,mobile,SM-G730V,,chrome 61.0 for android
+alumini,mobile,ALUMINI,,chrome 43.0 for android
+9008a,mobile,9008A Build/NRD90M,,chrome 55.0 for android
+ideataba2109a,mobile,IdeaTabA2109A,,chrome 63.0 for android
+lg-m710,mobile,LG-M710 Build/NRD90U,,chrome 64.0 for android
+lg-h520,mobile,LG-H520,,chrome 64.0 for android
+aquaris_a45,mobile,Aquaris_A4.5,,chrome 63.0 for android
+sm-j500g,mobile,SM-J500G,,chrome 55.0 for android
+hisense_t963,mobile,Hisense T963 Build/MRA58K,,chrome 64.0 for android
+sm-j200h,mobile,SM-J200H,,chrome 63.0 for android
+8080,mobile,8080 Build/LRX21M,,chrome 64.0 for android
+sm-g530fz,mobile,SM-G530FZ,,chrome 64.0 for android
+logic,mobile,LOGIC,,android webview 4.0
+asus_x00dda,mobile,ASUS_X00DDA,,chrome 64.0 for android
+huawei_y360-u23,mobile,HUAWEI Y360-U23 Build/HUAWEIY360-U23,,chrome 62.0 for android
+e6653,mobile,E6653 Build/32.4.A.1.54,,chrome 64.0 for android
+nxa8qc116,mobile,NXA8QC116,Android 5.0,chrome 64.0 for android
+aerial,mobile,AERIAL,,chrome 64.0 for android
+xs-z47b7vqtmxs,desktop,xs-Z47b7VqTMxs,Windows 7,ie 11.0 for desktop
+s70v,desktop,S70V,,chrome generic
+linux,desktop,Linux,,chromium
+8062,mobile,8062 Build/MRA58K,,chrome 64.0 for android
+lg-d400,mobile,LG-D400,,chrome 64.0 for android
+samsung-sm-g930az,mobile,SAMSUNG-SM-G930AZ,,chrome 63.0 for android
+xt1572,mobile,XT1572 Build/NPHS25.200-15-8,,chrome 64.0 for android
+zte_blade_v8_mini,mobile,ZTE BLADE V8 MINI Build/NRD90M,,chrome 64.0 for android
+vtr-al00,mobile,VTR-AL00 Build/HUAWEIVTR-AL00,,android browser 4.0
+mya-l03,mobile,MYA-L03 Build/HUAWEIMYA-L03,,chrome 64.0 for android
+hisense_f32,mobile,Hisense F32 Build/NMF26F,,chrome 64.0 for android
+sm-t217s,mobile,SM-T217S Build/KOT49H,Android 4.4.2,chrome 64.0 for android
+b3-a40,mobile,B3-A40,,chrome 64.0 for android
+zuum_zen_i,desktop,ZUUM_ZEN_I Build/LRX21M,,chrome generic
+b3-a20,mobile,B3-A20,,chrome 50.0 for android
+en-gb,mobile,en-gb,Android 4.4.2,chrome generic
+gt-s5310l,mobile,GT-S5310L,,chrome 55.0 for android
+vs5012,mobile,VS5012 Build/NRD90M,,chrome 64.0 for android
+c1904,mobile,C1904,,chrome 60.0 for android
+sm-t585,mobile,SM-T585,,chrome 64.0 for android
+f3111,mobile,F3111 Build/33.3.A.1.97,,chrome 64.0 for android
+lgls992,mobile,LGLS992,Android 7.0,chrome 64.0 for android
+bv7000,mobile,BV7000,,android webview 4.0
+k10,mobile,K10,,android webview 4.0
+lg-p708g,mobile,LG-P708g,,chrome 53.0 for android
+sm-g386w,mobile,SM-G386W,,chrome 64.0 for android
+sm-a300m,mobile,SM-A300M,,chrome 64.0 for android
+huawei_m2-801w,mobile,HUAWEI M2-801W Build/HUAWEIM2-801W,,chrome 64.0 for android
+lenovo_yt3-850f,mobile,Lenovo YT3-850F Build/MMB29M,,chrome 64.0 for android
+ple-701l,mobile,PLE-701L,,chrome 62.0 for android
+limit,mobile,LIMIT,,chrome 64.0 for android
+sm-t285m,mobile,SM-T285M,,chrome 64.0 for android
+iris702,mobile,iris702,,chrome 63.0 for android
+sm-j530g,mobile,SM-J530G,,chrome 64.0 for android
+lg-h812,mobile,LG-H812,,chrome 64.0 for android
+lgl164vl,mobile,LGL164VL Build/NRD90U,Android 7.0,chrome 64.0 for android
+huawei_can-l11,mobile,HUAWEI CAN-L11 Build/HUAWEICAN-L11,,chrome 64.0 for android
+nx16a8116kp,mobile,NX16A8116KP,Android 7.1.1,chrome 64.0 for android
+a574bl,mobile,A574BL Build/NMF26F,Android 7.1.1,chrome 64.0 for android
+samsung_sm-a730f,mobile,SAMSUNG SM-A730F Build/NMF26X,,samsung browser generic
+sm-t827r4,mobile,SM-T827R4,Android 7.0,chrome 64.0 for android
+lenovo_yt3-850m,mobile,Lenovo YT3-850M Build/MMB29M,,chrome generic for android
+sm-g7105,mobile,SM-G7105,,chrome 64.0 for android
+gt-s7275b,mobile,GT-S7275B,,chrome 64.0 for android
+minion_tab,mobile,Minion_Tab,,Inco/Minion
+x900,mobile,X900+,,chrome 64.0 for android
+samsung-sm-j327az,mobile,SAMSUNG-SM-J327AZ,Android 7.0,chrome 64.0 for android
+lgms428,mobile,LGMS428,,chrome 64.0 for android
+samsung_sm-t813,mobile,SAMSUNG SM-T813 Build/NRD90M,Android 7.0,samsung browser 6.2
+ilium_lt520,mobile,Ilium LT520 Build/NRD90M,,chrome 56.0 for android
+sm-a530f,mobile,SM-A530F Build/NMF26X,,chrome 64.0 for android
+sm-p607t,mobile,SM-P607T,Android 5.1.1,chrome 64.0 for android
+redmi_5_plus,mobile,Redmi 5 Plus Build/N2G47H,,chrome 64.0 for android
+sm-t355y,mobile,SM-T355Y Build/NMF26X,,android webview 4.0
+sm-j700p,mobile,SM-J700P,Android 7.1.1,chrome 64.0 for android
+ilium_x220,mobile,Ilium X220 Build/MRA58K,,chrome 64.0 for android
+lgl163bl,mobile,LGL163BL,Android 7.0,chrome 63.0 for android
+ta-1052,mobile,TA-1052,Android 8.1.0,
+o1,mobile,O1,,android browser 4.0
+origins,mobile,Origins,,android webview 4.0
+asus_z017da,mobile,ASUS_Z017DA,,chrome 64.0 for android
+lg-m257,mobile,LG-M257,,chrome 64.0 for android
+aquaris_x5_plus,mobile,Aquaris X5 Plus Build/NMF26F,,chrome 64.0 for android
+xt1072,mobile,XT1072,,chrome 64.0 for android
+verykool,mobile,verykool,,chrome 64.0 for android
+x3402,mobile,X3402,,chrome 55.0 for android
+lgms345,mobile,LGMS345,,android browser 4.0
+lg-v500,mobile,LG-V500,,chrome 53.0 for android
+a1-850,mobile,A1-850,,chrome 64.0 for android
+a97,mobile,A97,,chrome 64.0 for android
+fig-lx3,mobile,FIG-LX3 Build/HUAWEIFIG-LX3,,chrome 62.0 for android
+5045i,mobile,5045I,,chrome generic for android
+stf-l09,mobile,STF-L09 Build/HUAWEISTF-L09,,chrome 64.0 for android
+alcatel_4060o,mobile,Alcatel_4060O Build/MMB29M,Android 6.0.1,chrome 50.0 for android
+lgus992,mobile,LGUS992,Android 7.0,chrome generic for android
+sm-t537v,mobile,SM-T537V,,chrome 50.0 for android
+sc-02h,mobile,SC-02H,,chrome generic for android
+ilium_pad_t7x,desktop,Ilium Pad T7X Build/LMY47I,,chrome generic
+xt1095,mobile,XT1095,Android 6.0,chrome generic for android
+samsung_sm-a310f,mobile,SAMSUNG SM-A310F Build/NRD90M,,samsung browser generic
+5056n,mobile,5056N,Android 6.0.1,chrome 64.0 for android
+samsung-sgh-i497,mobile,SAMSUNG-SGH-I497,,chrome 59.0 for android
+alcatel_one_touch_7040a,mobile,ALCATEL ONE TOUCH 7040A Build/JDQ39,,chrome 64.0 for android
+zte-z956,mobile,ZTE-Z956,Android 6.0.1,other
+c6903,desktop,C6903,,chrome generic
+bla-l09,mobile,BLA-L09 Build/HUAWEIBLA-L09,,chrome 64.0 for android
+magno,mobile,MAGNO,,chrome 63.0 for android
+alcatel_5056o,mobile,Alcatel_5056O,,chrome 64.0 for android
+lg-sp200,mobile,LG-SP200,Android 7.1.2,chrome generic for android
+vk815,mobile,VK815,Android 6.0,chrome 64.0 for android
+sm-c900f,mobile,SM-C900F,Android 7.1.1,chrome generic for android
+p5046a,mobile,P5046A,,chrome generic for android
+stk_sync_5e,mobile,STK_Sync_5e,,chrome 64.0 for android
+was-tl10,mobile,WAS-TL10 Build/HUAWEIWAS-TL10,,chrome generic for android
+g25524k,mobile,G25524K,,chrome generic for android
+sgp511,desktop,SGP511,,chrome generic
+samsung-sm-j120a,mobile,SAMSUNG-SM-J120A,,chrome 64.0 for android
+sov33,mobile,SOV33 Build/35.0.D.2.25,,chrome 54.0 for android
+z813,desktop,Z813 Build/LMY47O,,chrome generic
+sm-g730w8,mobile,SM-G730W8 Build/KOT49H,,chrome 64.0 for android
+4034e,mobile,4034E,,chrome 64.0 for android
+mya-l11,mobile,MYA-L11,,chrome generic for android
+rct6k03w13,mobile,RCT6K03W13,Android 6.0,chrome 64.0 for android
+rv140,mobile,rv:14.0,,Mozilla/Firefox
+a5002,mobile,A5002,Android 6.0,chrome 55.0 for android
+sm-t210,mobile,SM-T210,,chrome 64.0 for android
+nyx_a1,mobile,NYX_A1,,chrome 63.0 for android
+f3311,mobile,F3311,,chrome 65.0 for android
+mi_max_2,mobile,MI MAX 2 Build/NMF26F,,chrome 65.0 for android
+sph-l720t,mobile,SPH-L720T,Android,chrome 65.0 for android
+b1-790,mobile,B1-790,,chrome 65.0 for android
+g527-u081,mobile,G527-U081,,chrome 62.0 for android
+lg-d681,mobile,LG-D681,,chrome 65.0 for android
+helix,mobile,Helix,,chrome 65.0 for android
+xt890,mobile,XT890 Build/9.8.2I-50_SML-25,,chrome 65.0 for android
+samsung_sm-g9600,mobile,SAMSUNG SM-G9600 Build/R16NW,,other
+sm-g9600,mobile,SM-G9600 Build/R16NW,,chrome 65.0 for android
+zur70016,mobile,ZUR70016,,chrome 65.0 for android
+samsung_sm-a310m,desktop,SAMSUNG SM-A310M Build/LMY47X,,chrome generic
+star,desktop,Star,,chrome generic
+g8341,mobile,G8341,,chrome 65.0 for android
+lex829,mobile,LEX829,,chrome 65.0 for android
+ta-1020,mobile,TA-1020,,chrome 65.0 for android
+ht0703k16,mobile,HT0703K16,,chrome 64.0 for android
+aquaris_v,mobile,Aquaris V Build/N2G47H,,chrome 65.0 for android
+sm-g350m,mobile,SM-G350M,,chrome 63.0 for android
+infinix,mobile,Infinix,,chrome 65.0 for android
+h550,mobile,H550,,android webview 4.0
+m431,mobile,M431,,chrome 63.0 for android
+aoc_u706g,mobile,AOC_U706G,,chrome 64.0 for android
+gigaset,mobile,Gigaset,,chrome 65.0 for android
+sla-l23,mobile,SLA-L23,,chrome 65.0 for android
+lg-h221,desktop,LG-H221,,chrome
+grace,mobile,GRACE,,chrome 65.0 for android
+pmid7102dc,mobile,PMID7102DC,,chrome 64.0 for android
+sm-j500h,mobile,SM-J500H,,chrome 58.0 for android
+lg-sp320,mobile,LG-SP320,Android 7.1.1,chrome 65.0 for android
+v502015,mobile,V502015,,Cherry
+zte_blade_a6,mobile,ZTE BLADE A6 Build/NMF26F,,chrome 65.0 for android
+vs980_4g,mobile,VS980 4G Build/LRX22G,Android 5.0.2,chrome 63.0 for android
+grant,mobile,GRANT,,chrome 65.0 for android
+sm-g965u,mobile,SM-G965U Build/R16NW,Android 8.0.0,chrome 65.0 for android
+samsung_sm-a310fa310fxxu4crb1,mobile,SAMSUNG SM-A310F/A310FXXU4CRB1 Build/NRD90M,,samsung browser 6.4
+xt1225,mobile,XT1225,,chrome 65.0 for android
+m4_ss4457-r,mobile,M4 SS4457-R Build/NRD90M,,chrome 65.0 for android
+r831l,mobile,R831L,,chrome 65.0 for android
+swift,mobile,Swift,,chrome 65.0 for android
+pra507,mobile,PRA507,,chrome 65.0 for android
+f8131,mobile,F8131,,chrome 65.0 for android
+iris50,mobile,iris50,,chrome 65.0 for android
+m10q1010,mobile,M10/Q1010,,chrome 65.0 for android
+ax705,mobile,AX705,,chrome 65.0 for android
+samsung_sm-g965u1,mobile,SAMSUNG SM-G965U1 Build/R16NW,,samsung browser 7.0
+htcd100lvwpp,mobile,HTCD100LVWPP,Android,chrome 65.0 for android
+p01m,mobile,P01M,Android 6.0.1,chrome 55.0 for android
+p00a,mobile,P00A,Android 7.0,chrome 65.0 for android
+lg-v522,mobile,LG-V522,Android 7.0,chrome 65.0 for android
+sm-t380,mobile,SM-T380,,chrome 65.0 for android
+rne-l21,mobile,RNE-L21 Build/HUAWEIRNE-L21,,chrome 65.0 for android
+htcd200lvw,mobile,HTCD200LVW,Android 6.0.1,chrome 58.0 for android
+b1-750,mobile,B1-750,,chrome 65.0 for android
+gt-s7582l,mobile,GT-S7582L,,chrome 64.0 for android
+sm-t587p,mobile,SM-T587P,Android 6.0.1,chrome 63.0 for android
+z557bl,mobile,Z557BL,Android 7.1.1,chrome 59.0 for android
+a577vl,mobile,A577VL,Android 7.1.1,chrome 65.0 for android
+sm-g960u,mobile,SM-G960U Build/R16NW,Android 8.0.0,chrome 65.0 for android
+sm-g925r4,mobile,SM-G925R4,,chrome 65.0 for android
+za990,mobile,ZA990,,chrome 65.0 for android
+4009f,mobile,4009F,,chrome 65.0 for android
+was-lx2j,mobile,WAS-LX2J,,chrome 65.0 for android
+samsung_sm-j250m,mobile,SAMSUNG SM-J250M Build/NMF26X,,samsung browser 6.4
+z,mobile,Z,,chrome 43.0 for android
+was-lx1,mobile,WAS-LX1 Build/HUAWEIWAS-LX1,,chrome 65.0 for android
+sm-g901f,mobile,SM-G901F,,chrome 65.0 for android
+samsung-sm-g920az,mobile,SAMSUNG-SM-G920AZ,Android 6.0.1,chrome 55.0 for android
+samsung_sm-g960u,mobile,SAMSUNG SM-G960U Build/R16NW,Android 8.0.0,other
+sm-g9650,mobile,SM-G9650 Build/R16NW,,chrome 65.0 for android
+dream,mobile,Dream,,chrome 65.0 for android
+lgms395,mobile,LGMS395,Android 4.4.2,chrome 65.0 for android
+sm-g965f,mobile,SM-G965F Build/R16NW,,chrome 65.0 for android
+sm-a730f,mobile,SM-A730F Build/NMF26X,,chrome 61.0 for android
+a463bg,mobile,A463BG,Android 4.4.2,chrome 56.0 for android
+gt-i8190n,mobile,GT-I8190N,,chrome 65.0 for android
+f80s,mobile,F80'S+,,android webview 4.0
+47418,mobile,47418,,chrome 65.0 for android
+e6683,mobile,E6683,,chrome 65.0 for android
+rv610,mobile,rv:61.0,,Generic/Android
+6055b,mobile,6055B,,chrome 65.0 for android
+c6603,mobile,C6603,,chrome 65.0 for android
+redmi_note_5a,mobile,Redmi Note 5A Build/N2G47H,,chrome 65.0 for android
+smart,mobile,SMART,,chrome 55.0 for android
+kylin,mobile,Kylin,,chrome 65.0 for android
+am508,mobile,AM508,,android webview 4.0
+rv330,desktop,rv:33.0,,firefox
+samsung-sm-j727az,mobile,SAMSUNG-SM-J727AZ,Android 7.0,chrome 65.0 for android
+samsung_sm-g935w8,mobile,SAMSUNG SM-G935W8 Build/NRD90M,,samsung browser 6.4
+sm-g361f,mobile,SM-G361F,,chrome 63.0 for android
+sm-g960f,mobile,SM-G960F Build/R16NW,,chrome 65.0 for android
+asus_x00id,mobile,ASUS_X00ID,Android 7.1.1,chrome 65.0 for android
+lg-lg870,mobile,LG-LG870,,chrome 64.0 for android
+lg-m200,mobile,LG-M200 Build/NRD90U,,chrome 64.0 for android
+sp7731g,mobile,SP7731G,,other
+alumini3,mobile,Alumini3 Build/MRA58K,,chrome 51.0 for android
+bnd-l34,mobile,BND-L34,,chrome generic for android
+htc_one_m84282,mobile,HTC_One_M8/4.28.502.2,,
+sm-g570f,mobile,SM-G570F,,chrome 65.0 for android
+sm-j120m,mobile,SM-J120M,,chrome 64.0 for android
+hisense_e51,mobile,Hisense E51 Build/LMY47V,,chrome 43.0 for android
+t08,mobile,T08,Android 6.0,chrome 65.0 for android
+sgh-i747m,desktop,SGH-I747M,,chrome generic
+samsung_sm-g9650,mobile,SAMSUNG SM-G9650 Build/R16NW,,samsung browser 7.0
+bv8000pro,mobile,BV8000Pro,,chrome 65.0 for android
+asus_z01bdc,mobile,ASUS_Z01BDC,,chrome 65.0 for android
+sm-g615f,mobile,SM-G615F,,android webview 4.0
+asus_x018d,mobile,ASUS_X018D,,chrome generic for android
+lg-h933,mobile,LG-H933,,chrome generic for android
+mtt,mobile,MTT,,chrome generic for android
+samsung_sm-g965u,mobile,SAMSUNG SM-G965U Build/R16NW,Android 8.0.0,other
+f5122,mobile,F5122,,chrome generic for android
+samsung_sm-g965f,mobile,SAMSUNG SM-G965F Build/R16NW,,samsung browser 7.0
+techpad,mobile,Techpad,,chrome generic for android
+fusion5_u7,mobile,Fusion5_u7,,chrome generic for android
+vs425,mobile,VS425,Android 6.0.1,chrome generic for android
+r2,mobile,R2,,chrome 65.0 for android
+sm-g955w,mobile,SM-G955W,,chrome generic for android
+pulp_4g,desktop,PULP 4G Build/LMY47V,,chrome generic
+x78,desktop,X78,,chrome generic
+asus_x00hd,mobile,ASUS_X00HD Build/NMF26F,,chrome generic for android
+ax821,mobile,AX821 Build/MRA58K,,chrome generic for android
+aquaris_x,mobile,Aquaris X Build/NMF26F,,chrome generic for android
+sm-j700f,mobile,SM-J700F,,chrome generic for android
+lg-v410v41020c,mobile,LG-V410/V41020c,Android 5.0.2,chrome generic
+blade_v8q,mobile,BLADE V8Q Build/N2G47H,,chrome generic for android
+d5503,desktop,D5503,,chrome generic
+domos,mobile,DOMOS,,chrome 65.0 for android
+ul40,mobile,UL40,Android 7.1.1,chrome generic for android
+f8332,mobile,F8332,,chrome generic for android
+eml-l29,mobile,EML-L29 Build/HUAWEIEML-L29,,chrome generic for android
+sm-g892a,mobile,SM-G892A,Android 8.0.0,chrome generic for android
+northwell,desktop,Northwell,Windows 7,ie 11.0 for desktop
+hisense_f24,mobile,Hisense F24 Build/NRD90M,,chrome generic for android
+moto_g6_play,desktop,moto g(6) play Build/OPP27.61-14-4,,chrome generic
+ta-1032,mobile,TA-1032,,chrome 56.0 for android
+htc_desire_820,mobile,HTC_Desire_820,,android webview 4.0
+asus_a001,mobile,ASUS_A001,,chrome 66.0 for android
+ax1060,mobile,AX1060,,chrome 65.0 for android
+clt-l09,mobile,CLT-L09,,chrome 66.0 for android
+samsung_sm-a710m,mobile,SAMSUNG SM-A710M Build/NRD90M,,samsung browser 6.4
+akus,mobile,AKUS,,chrome 66.0 for android
+n9560,mobile,N9560 Build/NMF26F,Android 7.1.1,chrome 65.0 for android
+shift,mobile,Shift Build/LMY47I,,chrome 46.0 for android
+sm-t670,mobile,SM-T670,Android 5.1.1,chrome 66.0 for android
+verykools5530,mobile,verykoolS5530 Build/LMY47I,,chrome 64.0 for android
+verykools5005,mobile,verykoolS5005,,chrome
+a3-a20,mobile,A3-A20,,chrome 66.0 for android
+e501,mobile,E501,,chrome 64.0 for android
+verykools5524,mobile,verykoolS5524,,chrome 64.0 for android
+6037b,mobile,6037B,,chrome 66.0 for android
+e6790tm,mobile,E6790TM,Android 5.1.1,chrome 66.0 for android
+cph1607,mobile,CPH1607,,chrome 66.0 for android
+lg-k350,mobile,LG-K350,,chrome 66.0 for android
+bolt,mobile,Bolt,,chrome 66.0 for android
+5044a,mobile,5044A,,chrome 64.0 for android
+sm-g530t1,mobile,SM-G530T1,,chrome 66.0 for android
+s471,mobile,S471,,android webview 4.0
+oneplus_a5010,mobile,ONEPLUS A5010 Build/OPM1.171019.011,,android webview 4.0
+gt-s7582,mobile,GT-S7582,,chrome 66.0 for android
+sm-g900fd,mobile,SM-G900FD,,chrome 63.0 for android
+za509,mobile,ZA509,,android browser 4.0
+fever,mobile,FEVER,,chrome 63.0 for android
+sm-t330,mobile,SM-T330,,chrome 65.0 for android
+sm-j250m,mobile,SM-J250M Build/NMF26X,,chrome 66.0 for android
+alumini3plus,mobile,Alumini3Plus,,chrome 66.0 for android
+samsung_sm-g930fxxu2drc1,mobile,SAMSUNG SM-G930F/XXU2DRC1 Build/NRD90M,,samsung browser 6.4
+redmi_note_4x,mobile,Redmi Note 4X Build/MRA58K,,chrome 66.0 for android
+hisense_f8_mini,mobile,Hisense F8 MINI Build/NRD90M,,chrome 66.0 for android
+h3321,mobile,H3321,,chrome 66.0 for android
+studio_g_hd,mobile,STUDIO_G_HD,,chrome 52.0 for android
+azumi_kinzo_a5_ql,mobile,Azumi_KINZO_A5_QL,,chrome 65.0 for android
+android_71,mobile,Android 7.1.2,,android webview 4.0
+y550-l02,mobile,Y550-L02,,chrome 66.0 for android
+ls5,mobile,LS5,,chrome 65.0 for android
+sm-j120w,mobile,SM-J120W,,chrome 66.0 for android
+7_plus,mobile,7_Plus,,android webview 4.0
+sm-j7108,mobile,SM-J7108,,chrome 66.0 for android
+samsung_sm-n910v,mobile,SAMSUNG SM-N910V Build/MMB29M,Android 6.0.1,samsung browser 6.4
+ane-lx3,mobile,ANE-LX3 Build/HUAWEIANE-LX3,,chrome 66.0 for android
+yolo,mobile,YOLO,,android browser 4.0
+z812,mobile,Z812,,chrome 65.0 for android
+rne-l23,mobile,RNE-L23 Build/HUAWEIRNE-L23,,chrome 66.0 for android
+gt-n8010,mobile,GT-N8010,,chrome 65.0 for android
+sgp611,mobile,SGP611,,chrome 54.0 for android
+gt-i9506,mobile,GT-I9506,,chrome 66.0 for android
+z965,mobile,Z965 Build/NMF26V,Android 7.1.1,chrome 58.0 for android
+d2406,mobile,D2406,,chrome 43.0 for android
+samsung_sm-j327az,mobile,SAMSUNG SM-J327AZ Build/NRD90M,,samsung browser 6.4
+orion,mobile,ORION,,chrome 66.0 for android
+cph1723,mobile,CPH1723,Android 7.1.1,chrome 66.0 for android
+rne-l22,mobile,RNE-L22 Build/HUAWEIRNE-L22,,chrome 66.0 for android
+io,mobile,IO,,chrome 65.0 for android
+asus_x008d,mobile,ASUS_X008D Build/NRD90M,,android webview 4.0
+g8142,mobile,G8142,,chrome 66.0 for android
+g630-u251,mobile,G630-U251,,chrome
+lg-k212,mobile,LG-K212,Android 6.0.1,chrome 66.0 for android
+ldn-lx3,mobile,LDN-LX3 Build/HUAWEILDN-LX3,,chrome 66.0 for android
+z955a,mobile,Z955A,,chrome 66.0 for android
+lg-e975,mobile,LG-E975,,chrome 57.0 for android

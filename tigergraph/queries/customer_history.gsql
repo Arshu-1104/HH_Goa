@@ -1,0 +1,112 @@
+// Query: get_customer_history
+// Purpose: Returns a full investigation summary for a customer.
+// Returns compact JSON-structured result suitable for agent consumption.
+//
+// Usage:
+//   INSTALL QUERY get_customer_history
+//   RUN QUERY get_customer_history("C06075")
+
+USE GRAPH FraudGraph
+
+CREATE QUERY get_customer_history(STRING customer_id) FOR GRAPH FraudGraph {
+
+    // ── Seed vertex ──────────────────────────────────────────────────────
+    SetAccum<VERTEX<Transaction>> @@txn_set;
+    SetAccum<VERTEX<Card>> @@card_set;
+    SetAccum<VERTEX<DeviceProfile>> @@device_set;
+    SetAccum<VERTEX<ClosedCase>> @@case_set;
+
+    SumAccum<INT> @@txn_count;
+    SumAccum<DOUBLE> @@total_amount;
+    MinAccum<DOUBLE> @@min_amount;
+    MaxAccum<DOUBLE> @@max_amount;
+    MinAccum<INT> @@first_dt;
+    MaxAccum<INT> @@last_dt;
+    SumAccum<INT> @@online_count;
+    SumAccum<INT> @@in_person_count;
+
+    SetAccum<STRING> @@regions;
+    SetAccum<STRING> @@email_domains;
+
+    // Recent transaction buffer (last 30 days relative window)
+    MaxAccum<INT> @@max_dt;
+    ListAccum<MAP<STRING, STRING>> @@recent_txns;
+    ListAccum<MAP<STRING, STRING>> @@all_cards;
+    ListAccum<MAP<STRING, STRING>> @@all_devices;
+    ListAccum<MAP<STRING, STRING>> @@prior_cases;
+
+    // ── Step 1: Get customer vertex ──────────────────────────────────────
+    Start = {Customer.*};
+    Cust = SELECT c FROM Start:c WHERE c.customer_id == customer_id;
+
+    // ── Step 2: Get all transactions by this customer ────────────────────
+    Txns = SELECT t
+           FROM Cust:c -(PERFORMED)-> Transaction:t
+           ACCUM
+               @@txn_set += t,
+               @@txn_count += 1,
+               @@total_amount += t.TransactionAmt,
+               @@min_amount += t.TransactionAmt,
+               @@max_amount += t.TransactionAmt,
+               @@first_dt += t.TransactionDT,
+               @@last_dt += t.TransactionDT,
+               @@max_dt += t.TransactionDT,
+               IF t.channel == "online" THEN @@online_count += 1
+               ELSE @@in_person_count += 1 END,
+               IF t.addr1 != "" THEN @@regions += t.addr1 END,
+               IF t.P_emaildomain != "" THEN @@email_domains += t.P_emaildomain END;
+
+    // ── Step 3: Get customer's cards ─────────────────────────────────────
+    Cards = SELECT ca
+            FROM Cust:c -(OWNS)-> Card:ca
+            ACCUM @@card_set += ca,
+                  @@all_cards += ("card_id" -> ca.card_id,
+                                  "card4"   -> ca.card4,
+                                  "card6"   -> ca.card6);
+
+    // ── Step 4: Get devices used (via transactions) ───────────────────────
+    Devs = SELECT d
+           FROM Txns:t -(USES_DEVICE)-> DeviceProfile:d
+           ACCUM @@device_set += d,
+                 @@all_devices += ("device_id"  -> d.device_id,
+                                   "DeviceType" -> d.DeviceType,
+                                   "os"         -> d.os,
+                                   "browser"    -> d.browser);
+
+    // ── Step 5: Prior closed cases ────────────────────────────────────────
+    PriorCases = SELECT cc
+                 FROM Cust:c -(CUSTOMER_IN_CASE)-> ClosedCase:cc
+                 ACCUM @@prior_cases += ("case_id"      -> cc.case_id,
+                                         "outcome"      -> cc.outcome,
+                                         "pattern"      -> cc.pattern,
+                                         "closed_at"    -> cc.closed_at,
+                                         "exposure_usd" -> to_string(cc.exposure_usd),
+                                         "actions_taken"-> cc.actions_taken);
+
+    // ── Step 6: Recent transactions (last 30 days = 2592000 seconds) ──────
+    RecentTxns = SELECT t FROM Txns:t
+                 WHERE t.TransactionDT >= (@@max_dt - 2592000)
+                 ACCUM @@recent_txns += ("TransactionID"  -> to_string(t.TransactionID),
+                                         "TransactionAmt" -> to_string(t.TransactionAmt),
+                                         "ProductCD"      -> t.ProductCD,
+                                         "channel"        -> t.channel,
+                                         "risk_score"     -> to_string(t.risk_score),
+                                         "ts"             -> t.ts);
+
+    // ── Output ────────────────────────────────────────────────────────────
+    PRINT customer_id,
+          @@txn_count AS transaction_count,
+          @@first_dt  AS first_transaction_dt,
+          @@last_dt   AS last_transaction_dt,
+          @@online_count AS online_count,
+          @@in_person_count AS in_person_count,
+          @@min_amount AS min_amount,
+          @@max_amount AS max_amount,
+          @@total_amount AS total_amount,
+          @@regions AS regions,
+          @@email_domains AS email_domains,
+          @@all_cards AS cards,
+          @@all_devices AS devices,
+          @@prior_cases AS prior_cases,
+          @@recent_txns AS recent_transactions;
+}

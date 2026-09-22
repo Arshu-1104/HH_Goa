@@ -1,0 +1,82 @@
+// Query: find_prior_cases
+// Purpose: Find relevant historical closed cases by customer, card, or fraud pattern.
+// Any non-empty parameter is used as a filter. Empty string = skip that filter.
+// Results are unioned across all three match types.
+//
+// Usage:
+//   INSTALL QUERY find_prior_cases
+//   RUN QUERY find_prior_cases("C06075", "C06075-K1", "card_not_present_fraud")
+//   RUN QUERY find_prior_cases("C06075", "", "")
+
+USE GRAPH FraudGraph
+
+CREATE QUERY find_prior_cases(
+    STRING customer_id,
+    STRING card_id,
+    STRING pattern
+) FOR GRAPH FraudGraph {
+
+    SetAccum<VERTEX<ClosedCase>> @@matched_cases;
+    MapAccum<VERTEX<ClosedCase>, STRING> @@match_reason;
+    ListAccum<MAP<STRING, STRING>> @@results;
+
+    // ── Match by customer_id ──────────────────────────────────────────────
+    IF customer_id != "" THEN
+        CustSet = {Customer.*};
+        Cust = SELECT c FROM CustSet:c WHERE c.customer_id == customer_id;
+
+        CustCases = SELECT cc
+                    FROM Cust:c -(CUSTOMER_IN_CASE)-> ClosedCase:cc
+                    ACCUM @@matched_cases += cc,
+                          @@match_reason += (cc -> "customer_id");
+    END;
+
+    // ── Match by card_id ──────────────────────────────────────────────────
+    IF card_id != "" THEN
+        CardSet = {Card.*};
+        CardV = SELECT ca FROM CardSet:ca WHERE ca.card_id == card_id;
+
+        CardCases = SELECT cc
+                    FROM CardV:ca -(CARD_IN_CASE)-> ClosedCase:cc
+                    ACCUM
+                        IF @@matched_cases.contains(cc) == false THEN
+                            @@matched_cases += cc,
+                            @@match_reason += (cc -> "card_id")
+                        END;
+    END;
+
+    // ── Match by fraud pattern ────────────────────────────────────────────
+    IF pattern != "" THEN
+        PatternSet = {FraudPattern.*};
+        PatV = SELECT p FROM PatternSet:p WHERE p.pattern_name == pattern;
+
+        PatCases = SELECT cc
+                   FROM PatV:p -(PATTERN_HAS_CASE)-> ClosedCase:cc
+                   ACCUM
+                       IF @@matched_cases.contains(cc) == false THEN
+                           @@matched_cases += cc,
+                           @@match_reason += (cc -> "pattern")
+                       END;
+    END;
+
+    // ── Build output ──────────────────────────────────────────────────────
+    FOREACH cc IN @@matched_cases DO
+        @@results += (
+            "case_id"        -> cc.case_id,
+            "match_reason"   -> @@match_reason.get(cc),
+            "outcome"        -> cc.outcome,
+            "pattern"        -> cc.pattern,
+            "opened_at"      -> cc.opened_at,
+            "closed_at"      -> cc.closed_at,
+            "exposure_usd"   -> to_string(cc.exposure_usd),
+            "n_txns"         -> to_string(cc.n_txns),
+            "actions_taken"  -> cc.actions_taken,
+            "analyst_notes"  -> cc.analyst_notes
+        );
+    END;
+
+    PRINT customer_id,
+          card_id,
+          pattern,
+          @@results AS matching_cases;
+}

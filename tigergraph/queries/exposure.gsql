@@ -1,0 +1,58 @@
+// Query: calculate_exposure
+// Purpose: Calculate total USD exposure for a given case by summing
+// transaction amounts for all flagged transactions.
+// Fully deterministic — does not use LLM or any probabilistic logic.
+//
+// Works for both InvestigationCase and ClosedCase.
+//
+// Usage:
+//   INSTALL QUERY calculate_exposure
+//   RUN QUERY calculate_exposure("HHG-001")
+//   RUN QUERY calculate_exposure("CHC-1234")
+
+USE GRAPH FraudGraph
+
+CREATE QUERY calculate_exposure(STRING case_id) FOR GRAPH FraudGraph {
+
+    SumAccum<DOUBLE> @@total_exposure;
+    SumAccum<INT> @@flagged_count;
+    ListAccum<MAP<STRING, STRING>> @@txn_list;
+
+    // ── Try InvestigationCase first ───────────────────────────────────────
+    InvCaseSet = {InvestigationCase.*};
+    InvCase = SELECT ic FROM InvCaseSet:ic WHERE ic.case_id == case_id;
+
+    InvFlaggedTxns = SELECT t
+                     FROM InvCase:ic -(INVESTIGATION_FLAGGED_TRANSACTION)-> Transaction:t
+                     ACCUM
+                         @@total_exposure += t.TransactionAmt,
+                         @@flagged_count += 1,
+                         @@txn_list += (
+                             "TransactionID"  -> to_string(t.TransactionID),
+                             "amount"         -> to_string(t.TransactionAmt),
+                             "channel"        -> t.channel,
+                             "ts"             -> t.ts
+                         );
+
+    // ── Also try ClosedCase ───────────────────────────────────────────────
+    ClosedCaseSet = {ClosedCase.*};
+    ClosedCase_ = SELECT cc FROM ClosedCaseSet:cc WHERE cc.case_id == case_id;
+
+    ClosedFlaggedTxns = SELECT t
+                        FROM ClosedCase_:cc -(FLAGGED_TRANSACTION)-> Transaction:t
+                        ACCUM
+                            @@total_exposure += t.TransactionAmt,
+                            @@flagged_count += 1,
+                            @@txn_list += (
+                                "TransactionID" -> to_string(t.TransactionID),
+                                "amount"        -> to_string(t.TransactionAmt),
+                                "channel"       -> t.channel,
+                                "ts"            -> t.ts
+                            );
+
+    // ── Output ────────────────────────────────────────────────────────────
+    PRINT case_id,
+          @@total_exposure AS total_exposure_usd,
+          @@flagged_count AS flagged_transaction_count,
+          @@txn_list AS transactions;
+}

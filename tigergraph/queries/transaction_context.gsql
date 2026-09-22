@@ -1,0 +1,71 @@
+// Query: get_transaction_context
+// Purpose: Returns full context for a specific transaction.
+// Includes customer, card, device, region, surrounding transactions
+// (±7 days = 604800 seconds), and any closed cases involving this transaction.
+//
+// Usage:
+//   INSTALL QUERY get_transaction_context
+//   RUN QUERY get_transaction_context(2987432)
+
+USE GRAPH FraudGraph
+
+CREATE QUERY get_transaction_context(UINT txn_id) FOR GRAPH FraudGraph {
+
+    // Accumulators for surrounding transactions
+    ListAccum<MAP<STRING, STRING>> @@surrounding_txns;
+    ListAccum<MAP<STRING, STRING>> @@involved_cases;
+
+    SumAccum<INT> @@txn_dt;
+
+    // ── Step 1: Get the target transaction ───────────────────────────────
+    TxnSet = {Transaction.*};
+    Txn = SELECT t FROM TxnSet:t WHERE t.TransactionID == txn_id
+          ACCUM @@txn_dt += t.TransactionDT;
+
+    // ── Step 2: Get customer (via PERFORMED_BY edge) ──────────────────────
+    CustResult = SELECT c FROM Txn:t -(PERFORMED_BY)-> Customer:c;
+
+    // ── Step 3: Get card (via MADE_BY edge) ───────────────────────────────
+    CardResult = SELECT ca FROM Txn:t -(MADE_BY)-> Card:ca;
+
+    // ── Step 4: Get device profile ────────────────────────────────────────
+    DeviceResult = SELECT d FROM Txn:t -(USES_DEVICE)-> DeviceProfile:d;
+
+    // ── Step 5: Get region ────────────────────────────────────────────────
+    RegionResult = SELECT r FROM Txn:t -(BILLED_TO_REGION)-> Region:r;
+
+    // ── Step 6: Surrounding transactions by same customer (±7 days) ───────
+    AllCustTxns = SELECT t2
+                  FROM CustResult:c -(PERFORMED)-> Transaction:t2
+                  WHERE t2.TransactionID != txn_id
+                    AND t2.TransactionDT >= (@@txn_dt - 604800)
+                    AND t2.TransactionDT <= (@@txn_dt + 604800)
+                  ACCUM @@surrounding_txns += (
+                      "TransactionID"  -> to_string(t2.TransactionID),
+                      "TransactionAmt" -> to_string(t2.TransactionAmt),
+                      "TransactionDT"  -> to_string(t2.TransactionDT),
+                      "channel"        -> t2.channel,
+                      "risk_score"     -> to_string(t2.risk_score),
+                      "ProductCD"      -> t2.ProductCD,
+                      "ts"             -> t2.ts
+                  );
+
+    // ── Step 7: Closed cases involving this transaction ───────────────────
+    ClosedInvolves = SELECT cc
+                    FROM Txn:t -(TRANSACTION_IN_CASE)-> ClosedCase:cc
+                    ACCUM @@involved_cases += (
+                        "case_id"       -> cc.case_id,
+                        "outcome"       -> cc.outcome,
+                        "pattern"       -> cc.pattern,
+                        "actions_taken" -> cc.actions_taken
+                    );
+
+    // ── Output ────────────────────────────────────────────────────────────
+    PRINT Txn,
+          CustResult AS customer,
+          CardResult AS card,
+          DeviceResult AS device,
+          RegionResult AS region,
+          @@surrounding_txns AS surrounding_transactions,
+          @@involved_cases AS involved_in_cases;
+}

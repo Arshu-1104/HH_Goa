@@ -1,0 +1,157 @@
+// FraudGraph Schema — TigerGraph 3.x / 4.x compatible
+// Deploy with: gsql tigergraph/schema/schema.gsql
+
+CREATE VERTEX Customer (
+    PRIMARY_ID customer_id STRING,
+    first_seen STRING DEFAULT "",
+    last_seen STRING DEFAULT ""
+) WITH primary_id_as_attribute="true"
+
+CREATE VERTEX Card (
+    PRIMARY_ID card_id STRING,
+    card4 STRING DEFAULT "",
+    card6 STRING DEFAULT "",
+    card1 STRING DEFAULT ""
+) WITH primary_id_as_attribute="true"
+
+CREATE VERTEX Transaction (
+    PRIMARY_ID TransactionID UINT,
+    TransactionDT INT DEFAULT 0,
+    TransactionAmt DOUBLE DEFAULT 0.0,
+    ProductCD STRING DEFAULT "",
+    card4 STRING DEFAULT "",
+    card6 STRING DEFAULT "",
+    channel STRING DEFAULT "",
+    risk_score DOUBLE DEFAULT 0.0,
+    ts STRING DEFAULT "",
+    P_emaildomain STRING DEFAULT "",
+    R_emaildomain STRING DEFAULT "",
+    addr1 STRING DEFAULT "",
+    addr2 STRING DEFAULT "",
+    C1 DOUBLE DEFAULT 0.0,
+    C2 DOUBLE DEFAULT 0.0,
+    D1 DOUBLE DEFAULT -1.0,
+    M1 STRING DEFAULT "",
+    M2 STRING DEFAULT "",
+    M3 STRING DEFAULT ""
+) WITH primary_id_as_attribute="true"
+
+CREATE VERTEX DeviceProfile (
+    PRIMARY_ID device_id STRING,
+    DeviceType STRING DEFAULT "",
+    DeviceInfo STRING DEFAULT "",
+    os STRING DEFAULT "",
+    browser STRING DEFAULT ""
+) WITH primary_id_as_attribute="true"
+
+CREATE VERTEX Region (
+    PRIMARY_ID region_code STRING
+) WITH primary_id_as_attribute="true"
+
+CREATE VERTEX EmailDomain (
+    PRIMARY_ID domain STRING
+) WITH primary_id_as_attribute="true"
+
+CREATE VERTEX ClosedCase (
+    PRIMARY_ID case_id STRING,
+    outcome STRING DEFAULT "",
+    pattern STRING DEFAULT "",
+    opened_at STRING DEFAULT "",
+    closed_at STRING DEFAULT "",
+    exposure_usd DOUBLE DEFAULT 0.0,
+    n_txns INT DEFAULT 0,
+    actions_taken STRING DEFAULT "",
+    analyst_notes STRING DEFAULT ""
+) WITH primary_id_as_attribute="true"
+
+CREATE VERTEX InvestigationCase (
+    PRIMARY_ID case_id STRING,
+    opened_at STRING DEFAULT "",
+    trigger_type STRING DEFAULT "",
+    trigger_text STRING DEFAULT "",
+    risk_score DOUBLE DEFAULT 0.0
+) WITH primary_id_as_attribute="true"
+
+CREATE VERTEX FraudPattern (
+    PRIMARY_ID pattern_name STRING,
+    description STRING DEFAULT ""
+) WITH primary_id_as_attribute="true"
+
+// ── Edges ──────────────────────────────────────────────────────────────────
+
+CREATE DIRECTED EDGE OWNS (
+    FROM Customer, TO Card
+) WITH REVERSE_EDGE="OWNED_BY"
+
+CREATE DIRECTED EDGE MADE (
+    FROM Card, TO Transaction
+) WITH REVERSE_EDGE="MADE_BY"
+
+CREATE DIRECTED EDGE PERFORMED (
+    FROM Customer, TO Transaction
+) WITH REVERSE_EDGE="PERFORMED_BY"
+
+CREATE DIRECTED EDGE USES_DEVICE (
+    FROM Transaction, TO DeviceProfile
+) WITH REVERSE_EDGE="DEVICE_USED_BY"
+
+CREATE DIRECTED EDGE BILLED_TO_REGION (
+    FROM Transaction, TO Region
+) WITH REVERSE_EDGE="REGION_HAS_TRANSACTION"
+
+CREATE DIRECTED EDGE USES_EMAIL (
+    FROM Transaction, TO EmailDomain
+) WITH REVERSE_EDGE="EMAIL_USED_BY"
+
+CREATE DIRECTED EDGE INVOLVES_CUSTOMER (
+    FROM ClosedCase, TO Customer
+) WITH REVERSE_EDGE="CUSTOMER_IN_CASE"
+
+CREATE DIRECTED EDGE INVOLVES_CARD (
+    FROM ClosedCase, TO Card
+) WITH REVERSE_EDGE="CARD_IN_CASE"
+
+CREATE DIRECTED EDGE FLAGGED_TRANSACTION (
+    FROM ClosedCase, TO Transaction
+) WITH REVERSE_EDGE="TRANSACTION_IN_CASE"
+
+CREATE DIRECTED EDGE HAS_PATTERN (
+    FROM ClosedCase, TO FraudPattern
+) WITH REVERSE_EDGE="PATTERN_HAS_CASE"
+
+CREATE DIRECTED EDGE ABOUT_CUSTOMER (
+    FROM InvestigationCase, TO Customer
+) WITH REVERSE_EDGE="CUSTOMER_UNDER_INVESTIGATION"
+
+CREATE DIRECTED EDGE INVESTIGATION_INVOLVES_CARD (
+    FROM InvestigationCase, TO Card
+) WITH REVERSE_EDGE="CARD_UNDER_INVESTIGATION"
+
+CREATE DIRECTED EDGE INVESTIGATION_FLAGGED_TRANSACTION (
+    FROM InvestigationCase, TO Transaction
+) WITH REVERSE_EDGE="TRANSACTION_UNDER_INVESTIGATION"
+
+CREATE DIRECTED EDGE SIMILAR_TO (
+    FROM InvestigationCase, TO ClosedCase,
+    similarity_score DOUBLE DEFAULT 0.0
+) WITH REVERSE_EDGE="SIMILAR_INVESTIGATION"
+
+CREATE GRAPH FraudGraph (
+    Customer, Card, Transaction, DeviceProfile,
+    Region, EmailDomain,
+    ClosedCase, InvestigationCase, FraudPattern,
+    OWNS, OWNED_BY,
+    MADE, MADE_BY,
+    PERFORMED, PERFORMED_BY,
+    USES_DEVICE, DEVICE_USED_BY,
+    BILLED_TO_REGION, REGION_HAS_TRANSACTION,
+    USES_EMAIL, EMAIL_USED_BY,
+    INVOLVES_CUSTOMER, CUSTOMER_IN_CASE,
+    INVOLVES_CARD, CARD_IN_CASE,
+    FLAGGED_TRANSACTION, TRANSACTION_IN_CASE,
+    HAS_PATTERN, PATTERN_HAS_CASE,
+    ABOUT_CUSTOMER, CUSTOMER_UNDER_INVESTIGATION,
+    INVESTIGATION_INVOLVES_CARD, CARD_UNDER_INVESTIGATION,
+    INVESTIGATION_FLAGGED_TRANSACTION, TRANSACTION_UNDER_INVESTIGATION,
+    SIMILAR_TO, SIMILAR_INVESTIGATION
+)

@@ -1,0 +1,70 @@
+// Query: find_shared_devices
+// Purpose: Find all transactions that share the same DeviceProfile as the
+// given transaction. Returns customer IDs and card IDs for those transactions.
+// A device shared by multiple customers is a strong fraud ring indicator.
+//
+// Usage:
+//   INSTALL QUERY find_shared_devices
+//   RUN QUERY find_shared_devices(2987432)
+
+USE GRAPH FraudGraph
+
+CREATE QUERY find_shared_devices(UINT txn_id) FOR GRAPH FraudGraph {
+
+    SetAccum<VERTEX<DeviceProfile>> @@devices;
+    SetAccum<VERTEX<Transaction>> @@sharing_txns;
+    SetAccum<VERTEX<Customer>> @@sharing_customers;
+
+    ListAccum<MAP<STRING, STRING>> @@device_info;
+    ListAccum<MAP<STRING, STRING>> @@sharing_txn_list;
+
+    SumAccum<INT> @@total_customers;
+    SumAccum<INT> @@total_txns;
+
+    // ── Step 1: Get the target transaction ───────────────────────────────
+    TxnSet = {Transaction.*};
+    Txn = SELECT t FROM TxnSet:t WHERE t.TransactionID == txn_id;
+
+    // ── Step 2: Get device(s) used by this transaction ───────────────────
+    Devices = SELECT d FROM Txn:t -(USES_DEVICE)-> DeviceProfile:d
+              ACCUM @@devices += d,
+                    @@device_info += (
+                        "device_id"  -> d.device_id,
+                        "DeviceType" -> d.DeviceType,
+                        "DeviceInfo" -> d.DeviceInfo,
+                        "os"         -> d.os,
+                        "browser"    -> d.browser
+                    );
+
+    // ── Step 3: Find all other transactions on these devices ─────────────
+    SharingTxns = SELECT t2
+                  FROM Devices:d -(DEVICE_USED_BY)-> Transaction:t2
+                  WHERE t2.TransactionID != txn_id
+                  ACCUM @@sharing_txns += t2,
+                        @@total_txns += 1;
+
+    // ── Step 4: Get customers and cards for those transactions ────────────
+    SharingCustomers = SELECT c
+                       FROM SharingTxns:t -(PERFORMED_BY)-> Customer:c
+                       ACCUM @@sharing_customers += c,
+                             @@total_customers += 1;
+
+    // ── Step 5: Build sharing transaction list with customer/card info ────
+    DetailedTxns = SELECT t2
+                   FROM SharingTxns:t2
+                   ACCUM
+                       @@sharing_txn_list += (
+                           "TransactionID"  -> to_string(t2.TransactionID),
+                           "TransactionAmt" -> to_string(t2.TransactionAmt),
+                           "channel"        -> t2.channel,
+                           "ts"             -> t2.ts,
+                           "risk_score"     -> to_string(t2.risk_score)
+                       );
+
+    // ── Output ────────────────────────────────────────────────────────────
+    PRINT txn_id AS source_txn_id,
+          @@device_info AS device,
+          @@sharing_txn_list AS sharing_transactions,
+          @@total_customers AS total_customers_on_device,
+          @@total_txns AS total_transactions_on_device;
+}

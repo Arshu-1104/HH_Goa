@@ -1,0 +1,8 @@
+pattern_name,description
+account_takeover,Fraudster gained access to legitimate customer account
+card_not_present_fraud,Card used for online/phone transactions without physical card
+card_not_present_new_device,Card-not-present transaction from a new/unrecognized device
+card_testing,Small repeated transactions to test if stolen card is active
+none,No fraud pattern — case was cleared
+out_of_region_use,Card used far outside the customer's normal geographic region
+undocumented,Fraud confirmed but specific pattern not documented

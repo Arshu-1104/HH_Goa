@@ -1,0 +1,101 @@
+// Query: detect_temporal_patterns
+// Purpose: Analyze transaction sequences for time-based fraud signals.
+// Detects:
+//   - Transaction bursts (multiple transactions in short window)
+//   - Repeated amounts (card testing signal)
+//   - Rapid region changes
+//   - Out-of-hours activity (before 6am or after 10pm)
+//
+// window_hours: time window for burst detection, e.g. 24 = last 24 hours
+//
+// Usage:
+//   INSTALL QUERY detect_temporal_patterns
+//   RUN QUERY detect_temporal_patterns("C06075", 24)
+
+USE GRAPH FraudGraph
+
+CREATE QUERY detect_temporal_patterns(
+    STRING customer_id,
+    INT window_hours
+) FOR GRAPH FraudGraph {
+
+    MaxAccum<INT> @@max_dt;
+    MinAccum<INT> @@min_dt;
+    SumAccum<INT> @@txn_count_window;
+
+    // Amount frequency map for card testing detection
+    MapAccum<DOUBLE, INT> @@amount_freq;
+    ListAccum<MAP<STRING, STRING>> @@burst_txns;
+    ListAccum<MAP<STRING, STRING>> @@repeated_amounts;
+    ListAccum<MAP<STRING, STRING>> @@region_sequence;
+    SumAccum<INT> @@out_of_hours_count;
+
+    INT window_seconds;
+    window_seconds = window_hours * 3600;
+
+    // ── Step 1: Get all customer transactions ─────────────────────────────
+    CustSet = {Customer.*};
+    Cust = SELECT c FROM CustSet:c WHERE c.customer_id == customer_id;
+
+    AllTxns = SELECT t FROM Cust:c -(PERFORMED)-> Transaction:t
+              ACCUM @@max_dt += t.TransactionDT,
+                    @@min_dt += t.TransactionDT;
+
+    // ── Step 2: Find transactions in window ───────────────────────────────
+    WindowTxns = SELECT t FROM AllTxns:t
+                 WHERE t.TransactionDT >= (@@max_dt - window_seconds)
+                 ACCUM
+                     @@txn_count_window += 1,
+                     @@amount_freq += (t.TransactionAmt -> 1),
+                     @@burst_txns += (
+                         "TransactionID"  -> to_string(t.TransactionID),
+                         "TransactionAmt" -> to_string(t.TransactionAmt),
+                         "TransactionDT"  -> to_string(t.TransactionDT),
+                         "channel"        -> t.channel,
+                         "risk_score"     -> to_string(t.risk_score),
+                         "addr1"          -> t.addr1
+                     );
+
+    // ── Step 3: Detect repeated amounts (card testing) ───────────────────
+    // Flag any amount appearing 3+ times in the window
+    FOREACH (amt, cnt) IN @@amount_freq DO
+        IF cnt >= 3 THEN
+            @@repeated_amounts += (
+                "amount" -> to_string(amt),
+                "count"  -> to_string(cnt),
+                "flag"   -> "possible_card_testing"
+            );
+        END;
+    END;
+
+    // ── Step 4: Build region sequence for rapid change detection ──────────
+    // Sort by TransactionDT and check consecutive region changes
+    RegionSeq = SELECT t FROM AllTxns:t
+                WHERE t.addr1 != ""
+                ORDER BY t.TransactionDT ASC
+                ACCUM @@region_sequence += (
+                    "TransactionDT" -> to_string(t.TransactionDT),
+                    "addr1"         -> t.addr1,
+                    "channel"       -> t.channel
+                );
+
+    // ── Step 5: Out-of-hours detection ───────────────────────────────────
+    // TransactionDT is a unix-style offset; modulo 86400 gives seconds-of-day.
+    // Before 06:00 (21600s) or after 22:00 (79200s) = out of hours.
+    // Note: integer variable declarations are not permitted inside ACCUM blocks;
+    // the modulo expression is evaluated inline.
+    OOH = SELECT t FROM WindowTxns:t
+          ACCUM
+              IF (t.TransactionDT % 86400 < 21600) OR (t.TransactionDT % 86400 > 79200) THEN
+                  @@out_of_hours_count += 1
+              END;
+
+    // ── Output ────────────────────────────────────────────────────────────
+    PRINT customer_id,
+          window_hours,
+          @@txn_count_window AS transactions_in_window,
+          @@burst_txns AS burst_transactions,
+          @@repeated_amounts AS repeated_amounts,
+          @@region_sequence AS region_sequence,
+          @@out_of_hours_count AS out_of_hours_count;
+}

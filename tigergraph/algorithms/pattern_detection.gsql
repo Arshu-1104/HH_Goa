@@ -1,0 +1,110 @@
+// Algorithm: detect_fraud_clusters
+// Purpose: Find clusters of transactions connected through shared devices or
+// shared regions using connected component analysis.
+//
+// Why this is useful:
+//   Fraud rings operate by using the same device or operating from the same
+//   geographic region. By finding connected components in the
+//   Transaction-DeviceProfile-Transaction and Transaction-Region-Transaction
+//   subgraph, we can identify groups of transactions that are likely
+//   related to the same fraud operation — even when no single transaction
+//   looks suspicious alone.
+//
+//   Example: 15 transactions from 8 different customers all used the same
+//   mobile device. Without graph analysis, these look like unrelated events.
+//   With connected component analysis, they form a single cluster that
+//   can be matched against historical fraud patterns.
+//
+// Algorithm: Iterative label propagation (weakly connected components).
+//   Each Transaction starts with its own component ID (TransactionID).
+//   In each iteration, each transaction propagates its minimum component
+//   label to neighbors via shared devices. Converges when no labels change.
+//
+// Usage:
+//   INSTALL QUERY detect_fraud_clusters
+//   RUN QUERY detect_fraud_clusters(10)  -- max 10 iterations
+
+USE GRAPH FraudGraph
+
+CREATE QUERY detect_fraud_clusters(INT max_iterations) FOR GRAPH FraudGraph {
+
+    // Component label for each transaction
+    OrAccum<BOOL> @@changed;
+
+    MapAccum<VERTEX<Transaction>, UINT> @@component;
+    MapAccum<UINT, INT> @@cluster_sizes;
+    MapAccum<UINT, INT> @@cluster_customer_counts;
+    MapAccum<UINT, INT> @@cluster_device_counts;
+
+    ListAccum<MAP<STRING, STRING>> @@suspicious_clusters;
+    SumAccum<INT> @@total_clusters;
+
+    INT iter;
+
+    // ── Step 1: Initialize — each transaction is its own cluster ──────────
+    AllTxns = {Transaction.*};
+    InitComp = SELECT t FROM AllTxns:t
+               POST-ACCUM @@component += (t -> t.TransactionID);
+
+    // ── Step 2: Label propagation — propagate min label via devices ───────
+    iter = 0;
+    WHILE iter < max_iterations DO
+        @@changed = false;
+
+        // For each transaction, get neighbors via shared device.
+        // Propagate the smaller component label.
+        // NOTE: Inline variable declarations are not permitted
+        // inside ACCUM blocks in TigerGraph GSQL.
+        // The MapAccum.get() calls are used directly in the conditional expression.
+        PropStep = SELECT t2
+                   FROM AllTxns:t -(USES_DEVICE)-> DeviceProfile:d
+                                   -(DEVICE_USED_BY)-> Transaction:t2
+                   WHERE t2.TransactionID != t.TransactionID
+                   ACCUM
+                       IF @@component.get(t) < @@component.get(t2) THEN
+                           @@component += (t2 -> @@component.get(t)),
+                           @@changed += true
+                       END;
+
+        iter = iter + 1;
+        IF @@changed == false THEN
+            BREAK;
+        END;
+    END;
+
+    // ── Step 3: Aggregate cluster statistics ─────────────────────────────
+    // NOTE: Local variable declarations are not permitted inside ACCUM blocks.
+    // Use MapAccum.get() inline instead.
+    StatsStep = SELECT t FROM AllTxns:t
+                ACCUM
+                    @@cluster_sizes += (@@component.get(t) -> 1);
+
+    // Count distinct customers per cluster
+    CustStep = SELECT c FROM AllTxns:t -(PERFORMED_BY)-> Customer:c
+               ACCUM
+                   @@cluster_customer_counts += (@@component.get(t) -> 1);
+
+    // Count distinct devices per cluster
+    DevStep = SELECT d FROM AllTxns:t -(USES_DEVICE)-> DeviceProfile:d
+              ACCUM
+                  @@cluster_device_counts += (@@component.get(t) -> 1);
+
+    // ── Step 4: Identify suspicious clusters (2+ customers) ───────────────
+    FOREACH (cluster_id, cust_count) IN @@cluster_customer_counts DO
+        IF cust_count >= 2 THEN
+            @@suspicious_clusters += (
+                "cluster_id"      -> to_string(cluster_id),
+                "transaction_count" -> to_string(@@cluster_sizes.get(cluster_id)),
+                "customer_count"  -> to_string(cust_count),
+                "device_count"    -> to_string(@@cluster_device_counts.get(cluster_id))
+            );
+        END;
+    END;
+
+    @@total_clusters = @@cluster_sizes.size();
+
+    // ── Output ────────────────────────────────────────────────────────────
+    PRINT @@total_clusters AS total_clusters,
+          @@suspicious_clusters AS suspicious_clusters,
+          iter AS iterations_run;
+}

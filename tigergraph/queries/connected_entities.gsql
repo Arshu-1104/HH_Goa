@@ -1,0 +1,142 @@
+// Query: find_connected_entities
+// Purpose: Multi-hop traversal from a flagged transaction to find connected
+// cards, customers, shared devices, and related prior cases.
+// Used to detect fraud rings and account takeover chains.
+//
+// NOTE: This query performs a FIXED traversal depth (not parameterised).
+// The traversal logic is:
+//   Txn → Device → other Txns → Customers → Cards
+//   Txn → Region → other Txns → Customers
+//   Txn → Email  → other Txns → Customers
+// "Hops" in the graph sense is always 2 (entity → shared-attribute → entity).
+// There is no max_hops parameter — a misleading unused parameter was removed.
+//
+// Usage:
+//   INSTALL QUERY find_connected_entities
+//   RUN QUERY find_connected_entities(2987432)
+
+USE GRAPH FraudGraph
+
+CREATE QUERY find_connected_entities(UINT txn_id) FOR GRAPH FraudGraph {
+
+    SetAccum<VERTEX<Card>> @@connected_cards;
+    SetAccum<VERTEX<Customer>> @@connected_customers;
+    SetAccum<VERTEX<DeviceProfile>> @@shared_devices;
+    SetAccum<VERTEX<ClosedCase>> @@related_cases;
+
+    MapAccum<VERTEX<Card>, STRING> @@card_connection_type;
+    MapAccum<VERTEX<Customer>, STRING> @@customer_connection_type;
+    MapAccum<VERTEX<DeviceProfile>, INT> @@device_txn_count;
+
+    ListAccum<MAP<STRING, STRING>> @@card_results;
+    ListAccum<MAP<STRING, STRING>> @@customer_results;
+    ListAccum<MAP<STRING, STRING>> @@device_results;
+    ListAccum<MAP<STRING, STRING>> @@case_results;
+
+    // ── Step 1: Start at the target transaction ──────────────────────────
+    TxnSet = {Transaction.*};
+    Txn = SELECT t FROM TxnSet:t WHERE t.TransactionID == txn_id;
+
+    // ── Step 2: Get device used by this transaction ───────────────────────
+    Devices = SELECT d FROM Txn:t -(USES_DEVICE)-> DeviceProfile:d
+              ACCUM @@shared_devices += d;
+
+    // ── Step 3: Find all other transactions on these devices ─────────────
+    DeviceTxns = SELECT t2
+                 FROM Devices:d -(DEVICE_USED_BY)-> Transaction:t2
+                 WHERE t2.TransactionID != txn_id
+                 ACCUM @@device_txn_count += (d -> 1);
+
+    // ── Step 4: Find customers behind those transactions ─────────────────
+    DeviceCustomers = SELECT c
+                      FROM DeviceTxns:t -(PERFORMED_BY)-> Customer:c
+                      ACCUM @@connected_customers += c,
+                            @@customer_connection_type += (c -> "shared_device");
+
+    // ── Step 5: Find cards belonging to those customers ───────────────────
+    DeviceCards = SELECT ca
+                  FROM DeviceCustomers:c -(OWNS)-> Card:ca
+                  ACCUM @@connected_cards += ca,
+                        @@card_connection_type += (ca -> "shared_device");
+
+    // ── Step 6: Find connections via shared region ───────────────────────
+    Regions = SELECT r FROM Txn:t -(BILLED_TO_REGION)-> Region:r;
+
+    RegionTxns = SELECT t2
+                 FROM Regions:r -(REGION_HAS_TRANSACTION)-> Transaction:t2
+                 WHERE t2.TransactionID != txn_id;
+
+    RegionCustomers = SELECT c
+                      FROM RegionTxns:t -(PERFORMED_BY)-> Customer:c
+                      ACCUM
+                          IF @@connected_customers.contains(c) == false THEN
+                              @@connected_customers += c,
+                              @@customer_connection_type += (c -> "shared_region")
+                          END;
+
+    // ── Step 7: Find connections via shared email domain ─────────────────
+    Emails = SELECT e FROM Txn:t -(USES_EMAIL)-> EmailDomain:e;
+
+    EmailTxns = SELECT t2
+                FROM Emails:e -(EMAIL_USED_BY)-> Transaction:t2
+                WHERE t2.TransactionID != txn_id;
+
+    EmailCustomers = SELECT c
+                     FROM EmailTxns:t -(PERFORMED_BY)-> Customer:c
+                     ACCUM
+                         IF @@connected_customers.contains(c) == false THEN
+                             @@connected_customers += c,
+                             @@customer_connection_type += (c -> "shared_email_domain")
+                         END;
+
+    // ── Step 8: Related prior cases ───────────────────────────────────────
+    // NOTE: @@connected_customers is a SetAccum<VERTEX> used as a vertex set.
+    // TigerGraph supports this via the SET syntax.
+    RelatedCases = SELECT cc
+                   FROM @@connected_customers:c -(CUSTOMER_IN_CASE)-> ClosedCase:cc
+                   ACCUM @@related_cases += cc;
+
+    // ── Build output ──────────────────────────────────────────────────────
+    FOREACH ca IN @@connected_cards DO
+        @@card_results += (
+            "card_id"         -> ca.card_id,
+            "card4"           -> ca.card4,
+            "card6"           -> ca.card6,
+            "connection_type" -> @@card_connection_type.get(ca)
+        );
+    END;
+
+    FOREACH cu IN @@connected_customers DO
+        @@customer_results += (
+            "customer_id"     -> cu.customer_id,
+            "connection_type" -> @@customer_connection_type.get(cu)
+        );
+    END;
+
+    FOREACH d IN @@shared_devices DO
+        @@device_results += (
+            "device_id"         -> d.device_id,
+            "DeviceType"        -> d.DeviceType,
+            "os"                -> d.os,
+            "browser"           -> d.browser,
+            "transaction_count" -> to_string(@@device_txn_count.get(d))
+        );
+    END;
+
+    FOREACH cc IN @@related_cases DO
+        @@case_results += (
+            "case_id"       -> cc.case_id,
+            "outcome"       -> cc.outcome,
+            "pattern"       -> cc.pattern,
+            "exposure_usd"  -> to_string(cc.exposure_usd),
+            "actions_taken" -> cc.actions_taken
+        );
+    END;
+
+    // ── Output ────────────────────────────────────────────────────────────
+    PRINT txn_id AS source_txn_id,
+          @@card_results AS connected_cards,
+          @@customer_results AS connected_customers,
+          @@device_results AS shared_devices,
+          @@case_results AS related_cases;
+}

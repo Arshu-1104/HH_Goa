@@ -1,0 +1,54 @@
+{
+  "case_id": "HHG-008",
+  "written_at": "2026-09-23T15:19:54.233038+00:00",
+  "memory": {
+    "case_id": "HHG-008",
+    "customer_id": "C13171",
+    "card_id": "C13171-K2",
+    "transaction_id": "3558054",
+    "investigation_completed_at": "2026-09-23T15:19:54.233038+00:00",
+    "final_action": "ActionType.BLOCK_CARD",
+    "outcome_description": "Block card on confirmed fraud pattern + sufficient evidence",
+    "fraud_patterns_identified": [],
+    "key_evidence_summary": "Customer C13171 has 18 prior confirmed fraud cases; Found 19 prior cases: 18 confirmed fraud, 1 cleared. Total exposure: $5190.34; Most frequent historical fraud pattern: card_not_present_new_device (12 cases)",
+    "connected_entities": [],
+    "policy_decisions": [
+      "ActionType.BLOCK_CARD"
+    ],
+    "reasoning_summary": "Block card on confirmed fraud pattern + sufficient evidence",
+    "approved_by": "senior_analyst"
+  },
+  "summary": {
+    "case_id": "HHG-008",
+    "trigger": "customer_report",
+    "investigation_objective": "Determine whether transaction 3558054 for customer C13171 is fraudulent. Trigger: Customer C13171 message: 'I never made this $55.68 purchase. Please check my card.' Refers to 3558054.",
+    "customer_id": "C13171",
+    "transaction_id": "3558054",
+    "transaction_amount": 0.0,
+    "key_entities": [],
+    "key_findings": [
+      "Customer C13171 has 18 prior confirmed fraud cases",
+      "Found 19 prior cases: 18 confirmed fraud, 1 cleared. Total exposure: $5190.34",
+      "Most frequent historical fraud pattern: card_not_present_new_device (12 cases)"
+    ],
+    "supporting_evidence_summary": "Customer C13171 has 18 prior confirmed fraud cases; Found 19 prior cases: 18 confirmed fraud, 1 cleared. Total exposure: $5190.34; Most frequent historical fraud pattern: card_not_present_new_device (12 cases)",
+    "contradictory_evidence_summary": "Transaction 3558054 used device: desktop / unknown",
+    "identified_patterns": [],
+    "hypotheses_summary": [],
+    "uncertainty_level": "medium",
+    "uncertainty_reason": "Uncertainty level: MEDIUM. Known facts: 4 items. Conflicts: 4 supporting vs 1 contradictory evidence items Unknown: No hypothesis has sufficient confidence (all < 0.4)",
+    "evidence_sufficiency_level": "sufficient",
+    "sufficiency_reason": "All required evidence categories covered (transaction, customer, historical, exposure). 4 supporting items.",
+    "missing_evidence": [],
+    "evidence_requests": [],
+    "candidate_actions": [],
+    "recommended_action": "ActionType.BLOCK_CARD",
+    "policy_basis": "RULE-001",
+    "approval_route": "senior_analyst",
+    "decision_reasoning": "Block card on confirmed fraud pattern + sufficient evidence",
+    "investigation_trail_summary": [],
+    "case_outcome": "ActionType.BLOCK_CARD",
+    "memory_updated": false,
+    "completed_at": ""
+  }
+}

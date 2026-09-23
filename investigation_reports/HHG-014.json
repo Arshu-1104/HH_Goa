@@ -1,0 +1,54 @@
+{
+  "case_id": "HHG-014",
+  "written_at": "2026-09-23T15:20:58.462026+00:00",
+  "memory": {
+    "case_id": "HHG-014",
+    "customer_id": "C13487",
+    "card_id": "C13487-K1",
+    "transaction_id": "3478561",
+    "investigation_completed_at": "2026-09-23T15:20:58.462026+00:00",
+    "final_action": "ActionType.BLOCK_CARD",
+    "outcome_description": "Block card on confirmed fraud pattern + sufficient evidence",
+    "fraud_patterns_identified": [],
+    "key_evidence_summary": "Entity C13487 is connected to 50 other entities via shared attributes; 50 connected entities via shared_device; Customer C13487 shares 2 device(s) with 4868 other customer(s)",
+    "connected_entities": [],
+    "policy_decisions": [
+      "ActionType.BLOCK_CARD"
+    ],
+    "reasoning_summary": "Block card on confirmed fraud pattern + sufficient evidence",
+    "approved_by": "fraud_analyst"
+  },
+  "summary": {
+    "case_id": "HHG-014",
+    "trigger": "analyst_request",
+    "investigation_objective": "Determine whether transaction 3478561 for customer C13487 is fraudulent. Trigger: Analyst request: several cards this month show purchases from the same unusual device profile. Review transaction 3478561 on card C13487-K1 and look for related activity.",
+    "customer_id": "C13487",
+    "transaction_id": "3478561",
+    "transaction_amount": 0.0,
+    "key_entities": [],
+    "key_findings": [
+      "Entity C13487 is connected to 50 other entities via shared attributes",
+      "50 connected entities via shared_device",
+      "Customer C13487 shares 2 device(s) with 4868 other customer(s)"
+    ],
+    "supporting_evidence_summary": "Entity C13487 is connected to 50 other entities via shared attributes; 50 connected entities via shared_device; Customer C13487 shares 2 device(s) with 4868 other customer(s)",
+    "contradictory_evidence_summary": "Transaction 3478561 used device: mobile / SM-G935F Build/NRD90M; Customer C13487 has 0 prior confirmed fraud cases",
+    "identified_patterns": [],
+    "hypotheses_summary": [],
+    "uncertainty_level": "medium",
+    "uncertainty_reason": "Uncertainty level: MEDIUM. Known facts: 4 items. Conflicts: 4 supporting vs 2 contradictory evidence items Unknown: No hypothesis has sufficient confidence (all < 0.4)",
+    "evidence_sufficiency_level": "sufficient",
+    "sufficiency_reason": "All required evidence categories covered (transaction, customer, historical, exposure). 4 supporting items.",
+    "missing_evidence": [],
+    "evidence_requests": [],
+    "candidate_actions": [],
+    "recommended_action": "ActionType.BLOCK_CARD",
+    "policy_basis": "RULE-001",
+    "approval_route": "fraud_analyst",
+    "decision_reasoning": "Block card on confirmed fraud pattern + sufficient evidence",
+    "investigation_trail_summary": [],
+    "case_outcome": "ActionType.BLOCK_CARD",
+    "memory_updated": false,
+    "completed_at": ""
+  }
+}

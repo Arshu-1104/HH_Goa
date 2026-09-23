@@ -30,3 +30,7 @@ transactions.csv
 # Generated graph/load artifacts
 *.tmp
 *.log
+# Python generated files
+__pycache__/
+*.pyc
+*.pyo

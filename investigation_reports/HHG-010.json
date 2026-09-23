@@ -1,0 +1,52 @@
+{
+  "case_id": "HHG-010",
+  "written_at": "2026-09-23T15:20:57.777635+00:00",
+  "memory": {
+    "case_id": "HHG-010",
+    "customer_id": "C10434",
+    "card_id": "C10434-K1",
+    "transaction_id": "3506725",
+    "investigation_completed_at": "2026-09-23T15:20:57.777635+00:00",
+    "final_action": "ActionType.ESCALATE",
+    "outcome_description": "Escalate on high uncertainty + high exposure",
+    "fraud_patterns_identified": [],
+    "key_evidence_summary": "Financial exposure: $0.00 confirmed fraud + $1000.03 pending = $1000.03 total",
+    "connected_entities": [],
+    "policy_decisions": [
+      "ActionType.ESCALATE"
+    ],
+    "reasoning_summary": "Escalate on high uncertainty + high exposure",
+    "approved_by": "senior_analyst"
+  },
+  "summary": {
+    "case_id": "HHG-010",
+    "trigger": "risk_score",
+    "investigation_objective": "Determine whether transaction 3506725 for customer C10434 is fraudulent. Trigger: Real-time model scored transaction 3506725 ($1,000.03, online) at 0.90. Review and decide.",
+    "customer_id": "C10434",
+    "transaction_id": "3506725",
+    "transaction_amount": 0.0,
+    "key_entities": [],
+    "key_findings": [
+      "Financial exposure: $0.00 confirmed fraud + $1000.03 pending = $1000.03 total"
+    ],
+    "supporting_evidence_summary": "Financial exposure: $0.00 confirmed fraud + $1000.03 pending = $1000.03 total",
+    "contradictory_evidence_summary": "Transaction 3506725 used device: desktop / Windows; Customer C10434 has 0 prior confirmed fraud cases",
+    "identified_patterns": [],
+    "hypotheses_summary": [],
+    "uncertainty_level": "high",
+    "uncertainty_reason": "Uncertainty level: HIGH. Known facts: 1 items. Conflicts: 1 supporting vs 2 contradictory evidence items Unknown: No hypothesis has sufficient confidence (all < 0.4)",
+    "evidence_sufficiency_level": "sufficient",
+    "sufficiency_reason": "All required evidence categories covered (transaction, customer, historical, exposure). 1 supporting items.",
+    "missing_evidence": [],
+    "evidence_requests": [],
+    "candidate_actions": [],
+    "recommended_action": "ActionType.ESCALATE",
+    "policy_basis": "RULE-006",
+    "approval_route": "senior_analyst",
+    "decision_reasoning": "Escalate on high uncertainty + high exposure",
+    "investigation_trail_summary": [],
+    "case_outcome": "ActionType.ESCALATE",
+    "memory_updated": false,
+    "completed_at": ""
+  }
+}

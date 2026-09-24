@@ -1,0 +1,54 @@
+{
+  "case_id": "HHG-007",
+  "written_at": "2026-09-23T15:20:57.745827+00:00",
+  "memory": {
+    "case_id": "HHG-007",
+    "customer_id": "C09933",
+    "card_id": "C09933-K2",
+    "transaction_id": "3514948",
+    "investigation_completed_at": "2026-09-23T15:20:57.745827+00:00",
+    "final_action": "ActionType.BLOCK_CARD",
+    "outcome_description": "Block card on confirmed fraud pattern + sufficient evidence",
+    "fraud_patterns_identified": [],
+    "key_evidence_summary": "Transaction 3514948 has NO device identity record; Customer C09933 has 18 prior confirmed fraud cases; Found 19 prior cases: 18 confirmed fraud, 1 cleared. Total exposure: $12195.93",
+    "connected_entities": [],
+    "policy_decisions": [
+      "ActionType.BLOCK_CARD"
+    ],
+    "reasoning_summary": "Block card on confirmed fraud pattern + sufficient evidence",
+    "approved_by": "senior_analyst"
+  },
+  "summary": {
+    "case_id": "HHG-007",
+    "trigger": "risk_score",
+    "investigation_objective": "Determine whether transaction 3514948 for customer C09933 is fraudulent. Trigger: Real-time model scored transaction 3514948 ($111.92, in billing region 264.0) at 0.87. Review and decide.",
+    "customer_id": "C09933",
+    "transaction_id": "3514948",
+    "transaction_amount": 0.0,
+    "key_entities": [],
+    "key_findings": [
+      "Transaction 3514948 has NO device identity record",
+      "Customer C09933 has 18 prior confirmed fraud cases",
+      "Found 19 prior cases: 18 confirmed fraud, 1 cleared. Total exposure: $12195.93"
+    ],
+    "supporting_evidence_summary": "Transaction 3514948 has NO device identity record; Customer C09933 has 18 prior confirmed fraud cases; Found 19 prior cases: 18 confirmed fraud, 1 cleared. Total exposure: $12195.93",
+    "contradictory_evidence_summary": "None",
+    "identified_patterns": [],
+    "hypotheses_summary": [],
+    "uncertainty_level": "medium",
+    "uncertainty_reason": "Uncertainty level: MEDIUM. Known facts: 6 items. Missing: Device/identity information is absent or incomplete Unknown: No hypothesis has sufficient confidence (all < 0.4)",
+    "evidence_sufficiency_level": "sufficient",
+    "sufficiency_reason": "All required evidence categories covered (transaction, customer, historical, exposure). 6 supporting items.",
+    "missing_evidence": [],
+    "evidence_requests": [],
+    "candidate_actions": [],
+    "recommended_action": "ActionType.BLOCK_CARD",
+    "policy_basis": "RULE-001",
+    "approval_route": "senior_analyst",
+    "decision_reasoning": "Block card on confirmed fraud pattern + sufficient evidence",
+    "investigation_trail_summary": [],
+    "case_outcome": "ActionType.BLOCK_CARD",
+    "memory_updated": false,
+    "completed_at": ""
+  }
+}

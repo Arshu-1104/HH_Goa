@@ -1,0 +1,54 @@
+{
+  "case_id": "HHG-015",
+  "written_at": "2026-09-23T15:19:55.066068+00:00",
+  "memory": {
+    "case_id": "HHG-015",
+    "customer_id": "C03042",
+    "card_id": "C03042-K1",
+    "transaction_id": "3464869",
+    "investigation_completed_at": "2026-09-23T15:19:55.066068+00:00",
+    "final_action": "ActionType.BLOCK_CARD",
+    "outcome_description": "Block card on confirmed fraud pattern + sufficient evidence",
+    "fraud_patterns_identified": [],
+    "key_evidence_summary": "Customer C03042 has 2 prior confirmed fraud cases; Found 3 prior cases: 2 confirmed fraud, 1 cleared. Total exposure: $350.04; Most frequent historical fraud pattern: card_not_present_new_device (2 cases)",
+    "connected_entities": [],
+    "policy_decisions": [
+      "ActionType.BLOCK_CARD"
+    ],
+    "reasoning_summary": "Block card on confirmed fraud pattern + sufficient evidence",
+    "approved_by": "fraud_analyst"
+  },
+  "summary": {
+    "case_id": "HHG-015",
+    "trigger": "risk_score",
+    "investigation_objective": "Determine whether transaction 3464869 for customer C03042 is fraudulent. Trigger: Real-time model scored transaction 3464869 ($599.94, online) at 0.77. Review and decide.",
+    "customer_id": "C03042",
+    "transaction_id": "3464869",
+    "transaction_amount": 0.0,
+    "key_entities": [],
+    "key_findings": [
+      "Customer C03042 has 2 prior confirmed fraud cases",
+      "Found 3 prior cases: 2 confirmed fraud, 1 cleared. Total exposure: $350.04",
+      "Most frequent historical fraud pattern: card_not_present_new_device (2 cases)"
+    ],
+    "supporting_evidence_summary": "Customer C03042 has 2 prior confirmed fraud cases; Found 3 prior cases: 2 confirmed fraud, 1 cleared. Total exposure: $350.04; Most frequent historical fraud pattern: card_not_present_new_device (2 cases)",
+    "contradictory_evidence_summary": "Transaction 3464869 used device: desktop / Trident/7.0",
+    "identified_patterns": [],
+    "hypotheses_summary": [],
+    "uncertainty_level": "medium",
+    "uncertainty_reason": "Uncertainty level: MEDIUM. Known facts: 4 items. Conflicts: 4 supporting vs 1 contradictory evidence items Unknown: No hypothesis has sufficient confidence (all < 0.4)",
+    "evidence_sufficiency_level": "sufficient",
+    "sufficiency_reason": "All required evidence categories covered (transaction, customer, historical, exposure). 4 supporting items.",
+    "missing_evidence": [],
+    "evidence_requests": [],
+    "candidate_actions": [],
+    "recommended_action": "ActionType.BLOCK_CARD",
+    "policy_basis": "RULE-001",
+    "approval_route": "fraud_analyst",
+    "decision_reasoning": "Block card on confirmed fraud pattern + sufficient evidence",
+    "investigation_trail_summary": [],
+    "case_outcome": "ActionType.BLOCK_CARD",
+    "memory_updated": false,
+    "completed_at": ""
+  }
+}

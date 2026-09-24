@@ -1,0 +1,52 @@
+{
+  "case_id": "HHG-016",
+  "written_at": "2026-09-23T15:19:55.088019+00:00",
+  "memory": {
+    "case_id": "HHG-016",
+    "customer_id": "C09988",
+    "card_id": "C09988-K1",
+    "transaction_id": "3534820",
+    "investigation_completed_at": "2026-09-23T15:19:55.088019+00:00",
+    "final_action": "ActionType.VERIFY_WITH_CUSTOMER",
+    "outcome_description": "Verify with customer on customer-reported case",
+    "fraud_patterns_identified": [],
+    "key_evidence_summary": "Financial exposure: $0.00 confirmed fraud + $59.67 pending = $59.67 total",
+    "connected_entities": [],
+    "policy_decisions": [
+      "ActionType.VERIFY_WITH_CUSTOMER"
+    ],
+    "reasoning_summary": "Verify with customer on customer-reported case",
+    "approved_by": "none"
+  },
+  "summary": {
+    "case_id": "HHG-016",
+    "trigger": "customer_report",
+    "investigation_objective": "Determine whether transaction 3534820 for customer C09988 is fraudulent. Trigger: Customer C09988 message: 'I never made this $59.67 purchase. Please check my card.' Refers to 3534820.",
+    "customer_id": "C09988",
+    "transaction_id": "3534820",
+    "transaction_amount": 0.0,
+    "key_entities": [],
+    "key_findings": [
+      "Financial exposure: $0.00 confirmed fraud + $59.67 pending = $59.67 total"
+    ],
+    "supporting_evidence_summary": "Financial exposure: $0.00 confirmed fraud + $59.67 pending = $59.67 total",
+    "contradictory_evidence_summary": "Transaction 3534820 used device: desktop / Windows; Customer C09988 has 0 prior confirmed fraud cases",
+    "identified_patterns": [],
+    "hypotheses_summary": [],
+    "uncertainty_level": "high",
+    "uncertainty_reason": "Uncertainty level: HIGH. Known facts: 1 items. Conflicts: 1 supporting vs 2 contradictory evidence items Unknown: No hypothesis has sufficient confidence (all < 0.4)",
+    "evidence_sufficiency_level": "sufficient",
+    "sufficiency_reason": "All required evidence categories covered (transaction, customer, historical, exposure). 1 supporting items.",
+    "missing_evidence": [],
+    "evidence_requests": [],
+    "candidate_actions": [],
+    "recommended_action": "ActionType.VERIFY_WITH_CUSTOMER",
+    "policy_basis": "RULE-003",
+    "approval_route": "none",
+    "decision_reasoning": "Verify with customer on customer-reported case",
+    "investigation_trail_summary": [],
+    "case_outcome": "ActionType.VERIFY_WITH_CUSTOMER",
+    "memory_updated": false,
+    "completed_at": ""
+  }
+}

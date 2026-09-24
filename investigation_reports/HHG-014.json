@@ -1,12 +1,12 @@
 {
   "case_id": "HHG-014",
-  "written_at": "2026-09-23T15:20:58.462026+00:00",
+  "written_at": "2026-09-24T16:35:22.689067+00:00",
   "memory": {
     "case_id": "HHG-014",
     "customer_id": "C13487",
     "card_id": "C13487-K1",
     "transaction_id": "3478561",
-    "investigation_completed_at": "2026-09-23T15:20:58.462026+00:00",
+    "investigation_completed_at": "2026-09-24T16:35:22.689067+00:00",
     "final_action": "ActionType.BLOCK_CARD",
     "outcome_description": "Block card on confirmed fraud pattern + sufficient evidence",
     "fraud_patterns_identified": [],
@@ -24,31 +24,62 @@
     "investigation_objective": "Determine whether transaction 3478561 for customer C13487 is fraudulent. Trigger: Analyst request: several cards this month show purchases from the same unusual device profile. Review transaction 3478561 on card C13487-K1 and look for related activity.",
     "customer_id": "C13487",
     "transaction_id": "3478561",
-    "transaction_amount": 0.0,
-    "key_entities": [],
-    "key_findings": [
-      "Entity C13487 is connected to 50 other entities via shared attributes",
-      "50 connected entities via shared_device",
-      "Customer C13487 shares 2 device(s) with 4868 other customer(s)"
+    "transaction_amount": 74.96,
+    "key_entities": [
+      "C13487",
+      "C13487-K1"
     ],
-    "supporting_evidence_summary": "Entity C13487 is connected to 50 other entities via shared attributes; 50 connected entities via shared_device; Customer C13487 shares 2 device(s) with 4868 other customer(s)",
-    "contradictory_evidence_summary": "Transaction 3478561 used device: mobile / SM-G935F Build/NRD90M; Customer C13487 has 0 prior confirmed fraud cases",
+    "key_findings": [
+      "Entity C13487 is connected to 50 other entities via shared attributes [EV-007]",
+      "50 connected entities via shared_device [EV-008]",
+      "Customer C13487 shares 2 device(s) with 4868 other customer(s) [EV-009]",
+      "Financial exposure: $0.00 confirmed fraud + $74.96 pending = $74.96 total [EV-012]"
+    ],
+    "supporting_evidence_summary": "Entity C13487 is connected to 50 other entities via shared attributes [EV-007]; 50 connected entities via shared_device [EV-008]; Customer C13487 shares 2 device(s) with 4868 other customer(s) [EV-009]",
+    "contradictory_evidence_summary": "Transaction 3478561 used device: mobile / SM-G935F Build/NRD90M [EV-001]; Customer C13487 has 0 prior confirmed fraud cases [EV-006]",
     "identified_patterns": [],
-    "hypotheses_summary": [],
+    "hypotheses_summary": [
+      {
+        "id": "HYP-001",
+        "name": "FraudPattern.CARD_NOT_PRESENT_FRAUD",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-002",
+        "name": "FraudPattern.ACCOUNT_TAKEOVER",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-003",
+        "name": "FraudPattern.CARD_TESTING",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-004",
+        "name": "FraudPattern.CARD_NOT_PRESENT_NEW_DEVICE",
+        "status": "active",
+        "confidence": 0.3
+      }
+    ],
     "uncertainty_level": "medium",
     "uncertainty_reason": "Uncertainty level: MEDIUM. Known facts: 4 items. Conflicts: 4 supporting vs 2 contradictory evidence items Unknown: No hypothesis has sufficient confidence (all < 0.4)",
     "evidence_sufficiency_level": "sufficient",
     "sufficiency_reason": "All required evidence categories covered (transaction, customer, historical, exposure). 4 supporting items.",
     "missing_evidence": [],
     "evidence_requests": [],
-    "candidate_actions": [],
-    "recommended_action": "ActionType.BLOCK_CARD",
+    "candidate_actions": [
+      "BLOCK_CARD"
+    ],
+    "recommended_action": "BLOCK_CARD",
     "policy_basis": "RULE-001",
     "approval_route": "fraud_analyst",
     "decision_reasoning": "Block card on confirmed fraud pattern + sufficient evidence",
     "investigation_trail_summary": [],
-    "case_outcome": "ActionType.BLOCK_CARD",
-    "memory_updated": false,
-    "completed_at": ""
+    "case_outcome": "BLOCK_CARD",
+    "memory_updated": true,
+    "completed_at": "2026-09-24T16:35:22.685186+00:00"
   }
 }

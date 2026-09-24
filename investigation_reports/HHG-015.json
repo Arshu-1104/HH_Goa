@@ -1,12 +1,12 @@
 {
   "case_id": "HHG-015",
-  "written_at": "2026-09-23T15:19:55.066068+00:00",
+  "written_at": "2026-09-24T16:34:53.811309+00:00",
   "memory": {
     "case_id": "HHG-015",
     "customer_id": "C03042",
     "card_id": "C03042-K1",
     "transaction_id": "3464869",
-    "investigation_completed_at": "2026-09-23T15:19:55.066068+00:00",
+    "investigation_completed_at": "2026-09-24T16:34:53.811309+00:00",
     "final_action": "ActionType.BLOCK_CARD",
     "outcome_description": "Block card on confirmed fraud pattern + sufficient evidence",
     "fraud_patterns_identified": [],
@@ -24,31 +24,63 @@
     "investigation_objective": "Determine whether transaction 3464869 for customer C03042 is fraudulent. Trigger: Real-time model scored transaction 3464869 ($599.94, online) at 0.77. Review and decide.",
     "customer_id": "C03042",
     "transaction_id": "3464869",
-    "transaction_amount": 0.0,
-    "key_entities": [],
-    "key_findings": [
-      "Customer C03042 has 2 prior confirmed fraud cases",
-      "Found 3 prior cases: 2 confirmed fraud, 1 cleared. Total exposure: $350.04",
-      "Most frequent historical fraud pattern: card_not_present_new_device (2 cases)"
+    "transaction_amount": 599.94,
+    "key_entities": [
+      "C03042",
+      "C03042-K1"
     ],
-    "supporting_evidence_summary": "Customer C03042 has 2 prior confirmed fraud cases; Found 3 prior cases: 2 confirmed fraud, 1 cleared. Total exposure: $350.04; Most frequent historical fraud pattern: card_not_present_new_device (2 cases)",
-    "contradictory_evidence_summary": "Transaction 3464869 used device: desktop / Trident/7.0",
+    "key_findings": [
+      "Customer C03042 has 2 prior confirmed fraud cases [EV-006]",
+      "Found 3 prior cases: 2 confirmed fraud, 1 cleared. Total exposure: $350.04 [EV-008]",
+      "Most frequent historical fraud pattern: card_not_present_new_device (2 cases) [EV-009]",
+      "Financial exposure: $350.04 confirmed fraud + $599.94 pending = $949.98 total [EV-012]"
+    ],
+    "supporting_evidence_summary": "Customer C03042 has 2 prior confirmed fraud cases [EV-006]; Found 3 prior cases: 2 confirmed fraud, 1 cleared. Total exposure: $350.04 [EV-008]; Most frequent historical fraud pattern: card_not_present_new_device (2 cases) [EV-009]",
+    "contradictory_evidence_summary": "Transaction 3464869 used device: desktop / Trident/7.0 [EV-001]",
     "identified_patterns": [],
-    "hypotheses_summary": [],
+    "hypotheses_summary": [
+      {
+        "id": "HYP-001",
+        "name": "FraudPattern.CARD_NOT_PRESENT_FRAUD",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-002",
+        "name": "FraudPattern.CARD_NOT_PRESENT_NEW_DEVICE",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-003",
+        "name": "FraudPattern.CARD_TESTING",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-004",
+        "name": "FraudPattern.OUT_OF_REGION_USE",
+        "status": "active",
+        "confidence": 0.3
+      }
+    ],
     "uncertainty_level": "medium",
     "uncertainty_reason": "Uncertainty level: MEDIUM. Known facts: 4 items. Conflicts: 4 supporting vs 1 contradictory evidence items Unknown: No hypothesis has sufficient confidence (all < 0.4)",
     "evidence_sufficiency_level": "sufficient",
     "sufficiency_reason": "All required evidence categories covered (transaction, customer, historical, exposure). 4 supporting items.",
     "missing_evidence": [],
     "evidence_requests": [],
-    "candidate_actions": [],
-    "recommended_action": "ActionType.BLOCK_CARD",
+    "candidate_actions": [
+      "BLOCK_CARD",
+      "FILE_REPORT"
+    ],
+    "recommended_action": "BLOCK_CARD",
     "policy_basis": "RULE-001",
     "approval_route": "fraud_analyst",
     "decision_reasoning": "Block card on confirmed fraud pattern + sufficient evidence",
     "investigation_trail_summary": [],
-    "case_outcome": "ActionType.BLOCK_CARD",
-    "memory_updated": false,
-    "completed_at": ""
+    "case_outcome": "BLOCK_CARD",
+    "memory_updated": true,
+    "completed_at": "2026-09-24T16:34:53.811309+00:00"
   }
 }

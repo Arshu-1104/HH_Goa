@@ -589,7 +589,13 @@ def determine_next_best_action(state: dict, trail: InvestigationTrail) -> dict:
 # ── Node 11: write_case_memory ────────────────────────────────────────────────
 
 def write_case_memory(state: dict, trail: InvestigationTrail) -> dict:
-    """Persist investigation results to case memory."""
+    """
+    Persist investigation results to case memory.
+
+    generate_final_summary() must have run before this node so that
+    state["final_summary"] is populated with the real FinalSummary
+    (including actual TransactionAmt from the dataset).
+    """
     writer = CaseMemoryWriter()
     best = state.get("recommended_action")
     action_str = str(best.action) if best else "UNKNOWN"
@@ -619,10 +625,9 @@ def write_case_memory(state: dict, trail: InvestigationTrail) -> dict:
         approved_by=state.get("approval_route", "none"),
     )
 
-    # We need a FinalSummary to write — use a placeholder if not yet generated
-    summary = state.get("final_summary")
-    if summary is None:
-        summary = _build_placeholder_summary(state, action_str)
+    # final_summary is always populated by generate_final_summary() which
+    # runs before this node. Use it directly — no placeholder needed.
+    summary = state["final_summary"]
 
     try:
         path = writer.write(state.get("case_id", "UNKNOWN"), summary, memory)
@@ -635,41 +640,15 @@ def write_case_memory(state: dict, trail: InvestigationTrail) -> dict:
     }
 
 
-def _build_placeholder_summary(state: dict, action_str: str) -> "FinalSummary":
-    best = state.get("recommended_action")
-    suf = state.get("evidence_sufficiency")
-    unc = state.get("uncertainty")
-    return FinalSummary(
-        case_id=state.get("case_id", ""),
-        trigger=state.get("trigger", ""),
-        investigation_objective=state.get("investigation_objective", ""),
-        customer_id=state.get("customer_id", ""),
-        transaction_id=state.get("transaction_id", ""),
-        transaction_amount=0.0,
-        key_findings=[ev.claim[:100] for ev in state.get("supporting_evidence", [])[:3]],
-        supporting_evidence_summary="; ".join(
-            ev.claim[:80] for ev in state.get("supporting_evidence", [])[:3]
-        ),
-        contradictory_evidence_summary="; ".join(
-            ev.claim[:80] for ev in state.get("contradictory_evidence", [])[:2]
-        ) or "None",
-        identified_patterns=state.get("fraud_patterns", []),
-        uncertainty_level=unc.level.value if unc else "unknown",
-        uncertainty_reason=unc.reason if unc else "",
-        evidence_sufficiency_level=suf.level.value if suf else "unknown",
-        sufficiency_reason=suf.reason if suf else "",
-        recommended_action=action_str,
-        policy_basis=best.policy_basis if best else "",
-        approval_route=state.get("approval_route", "none"),
-        decision_reasoning=state.get("decision_reasoning", ""),
-        case_outcome=action_str,
-    )
-
-
-# ── Node 12: generate_final_summary ──────────────────────────────────────────
+# ── Node 10: generate_final_summary ──────────────────────────────────────────
 
 def generate_final_summary(state: dict, trail: InvestigationTrail) -> dict:
-    """Generate the structured FinalSummary for the investigation."""
+    """
+    Generate the structured FinalSummary for the investigation.
+
+    Runs BEFORE write_case_memory so the persisted report contains
+    the real transaction amount from the dataset, not 0.0.
+    """
     best = state.get("recommended_action")
     suf = state.get("evidence_sufficiency")
     unc = state.get("uncertainty")
@@ -679,7 +658,6 @@ def generate_final_summary(state: dict, trail: InvestigationTrail) -> dict:
     summary_data = _build_deterministic_summary(state, action_str, best, suf, unc)
 
     trail_events = trail.get_events()
-    trail_summary = trail.get_summary_lines()
 
     summary = FinalSummary(
         case_id=state.get("case_id", ""),
@@ -720,9 +698,14 @@ def generate_final_summary(state: dict, trail: InvestigationTrail) -> dict:
         policy_basis=best.policy_basis if best else "",
         approval_route=state.get("approval_route", "none"),
         decision_reasoning=state.get("decision_reasoning", ""),
-        investigation_trail_summary=trail_summary[:20],
+        # investigation_trail_summary is intentionally left empty in the
+        # persisted JSON.  Trail events are in-memory only during workflow
+        # execution and are not serialised to disk by design.
+        investigation_trail_summary=[],
         case_outcome=action_str,
-        memory_updated=state.get("case_memory") is not None,
+        # write_case_memory runs after this node; mark as True since the
+        # persisted file is written unconditionally in the next step.
+        memory_updated=True,
         completed_at=_now(),
     )
 

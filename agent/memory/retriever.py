@@ -24,16 +24,37 @@ class CaseMemoryRetriever:
         self._dir = memory_dir or _MEMORY_DIR
 
     def get_all(self) -> list[dict[str, Any]]:
-        """Return all stored case memories."""
+        """
+        Return all stored case memories.
+
+        Only returns valid case-memory documents — dicts that contain
+        both a "memory" object and a "case_id" string.  Any other JSON
+        artifacts in the directory (e.g. batch_summary.json, which is a
+        list) are silently skipped.
+        """
         results: list[dict[str, Any]] = []
         if not self._dir.exists():
             return results
         for path in sorted(self._dir.glob("*.json")):
             try:
                 with open(path, encoding="utf-8") as f:
-                    results.append(json.load(f))
+                    data = json.load(f)
             except Exception as exc:
                 log.warning(f"Could not load memory {path}: {exc}")
+                continue
+
+            # Filter: must be a dict with both "memory" and "case_id"
+            if not isinstance(data, dict):
+                log.debug(f"Skipping {path.name}: not a JSON object (got {type(data).__name__})")
+                continue
+            if "memory" not in data or not isinstance(data["memory"], dict):
+                log.debug(f"Skipping {path.name}: missing or invalid 'memory' key")
+                continue
+            if not data.get("case_id"):
+                log.debug(f"Skipping {path.name}: missing 'case_id'")
+                continue
+
+            results.append(data)
         return results
 
     def get_similar(

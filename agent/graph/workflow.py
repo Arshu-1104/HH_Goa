@@ -17,9 +17,13 @@ Flow:
       → PARTIAL/SUFFICIENT: evaluate_policy
   → evaluate_policy
   → determine_next_best_action
-  → write_case_memory
   → generate_final_summary
+  → write_case_memory
   → COMPLETE
+
+Note on node order: generate_final_summary runs BEFORE write_case_memory so that
+the persisted report contains the real FinalSummary (including actual TransactionAmt
+from the dataset), not a placeholder.
 """
 
 from __future__ import annotations
@@ -164,10 +168,13 @@ class InvestigationWorkflow:
         state.update(determine_next_best_action(state, trail))
 
         # ── Step 10: Write memory ──────────────────────────────────────────
-        state.update(write_case_memory(state, trail))
-
-        # ── Step 11: Final summary ─────────────────────────────────────────
+        # generate_final_summary runs FIRST so the persisted report contains
+        # the real FinalSummary (including actual TransactionAmt from the
+        # dataset) rather than a placeholder with transaction_amount=0.0.
         state.update(generate_final_summary(state, trail))
+
+        # ── Step 11: Write memory ──────────────────────────────────────────
+        state.update(write_case_memory(state, trail))
 
         log.info(f"Investigation complete: {case_id}")
         best = state.get("recommended_action")

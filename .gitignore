@@ -30,6 +30,9 @@ transactions.csv
 # Generated graph/load artifacts
 *.tmp
 *.log
+
+# Batch run artifacts (not case memories)
+artifacts/
 # Python generated files
 __pycache__/
 *.pyc

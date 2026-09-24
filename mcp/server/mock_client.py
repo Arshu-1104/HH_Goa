@@ -159,17 +159,43 @@ class MockClient:
 
     def _build_txn_indexes(self) -> None:
         """
-        Single-pass load of transactions.csv using the efficient column reader.
+        Single-pass load of transaction data using the efficient column reader.
+
+        Source priority:
+          1. transactions.csv (full raw dataset, ~675 MB) — if present
+          2. data/normalized/transactions_slim.csv — fallback for GitHub clones
+             where the raw file is excluded due to GitHub's 100 MB file limit.
 
         Builds _txn_index and _customer_txn_idx simultaneously.
         Only SLIM_COLS columns are stored.  The 397-key intermediate dict
-        is never created.
+        is never created (csv_utils uses csv.reader, not DictReader).
         """
         if self._txn_index is not None:
             return
 
+        # Determine source
+        primary = self._data_dir / "transactions.csv"
+        fallback = self._data_dir / "data" / "normalized" / "transactions_slim.csv"
+
+        if primary.exists():
+            path = primary
+            log.info("Using transaction source: transactions.csv")
+        elif fallback.exists():
+            path = fallback
+            log.info("Using transaction source: data/normalized/transactions_slim.csv")
+        else:
+            log.error(
+                "No transaction data found. Tried:\n"
+                f"  {primary}\n"
+                f"  {fallback}\n"
+                "Place transactions.csv in the project root or ensure "
+                "data/normalized/transactions_slim.csv exists."
+            )
+            self._txn_index = {}
+            self._customer_txn_idx = {}
+            return
+
         log.info("MockClient: building transaction indexes (slim columns, fast reader) …")
-        path = self._data_dir / "transactions.csv"
         txn_index: dict[str, dict[str, str]] = {}
         cust_idx: dict[str, list[str]] = {}
 

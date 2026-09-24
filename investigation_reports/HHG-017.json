@@ -1,12 +1,12 @@
 {
   "case_id": "HHG-017",
-  "written_at": "2026-09-23T15:19:55.108622+00:00",
+  "written_at": "2026-09-24T16:34:53.846082+00:00",
   "memory": {
     "case_id": "HHG-017",
     "customer_id": "C04570",
     "card_id": "C04570-K1",
     "transaction_id": "3450629",
-    "investigation_completed_at": "2026-09-23T15:19:55.108622+00:00",
+    "investigation_completed_at": "2026-09-24T16:34:53.846082+00:00",
     "final_action": "ActionType.VERIFY_WITH_CUSTOMER",
     "outcome_description": "ActionGuard: CLOSE_NO_FRAUD blocked \u2014 supporting evidence present",
     "fraud_patterns_identified": [],
@@ -24,29 +24,59 @@
     "investigation_objective": "Determine whether transaction 3450629 for customer C04570 is fraudulent. Trigger: Real-time model scored transaction 3450629 ($100.09, online) at 0.57. Review and decide.",
     "customer_id": "C04570",
     "transaction_id": "3450629",
-    "transaction_amount": 0.0,
-    "key_entities": [],
-    "key_findings": [
-      "Financial exposure: $0.00 confirmed fraud + $100.09 pending = $100.09 total"
+    "transaction_amount": 100.09,
+    "key_entities": [
+      "C04570",
+      "C04570-K1"
     ],
-    "supporting_evidence_summary": "Financial exposure: $0.00 confirmed fraud + $100.09 pending = $100.09 total",
-    "contradictory_evidence_summary": "Transaction 3450629 used device: desktop / Windows; Customer C04570 has 0 prior confirmed fraud cases",
+    "key_findings": [
+      "Financial exposure: $0.00 confirmed fraud + $100.09 pending = $100.09 total [EV-010]"
+    ],
+    "supporting_evidence_summary": "Financial exposure: $0.00 confirmed fraud + $100.09 pending = $100.09 total [EV-010]",
+    "contradictory_evidence_summary": "Transaction 3450629 used device: desktop / Windows [EV-001]; Customer C04570 has 0 prior confirmed fraud cases [EV-006]",
     "identified_patterns": [],
-    "hypotheses_summary": [],
+    "hypotheses_summary": [
+      {
+        "id": "HYP-001",
+        "name": "FraudPattern.CARD_NOT_PRESENT_FRAUD",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-002",
+        "name": "FraudPattern.CARD_NOT_PRESENT_NEW_DEVICE",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-003",
+        "name": "FraudPattern.CARD_TESTING",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-004",
+        "name": "FraudPattern.OUT_OF_REGION_USE",
+        "status": "active",
+        "confidence": 0.3
+      }
+    ],
     "uncertainty_level": "high",
     "uncertainty_reason": "Uncertainty level: HIGH. Known facts: 1 items. Conflicts: 1 supporting vs 2 contradictory evidence items Unknown: No hypothesis has sufficient confidence (all < 0.4)",
     "evidence_sufficiency_level": "sufficient",
     "sufficiency_reason": "All required evidence categories covered (transaction, customer, historical, exposure). 1 supporting items.",
     "missing_evidence": [],
     "evidence_requests": [],
-    "candidate_actions": [],
-    "recommended_action": "ActionType.VERIFY_WITH_CUSTOMER",
+    "candidate_actions": [
+      "CLOSE_NO_FRAUD"
+    ],
+    "recommended_action": "VERIFY_WITH_CUSTOMER",
     "policy_basis": "ACTION_GUARD_SAFETY",
     "approval_route": "none",
     "decision_reasoning": "ActionGuard: CLOSE_NO_FRAUD blocked \u2014 supporting evidence present",
     "investigation_trail_summary": [],
-    "case_outcome": "ActionType.VERIFY_WITH_CUSTOMER",
-    "memory_updated": false,
-    "completed_at": ""
+    "case_outcome": "VERIFY_WITH_CUSTOMER",
+    "memory_updated": true,
+    "completed_at": "2026-09-24T16:34:53.846082+00:00"
   }
 }

@@ -4,17 +4,34 @@
 
 ```
 ╔══════════════════════════════════════════════════════════════════════╗
-║  LAYER 4: AGENT LAYER  (Part 2 — placeholder)                       ║
+║  LAYER 4: INVESTIGATION AGENT LAYER                                 ║
 ║                                                                      ║
 ║   ┌──────────────────────────────────────────────────────────────┐  ║
-║   │  LLM (Claude / GPT-4)                                        │  ║
-║   │  Investigation Loop:                                         │  ║
-║   │    TRIGGER → INVESTIGATE → GATHER EVIDENCE                   │  ║
-║   │    → ASSESS UNCERTAINTY → REQUEST MORE EVIDENCE              │  ║
-║   │    → REASSESS → RECOMMEND → EXPLAIN → UPDATE CASE MEMORY     │  ║
+║   │  InvestigationWorkflow  (agent/graph/workflow.py)            │  ║
+║   │  LangGraph-style state machine — pure Python                 │  ║
 ║   │                                                              │  ║
-║   │  Inputs: case_pack.csv (20 open cases)                       │  ║
-║   │  Outputs: investigation_report.json per case                 │  ║
+║   │  Flow:                                                       │  ║
+║   │    load_case → plan → collect_evidence                       │  ║
+║   │    → analyze → update_hypotheses → assess_uncertainty        │  ║
+║   │    → assess_sufficiency                                      │  ║
+║   │        → INSUFFICIENT (≤2 retries): request_evidence → loop  │  ║
+║   │        → SUFFICIENT: evaluate_policy                        │  ║
+║   │    → determine_next_best_action                              │  ║
+║   │    → generate_final_summary → write_case_memory             │  ║
+║   │                                                              │  ║
+║   │  Evidence + Sufficiency + Uncertainty engines                │  ║
+║   │  Policy evaluator (7 rules) + ActionGuard safety layer       │  ║
+║   │  Approval router: FRAUD_ANALYST / SENIOR_ANALYST / NONE      │  ║
+║   │                                                              │  ║
+║   │  Inputs:  case_pack.csv (20 open cases)                      │  ║
+║   │  Outputs: investigation_reports/{case_id}.json               │  ║
+║   └──────────────────────────────────────────────────────────────┘  ║
+║                                                                      ║
+║   ┌──────────────────────────────────────────────────────────────┐  ║
+║   │  FastAPI Dashboard  (agent/api/main.py — port 8000)          │  ║
+║   │  GET /ui  |  /api/v3/cases/meta  |  /api/v3/report/{id}      │  ║
+║   │  GET /api/v3/benchmark  |  /api/v3/benchmark/validate        │  ║
+║   │  POST /api/v3/run/{id}  (re-run single investigation)        │  ║
 ║   └──────────────────────────────────────────────────────────────┘  ║
 ╠══════════════════════════════════════════════════════════════════════╣
 ║  LAYER 3: MCP SERVER LAYER                                          ║
@@ -128,14 +145,19 @@ The agent never calls TigerGraph directly — it always goes through MCP tools.
 
 ---
 
-## Agent Layer (Part 2 — Placeholder)
+## Investigation Agent Layer
 
-The agent will:
-1. Read open cases from `case_pack.csv`
-2. For each case, run the investigation loop (below)
-3. Write findings to `investigation_reports/`
+The investigation agent is a deterministic state machine implemented in `agent/graph/workflow.py`. It requires no LLM API key — all decisions are made by rule-based engines grounded in actual MCP tool results.
 
-The investigation loop is designed to be transparent and auditable — each step is logged.
+Key components:
+- **Evidence extractor**: pulls structured evidence items from every MCP tool response
+- **Sufficiency engine**: evaluates whether all required evidence categories are covered; retry exhaustion never upgrades INSUFFICIENT to SUFFICIENT
+- **Uncertainty engine**: rates investigation confidence as LOW / MEDIUM / HIGH
+- **Policy evaluator**: applies 7 deterministic rules (RULE-001 through RULE-007) to select a candidate action
+- **ActionGuard**: safety layer that blocks disruptive actions (BLOCK_CARD, FILE_REPORT) when evidence is insufficient, regardless of policy output
+- **Approval router**: routes BLOCK_CARD to FRAUD_ANALYST or SENIOR_ANALYST based on exposure amount
+
+The workflow runs all 20 cases via `python -m agent.run --all`. Results are persisted to `investigation_reports/{case_id}.json`.
 
 ---
 

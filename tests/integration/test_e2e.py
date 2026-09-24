@@ -210,3 +210,141 @@ class TestMultipleCases(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+
+class TestCaseMemoryRetrieverRobustness(unittest.TestCase):
+    """
+    Regression tests for the CaseMemoryRetriever fix.
+
+    Issue: batch_summary.json (a JSON list) was saved inside investigation_reports/
+    alongside case-memory objects (JSON dicts).  CaseMemoryRetriever.get_all()
+    loaded every *.json file and get_similar() called .get("memory") on the result,
+    causing: AttributeError: 'list' object has no attribute 'get'
+
+    Fix: get_all() now filters out any JSON file that is not a valid case-memory
+    document (must be a dict containing both "memory" and "case_id").
+    """
+
+    def setUp(self):
+        import tempfile
+        import json
+        from agent.memory.retriever import CaseMemoryRetriever
+
+        # Create a temporary directory with a mix of:
+        #   - a valid case-memory JSON (dict with memory + case_id)
+        #   - a batch_summary JSON (a list — not a case memory)
+        #   - an unrelated JSON object (no "memory" key)
+        self.tmpdir = tempfile.TemporaryDirectory()
+        tmppath = Path(self.tmpdir.name)
+
+        # Valid case memory
+        valid_memory = {
+            "case_id": "HHG-TEST",
+            "written_at": "2026-01-01T00:00:00",
+            "memory": {
+                "case_id": "HHG-TEST",
+                "customer_id": "C99999",
+                "card_id": "C99999-K1",
+                "transaction_id": "9999999",
+                "final_action": "BLOCK_CARD",
+                "approved_by": "fraud_analyst",
+                "policy_decisions": ["BLOCK_CARD"],
+                "fraud_patterns_identified": ["card_not_present_fraud"],
+            },
+            "summary": {},
+        }
+        with open(tmppath / "HHG-TEST.json", "w") as f:
+            json.dump(valid_memory, f)
+
+        # batch_summary.json — a list, NOT a case memory
+        batch_summary = [
+            {"case_id": "HHG-001", "action": "BLOCK_CARD", "status": "COMPLETE"},
+            {"case_id": "HHG-002", "action": "BLOCK_CARD", "status": "COMPLETE"},
+        ]
+        with open(tmppath / "batch_summary.json", "w") as f:
+            json.dump(batch_summary, f)
+
+        # An unrelated JSON object that has no "memory" key
+        unrelated = {"version": "1.0", "description": "some artifact"}
+        with open(tmppath / "unrelated_artifact.json", "w") as f:
+            json.dump(unrelated, f)
+
+        self.retriever = CaseMemoryRetriever(memory_dir=tmppath)
+
+    def tearDown(self):
+        self.tmpdir.cleanup()
+
+    def test_get_all_skips_batch_summary_list(self):
+        """batch_summary.json (a list) must not appear in get_all() results."""
+        results = self.retriever.get_all()
+        for r in results:
+            self.assertIsInstance(r, dict,
+                "get_all() must never return a non-dict (e.g. a list from batch_summary.json)")
+            self.assertIn("memory", r,
+                "Every result from get_all() must have a 'memory' key")
+            self.assertIn("case_id", r,
+                "Every result from get_all() must have a 'case_id' key")
+
+    def test_get_all_returns_only_valid_case_memories(self):
+        """Only the valid case-memory document must be returned."""
+        results = self.retriever.get_all()
+        self.assertEqual(len(results), 1,
+            f"Expected 1 valid case memory, got {len(results)}: "
+            f"{[r.get('case_id') for r in results]}")
+        self.assertEqual(results[0]["case_id"], "HHG-TEST")
+
+    def test_get_all_skips_dict_without_memory_key(self):
+        """JSON dicts without a 'memory' key must be skipped."""
+        results = self.retriever.get_all()
+        for r in results:
+            self.assertNotEqual(r.get("case_id"), "",
+                "Empty case_id should not appear in results")
+
+    def test_get_similar_does_not_crash_on_batch_summary(self):
+        """
+        get_similar() must not raise AttributeError when batch_summary.json exists.
+        This is the regression test for the original bug.
+        """
+        try:
+            result = self.retriever.get_similar(customer_id="C99999")
+        except AttributeError as e:
+            self.fail(
+                f"get_similar() raised AttributeError — the batch_summary fix is broken: {e}"
+            )
+
+    def test_get_similar_finds_valid_memory(self):
+        """get_similar() must still find the valid case memory by customer_id."""
+        results = self.retriever.get_similar(customer_id="C99999")
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0]["case_id"], "HHG-TEST")
+
+    def test_get_similar_matches_fraud_patterns(self):
+        """get_similar() must find memories by fraud pattern."""
+        results = self.retriever.get_similar(fraud_patterns=["card_not_present_fraud"])
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0]["case_id"], "HHG-TEST")
+
+    def test_get_prior_actions_does_not_crash(self):
+        """get_prior_actions() must not crash and must return the stored action."""
+        actions = self.retriever.get_prior_actions("C99999")
+        self.assertIsInstance(actions, list)
+        self.assertEqual(len(actions), 1)
+        self.assertEqual(actions[0], "BLOCK_CARD")
+
+    def test_batch_summary_saved_outside_investigation_reports(self):
+        """
+        agent/run.py must save batch_summary.json to artifacts/ not
+        investigation_reports/.  Verify the code path is correct.
+        """
+        import inspect
+        import agent.run as run_module
+        source = inspect.getsource(run_module.run_all)
+        # Must NOT write to investigation_reports/
+        self.assertNotIn(
+            "investigation_reports",
+            source.split("summary_path")[1].split("\n")[0],
+            "batch_summary.json must not be written to investigation_reports/"
+        )
+        # Must write to artifacts/
+        self.assertIn("artifacts", source,
+            "run_all() must save batch_summary.json to artifacts/ directory")

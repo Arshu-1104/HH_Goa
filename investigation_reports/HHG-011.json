@@ -1,12 +1,12 @@
 {
   "case_id": "HHG-011",
-  "written_at": "2026-09-23T15:19:54.333934+00:00",
+  "written_at": "2026-09-24T16:34:52.946125+00:00",
   "memory": {
     "case_id": "HHG-011",
     "customer_id": "C11923",
     "card_id": "C11923-K2",
     "transaction_id": "3583368",
-    "investigation_completed_at": "2026-09-23T15:19:54.333934+00:00",
+    "investigation_completed_at": "2026-09-24T16:34:52.946125+00:00",
     "final_action": "ActionType.BLOCK_CARD",
     "outcome_description": "Block card on confirmed fraud pattern + sufficient evidence",
     "fraud_patterns_identified": [],
@@ -24,31 +24,58 @@
     "investigation_objective": "Determine whether transaction 3583368 for customer C11923 is fraudulent. Trigger: Customer C11923 message: 'I never made this $131.30 purchase. Please check my card.' Refers to 3583368.",
     "customer_id": "C11923",
     "transaction_id": "3583368",
-    "transaction_amount": 0.0,
-    "key_entities": [],
-    "key_findings": [
-      "Customer C11923 has 10 prior confirmed fraud cases",
-      "Found 11 prior cases: 10 confirmed fraud, 1 cleared. Total exposure: $11095.35",
-      "Most frequent historical fraud pattern: card_not_present_new_device (6 cases)"
+    "transaction_amount": 131.3,
+    "key_entities": [
+      "C11923",
+      "C11923-K2"
     ],
-    "supporting_evidence_summary": "Customer C11923 has 10 prior confirmed fraud cases; Found 11 prior cases: 10 confirmed fraud, 1 cleared. Total exposure: $11095.35; Most frequent historical fraud pattern: card_not_present_new_device (6 cases)",
-    "contradictory_evidence_summary": "Transaction 3583368 used device: mobile / SM-G610F Build/NRD90M",
+    "key_findings": [
+      "Customer C11923 has 10 prior confirmed fraud cases [EV-005]",
+      "Found 11 prior cases: 10 confirmed fraud, 1 cleared. Total exposure: $11095.35 [EV-007]",
+      "Most frequent historical fraud pattern: card_not_present_new_device (6 cases) [EV-008]",
+      "Financial exposure: $11095.35 confirmed fraud + $131.30 pending = $11226.65 total [EV-010]"
+    ],
+    "supporting_evidence_summary": "Customer C11923 has 10 prior confirmed fraud cases [EV-005]; Found 11 prior cases: 10 confirmed fraud, 1 cleared. Total exposure: $11095.35 [EV-007]; Most frequent historical fraud pattern: card_not_present_new_device (6 cases) [EV-008]",
+    "contradictory_evidence_summary": "Transaction 3583368 used device: mobile / SM-G610F Build/NRD90M [EV-001]",
     "identified_patterns": [],
-    "hypotheses_summary": [],
+    "hypotheses_summary": [
+      {
+        "id": "HYP-001",
+        "name": "FraudPattern.CARD_NOT_PRESENT_FRAUD",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-002",
+        "name": "FraudPattern.ACCOUNT_TAKEOVER",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-003",
+        "name": "FraudPattern.CARD_NOT_PRESENT_NEW_DEVICE",
+        "status": "active",
+        "confidence": 0.3
+      }
+    ],
     "uncertainty_level": "medium",
     "uncertainty_reason": "Uncertainty level: MEDIUM. Known facts: 4 items. Conflicts: 4 supporting vs 1 contradictory evidence items Unknown: No hypothesis has sufficient confidence (all < 0.4)",
     "evidence_sufficiency_level": "sufficient",
     "sufficiency_reason": "All required evidence categories covered (transaction, customer, historical, exposure). 4 supporting items.",
     "missing_evidence": [],
     "evidence_requests": [],
-    "candidate_actions": [],
-    "recommended_action": "ActionType.BLOCK_CARD",
+    "candidate_actions": [
+      "BLOCK_CARD",
+      "FILE_REPORT",
+      "VERIFY_WITH_CUSTOMER"
+    ],
+    "recommended_action": "BLOCK_CARD",
     "policy_basis": "RULE-001",
     "approval_route": "senior_analyst",
     "decision_reasoning": "Block card on confirmed fraud pattern + sufficient evidence",
     "investigation_trail_summary": [],
-    "case_outcome": "ActionType.BLOCK_CARD",
-    "memory_updated": false,
-    "completed_at": ""
+    "case_outcome": "BLOCK_CARD",
+    "memory_updated": true,
+    "completed_at": "2026-09-24T16:34:52.946125+00:00"
   }
 }

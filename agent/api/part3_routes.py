@@ -528,9 +528,15 @@ def validate_benchmark() -> dict:
     # ── 9. Invariant: no fabricated hypotheses above threshold ───────────────
     for cid, raw in loaded.items():
         hyps = (raw.get("summary") or {}).get("hypotheses_summary") or []
-        if hyps:
+        # Warn only if any hypothesis exceeds the 0.4 confidence threshold,
+        # since that would mean identified_patterns should also be populated.
+        # Hypotheses below 0.4 are recorded for transparency but do not
+        # trigger a pattern — this is expected and correct behaviour.
+        high_conf = [h for h in hyps if isinstance(h, dict) and h.get("confidence", 0) >= 0.4]
+        if high_conf:
             _warn(cid, "hypotheses_present",
-                  f"{len(hyps)} hypothesis/hypotheses recorded (legitimate if confidence ≥ 0.4)")
+                  f"{len(high_conf)} hypothesis/hypotheses at confidence ≥ 0.4 — "
+                  "identified_patterns should be populated")
     checks_passed.append("hypotheses_checked")
 
     # ── 10. Cross-report consistency: action × sufficiency ───────────────────
@@ -570,10 +576,13 @@ def validate_benchmark() -> dict:
         },
         {
             "field": "summary.hypotheses_summary",
-            "detail": "Empty list in all 20 reports. Part 2 records hypotheses only when confidence ≥ 0.4. No case in this benchmark reached that threshold.",
+            "detail": "All 20 reports include hypothesis objects (3–4 per case), all with confidence < 0.4. No hypothesis cleared the 0.4 threshold, so hypotheses_summary is populated but identified_patterns remains empty.",
             "severity": "info",
             "count": sum(1 for raw in loaded.values()
-                         if not (raw.get("summary") or {}).get("hypotheses_summary")),
+                         if not any(
+                             isinstance(h, dict) and h.get("confidence", 0) >= 0.4
+                             for h in ((raw.get("summary") or {}).get("hypotheses_summary") or [])
+                         )),
         },
         {
             "field": "summary.identified_patterns",

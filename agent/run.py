@@ -96,9 +96,11 @@ def run_all(debug: bool = False) -> None:
             log.error(f"{case_id} FAILED: {exc}")
             results.append({"case_id": case_id, "action": "ERROR", "error": str(exc)})
 
-    # Save batch summary
-    summary_path = ROOT / "investigation_reports" / "batch_summary.json"
-    summary_path.parent.mkdir(exist_ok=True)
+    # Save batch summary outside investigation_reports/ to avoid polluting
+    # the case-memory directory with non-case JSON artifacts.
+    artifacts_dir = ROOT / "artifacts"
+    artifacts_dir.mkdir(exist_ok=True)
+    summary_path = artifacts_dir / "batch_summary.json"
     with open(summary_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, default=str)
     print(f"\nBatch summary saved: {summary_path}")

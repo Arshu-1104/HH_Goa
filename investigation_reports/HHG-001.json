@@ -1,12 +1,12 @@
 {
   "case_id": "HHG-001",
-  "written_at": "2026-09-23T15:20:57.654407+00:00",
+  "written_at": "2026-09-24T16:35:21.495206+00:00",
   "memory": {
     "case_id": "HHG-001",
     "customer_id": "C12382",
     "card_id": "C12382-K1",
     "transaction_id": "3514030",
-    "investigation_completed_at": "2026-09-23T15:20:57.654407+00:00",
+    "investigation_completed_at": "2026-09-24T16:35:21.495206+00:00",
     "final_action": "ActionType.BLOCK_CARD",
     "outcome_description": "Block card on confirmed fraud pattern + sufficient evidence",
     "fraud_patterns_identified": [],
@@ -24,31 +24,64 @@
     "investigation_objective": "Determine whether transaction 3514030 for customer C12382 is fraudulent. Trigger: Real-time model scored transaction 3514030 ($77.07, in billing region 444.0) at 0.61. Review and decide.",
     "customer_id": "C12382",
     "transaction_id": "3514030",
-    "transaction_amount": 0.0,
-    "key_entities": [],
-    "key_findings": [
-      "Transaction 3514030 has NO device identity record",
-      "Customer C12382 has 4 prior confirmed fraud cases",
-      "Found 4 prior cases: 4 confirmed fraud, 0 cleared. Total exposure: $591.13"
+    "transaction_amount": 77.07,
+    "key_entities": [
+      "C12382",
+      "C12382-K1"
     ],
-    "supporting_evidence_summary": "Transaction 3514030 has NO device identity record; Customer C12382 has 4 prior confirmed fraud cases; Found 4 prior cases: 4 confirmed fraud, 0 cleared. Total exposure: $591.13",
+    "key_findings": [
+      "Transaction 3514030 has NO device identity record [EV-001]",
+      "Customer C12382 has 4 prior confirmed fraud cases [EV-005]",
+      "Found 4 prior cases: 4 confirmed fraud, 0 cleared. Total exposure: $591.13 [EV-007]",
+      "Most frequent historical fraud pattern: out_of_region_use (3 cases) [EV-008]",
+      "Financial exposure: $591.13 confirmed fraud + $77.07 pending = $668.20 total [EV-011]"
+    ],
+    "supporting_evidence_summary": "Transaction 3514030 has NO device identity record [EV-001]; Customer C12382 has 4 prior confirmed fraud cases [EV-005]; Found 4 prior cases: 4 confirmed fraud, 0 cleared. Total exposure: $591.13 [EV-007]",
     "contradictory_evidence_summary": "None",
     "identified_patterns": [],
-    "hypotheses_summary": [],
+    "hypotheses_summary": [
+      {
+        "id": "HYP-001",
+        "name": "FraudPattern.CARD_NOT_PRESENT_FRAUD",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-002",
+        "name": "FraudPattern.CARD_NOT_PRESENT_NEW_DEVICE",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-003",
+        "name": "FraudPattern.CARD_TESTING",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-004",
+        "name": "FraudPattern.OUT_OF_REGION_USE",
+        "status": "active",
+        "confidence": 0.3
+      }
+    ],
     "uncertainty_level": "medium",
     "uncertainty_reason": "Uncertainty level: MEDIUM. Known facts: 5 items. Missing: Device/identity information is absent or incomplete Unknown: No hypothesis has sufficient confidence (all < 0.4)",
     "evidence_sufficiency_level": "sufficient",
     "sufficiency_reason": "All required evidence categories covered (transaction, customer, historical, exposure). 5 supporting items.",
     "missing_evidence": [],
     "evidence_requests": [],
-    "candidate_actions": [],
-    "recommended_action": "ActionType.BLOCK_CARD",
+    "candidate_actions": [
+      "BLOCK_CARD",
+      "FILE_REPORT"
+    ],
+    "recommended_action": "BLOCK_CARD",
     "policy_basis": "RULE-001",
     "approval_route": "fraud_analyst",
     "decision_reasoning": "Block card on confirmed fraud pattern + sufficient evidence",
     "investigation_trail_summary": [],
-    "case_outcome": "ActionType.BLOCK_CARD",
-    "memory_updated": false,
-    "completed_at": ""
+    "case_outcome": "BLOCK_CARD",
+    "memory_updated": true,
+    "completed_at": "2026-09-24T16:35:21.495206+00:00"
   }
 }

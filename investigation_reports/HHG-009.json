@@ -1,12 +1,12 @@
 {
   "case_id": "HHG-009",
-  "written_at": "2026-09-23T15:19:54.270648+00:00",
+  "written_at": "2026-09-24T16:34:52.885210+00:00",
   "memory": {
     "case_id": "HHG-009",
     "customer_id": "C08299",
     "card_id": "C08299-K1",
     "transaction_id": "3581141",
-    "investigation_completed_at": "2026-09-23T15:19:54.270648+00:00",
+    "investigation_completed_at": "2026-09-24T16:34:52.885210+00:00",
     "final_action": "ActionType.VERIFY_WITH_CUSTOMER",
     "outcome_description": "Verify with customer on customer-reported case",
     "fraud_patterns_identified": [],
@@ -24,29 +24,54 @@
     "investigation_objective": "Determine whether transaction 3581141 for customer C08299 is fraudulent. Trigger: Customer C08299 message: 'I never made this $30.02 purchase. Please check my card.' Refers to 3581141.",
     "customer_id": "C08299",
     "transaction_id": "3581141",
-    "transaction_amount": 0.0,
-    "key_entities": [],
-    "key_findings": [
-      "Financial exposure: $0.00 confirmed fraud + $30.02 pending = $30.02 total"
+    "transaction_amount": 30.02,
+    "key_entities": [
+      "C08299",
+      "C08299-K1"
     ],
-    "supporting_evidence_summary": "Financial exposure: $0.00 confirmed fraud + $30.02 pending = $30.02 total",
-    "contradictory_evidence_summary": "Transaction 3581141 used device: desktop / unknown; Customer C08299 has 0 prior confirmed fraud cases",
+    "key_findings": [
+      "Financial exposure: $0.00 confirmed fraud + $30.02 pending = $30.02 total [EV-007]"
+    ],
+    "supporting_evidence_summary": "Financial exposure: $0.00 confirmed fraud + $30.02 pending = $30.02 total [EV-007]",
+    "contradictory_evidence_summary": "Transaction 3581141 used device: desktop / unknown [EV-001]; Customer C08299 has 0 prior confirmed fraud cases [EV-005]",
     "identified_patterns": [],
-    "hypotheses_summary": [],
+    "hypotheses_summary": [
+      {
+        "id": "HYP-001",
+        "name": "FraudPattern.CARD_NOT_PRESENT_FRAUD",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-002",
+        "name": "FraudPattern.ACCOUNT_TAKEOVER",
+        "status": "active",
+        "confidence": 0.3
+      },
+      {
+        "id": "HYP-003",
+        "name": "FraudPattern.CARD_NOT_PRESENT_NEW_DEVICE",
+        "status": "active",
+        "confidence": 0.3
+      }
+    ],
     "uncertainty_level": "high",
     "uncertainty_reason": "Uncertainty level: HIGH. Known facts: 1 items. Conflicts: 1 supporting vs 2 contradictory evidence items Unknown: No hypothesis has sufficient confidence (all < 0.4)",
     "evidence_sufficiency_level": "sufficient",
     "sufficiency_reason": "All required evidence categories covered (transaction, customer, historical, exposure). 1 supporting items.",
     "missing_evidence": [],
     "evidence_requests": [],
-    "candidate_actions": [],
-    "recommended_action": "ActionType.VERIFY_WITH_CUSTOMER",
+    "candidate_actions": [
+      "VERIFY_WITH_CUSTOMER",
+      "CLOSE_NO_FRAUD"
+    ],
+    "recommended_action": "VERIFY_WITH_CUSTOMER",
     "policy_basis": "RULE-003",
     "approval_route": "none",
     "decision_reasoning": "Verify with customer on customer-reported case",
     "investigation_trail_summary": [],
-    "case_outcome": "ActionType.VERIFY_WITH_CUSTOMER",
-    "memory_updated": false,
-    "completed_at": ""
+    "case_outcome": "VERIFY_WITH_CUSTOMER",
+    "memory_updated": true,
+    "completed_at": "2026-09-24T16:34:52.885210+00:00"
   }
 }

@@ -30,8 +30,8 @@ with open(ROOT / "case_pack.csv", encoding="utf-8") as f:
 
 wf = InvestigationWorkflow()
 
-print(f"\n{'='*72}")
-print(f"PHASE 17 — END-TO-END VALIDATION ({len(cases)} cases)")
+print(f"{'='*72}")
+print(f"PHASE 17 -- END-TO-END VALIDATION ({len(cases)} cases)")
 print(f"{'='*72}")
 print(f"{'Case':<10} {'Status':<12} {'Sufficiency':<14} {'Action':<28} {'Reassess':<5} {'OK?'}")
 print(f"{'-'*72}")
@@ -48,22 +48,22 @@ for case_id in cases:
 
     suf_level = suf.level.value if suf else "none"
     action    = str(best.action.value if best and hasattr(best.action,"value") else best.action if best else "NONE")
-    ok        = "✓"
+    ok        = "OK"
 
     # Key invariant: BLOCK_CARD only when SUFFICIENT
     if best and best.action == ActionType.BLOCK_CARD:
         if not suf or suf.level != SufficiencyLevel.SUFFICIENT:
-            ok = "✗ VIOLATION"
+            ok = "VIOLATION"
             violations.append(f"{case_id}: BLOCK_CARD without SUFFICIENT (suf={suf_level})")
 
     # Key invariant: reassessment count never exceeds max
     if rcount > MAX_REASSESSMENTS:
-        ok = f"✗ REASSESS>{MAX_REASSESSMENTS}"
+        ok = f"REASSESS>{MAX_REASSESSMENTS}"
         errors.append(f"{case_id}: reassessment_count={rcount} > MAX={MAX_REASSESSMENTS}")
 
     if status == InvestigationStatus.ERROR:
-        ok = "⚠ ERROR"
-        errors.append(f"{case_id}: investigation error — {state.get('errors', [])}")
+        ok = "ERROR"
+        errors.append(f"{case_id}: investigation error - {state.get('errors', [])}")
 
     print(f"{case_id:<10} {str(status).split('.')[-1]:<12} {suf_level:<14} {action:<28} {rcount:<5} {ok}")
 

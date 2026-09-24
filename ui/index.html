@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FraudGraph Investigator</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+<div class="app">
+
+  <!-- Header -->
+  <header class="header">
+    <a class="header-logo" href="/ui">
+      <div class="logo-icon">🔍</div>
+      FraudGraph Investigator
+    </a>
+    <span class="header-subtitle">Hacker House Goa</span>
+    <div class="header-right">
+      <span class="header-status">
+        <span class="dot"></span>Part 2 Workflow Active
+      </span>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <div class="sidebar-section-title">Navigation</div>
+    <button class="nav-item active" data-view="welcome">
+      <span class="icon">🏠</span> Home
+    </button>
+    <button class="nav-item" data-view="benchmark">
+      <span class="icon">📊</span> Benchmark Dashboard
+    </button>
+
+    <div class="sidebar-section-title" style="margin-top:16px;">Investigation Cases</div>
+    <div id="case-list" class="case-list">
+      <!-- Populated by app.js -->
+      <div style="padding:8px 10px;font-size:12px;color:var(--muted)">Loading cases…</div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="main">
+
+    <!-- Welcome view -->
+    <div id="view-welcome" class="view active">
+      <div class="loading">
+        <div class="spinner"></div>
+        <div>Initialising…</div>
+      </div>
+    </div>
+
+    <!-- Investigation view -->
+    <div id="view-investigation" class="view">
+      <div class="empty-state">
+        <div class="empty-icon">🔍</div>
+        <div class="empty-title">No case selected</div>
+        <div class="empty-desc">Select a case from the sidebar to begin.</div>
+      </div>
+    </div>
+
+    <!-- Benchmark view -->
+    <div id="view-benchmark" class="view">
+      <div class="empty-state">
+        <div class="empty-icon">📊</div>
+        <div class="empty-title">Benchmark Dashboard</div>
+        <div class="empty-desc">Click the button above or "Benchmark Dashboard" in the nav to load.</div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- Toast container -->
+<div id="toast-container" class="toast-container"></div>
+
+<!-- Application -->
+<script src="/static/app.js"></script>
+</body>
+</html>

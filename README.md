@@ -203,3 +203,120 @@ See `mcp/README.md` for full tool documentation.
 **Port already in use** — Set `$env:MCP_PORT=9000` before starting the server.
 
 **Encoding errors in CSVs** — The scripts use `errors="replace"` for robustness. Check `validate_dataset.py` output for any encoding warnings.
+
+---
+
+## Part 3 — UI, Benchmark Validation, and Demo Readiness
+
+Part 3 adds a complete fraud investigator dashboard on top of the existing Part 1 and Part 2 systems. No Part 1 or Part 2 logic was modified.
+
+### How to Launch the Dashboard
+
+```powershell
+# From project root
+uvicorn agent.api.main:app --host 0.0.0.0 --port 8000
+```
+
+Then open: **http://localhost:8000/ui**
+
+### Part 3 Architecture
+
+```
+Browser (http://localhost:8000/ui)
+  ↓  fetch()
+FastAPI (agent/api/main.py — port 8000)
+  ├── GET /ui, /static/*           → Serves dashboard HTML/JS/CSS
+  ├── GET /api/v3/cases/meta       → All 20 cases from case_pack.csv
+  ├── GET /api/v3/report/{id}      → Load stored investigation report
+  ├── GET /api/v3/benchmark        → All 20 reports + aggregate stats
+  ├── GET /api/v3/benchmark/validate → Schema/consistency validation
+  ├── GET /api/v3/policy/rules     → Policy rule catalogue (read-only)
+  ├── POST /api/v3/run/{id}        → Re-run investigation (Part 2 workflow)
+  └── (existing Part 2 routes unchanged)
+        ↓
+  Part 2 InvestigationWorkflow (agent/graph/workflow.py — unchanged)
+        ↓
+  investigation_reports/*.json (read/write by Part 2)
+```
+
+### Part 3 New Files
+
+| File | Purpose |
+|------|---------|
+| `agent/api/main.py` | Combined FastAPI entrypoint (Part 2 + Part 3 routes) |
+| `agent/api/part3_routes.py` | All Part 3 API endpoints |
+| `ui/index.html` | Dashboard shell |
+| `ui/static/app.js` | Complete vanilla JS application |
+| `ui/static/styles.css` | Dark-theme investigator dashboard styles |
+| `tests/test_part3.py` | 120 Part 3/4 tests |
+| `docs/BENCHMARK_RESULTS.md` | 20-case benchmark validation artifact |
+| `docs/DEMO_GUIDE.md` | Demo instructions and recommended flow |
+
+### Investigation View Sections
+
+Every section is driven by actual report data — nothing is fabricated:
+
+1. **Case Information** — case ID, customer, card, transaction, trigger, risk score
+2. **Recommended Action** — prominent action panel with policy rule and approval requirement
+3. **Evidence Assessment** — sufficiency level + uncertainty level + evidence counts
+4. **Key Findings** — top findings from the investigation
+5. **Supporting Evidence** — green column (items from report)
+6. **Contradictory Evidence** — red column (items from report)
+7. **Hypotheses** — displays when present; honest notice when not reached
+8. **Identified Patterns** — displays when present
+9. **Missing Evidence** — displays when present
+10. **Case Memory** — full persisted memory object from Part 2
+11. **Investigation Workflow** — data-driven steps from report fields
+
+### Benchmark Dashboard
+
+- 20-case summary statistics (7 distributions)
+- Schema/consistency validation (12 checks, 0 errors)
+- Per-case table with drill-down to investigation view
+- Known limitations documented honestly
+
+### Test Results (Phase 5)
+
+| Suite | Tests | Result |
+|-------|-------|--------|
+| `tests/test_part3.py` | 120 | 120 passed |
+| `tests/agent/` + `tests/evidence/` + `tests/policy/` | 65 | 65 passed |
+| `tests/integration/test_e2e.py` | 15 | 15 passed |
+| `tests/test_data.py` + device/graph/smoke | 115 | 112 passed, 3 skipped |
+
+### How to Run Tests
+
+```powershell
+# Part 3/4 tests only
+python -m pytest tests/test_part3.py -v
+
+# All non-MCP tests
+python -m pytest tests/ --ignore=tests/test_mcp.py -q
+
+# Full test suite (MCP test may hang on Windows — see DEMO_GUIDE.md)
+python -m pytest tests/ -q
+```
+
+### Safety and Guardrails
+
+- **ActionGuard**: prevents disruptive actions (BLOCK_CARD, FILE_REPORT) under insufficient evidence
+- **Policy engine**: deterministic rules derived from actual closed case history
+- **No LLM fabrication**: all evidence is grounded in MCP tool results
+- **Approval routing**: high-impact actions require human analyst sign-off
+- **No ground-truth metrics**: benchmark reports actual agent decisions, not fabricated accuracy scores
+
+### Known Limitations
+
+See `docs/DEMO_GUIDE.md` section 6 for full details. Summary:
+- Investigation trail events not persisted to disk by Part 2
+- Hypothesis confidence never reached 0.4 threshold in benchmark cases
+- Transaction amount is 0.0 in all reports (mock client limitation)
+- MCP test hangs on Windows TCP socket cleanup (pre-existing)
+- No live TigerGraph — runs on CSV mock client
+
+### Further Documentation
+
+- `docs/ARCHITECTURE.md` — Full system architecture
+- `docs/BENCHMARK_RESULTS.md` — 20-case validation results
+- `docs/DEMO_GUIDE.md` — Demo flow and instructions
+- `docs/PART2_IMPLEMENTATION_PLAN.md` — Part 2 design decisions
